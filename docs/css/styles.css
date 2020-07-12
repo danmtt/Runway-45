@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 body,html{
     margin:0;
     padding:0;
     height:100%;}
 body{
-    background:black;
-    box-shadow: inset 0 0 20vmin 0 #585247;
+    background:#3d3d3d;
+    /* box-shadow: inset 0 5vmin 30vmin 0 #5f5e5e; */
+}
+header{
+display: flex;
+background-color: #5f5e5e;
+/* box-shadow: inset 0 5vmin 0 30vmin #5f5e5e; */
+justify-content: space-evenly; 
+}
+h1{
+    font-family: 'Bangers', cursive;
+   text-align: center;
+   text-shadow: -.5vmin .5vmin #eeeaea;
 }
 .wrap{
     position:relative;
@@ -17,7 +30,8 @@ body{
     transition:transform .5s, opacity .5s;
 }
 a{
-    text-decoration: none; 
+    text-decoration: none;
+    color: #000000; 
     position:absolute;
     left:0; top:0;
     width:47.5%; height:47.5%;
@@ -25,29 +39,31 @@ a{
     transform:scale(.5) translateZ(0px);
     background:#585247;
 }
+a:hover{color:#e9e7e5};a:visited{color:#0eec20
+}
 a div{
     height:100%;
     background-size:cover;
     opacity:.7;
     transition:opacity .5s;
     border-radius:inherit;
-    background: #7a68af;   
+    border-color: #e9e7e5;
+    background: #ddd9e9;   
 }
 div span{
     margin:0;
     position: relative;    
     overflow:hidden;
     background-color: transparent;
-    font-family: fantasy;
-    font-size: 6vmin;
+    font-family: 'Bangers', cursive;
+    font-size: 8vmin;
+    font-weight: bolder;
     text-transform: uppercase;  
     text-align: center;
     opacity: 0;
     /* transform: ; */
     border-radius:0;
-
-}
- 
+} 
 .menu_1{
     left:11vmin ;
     top:12vmin;
@@ -64,14 +80,11 @@ div span{
     /* transform-origin: 10% 10%; */
     transition: transform 5s, opacity 5s;
 }
-
-
 a:nth-child(1){
     border-radius:40vmin 0 0 0;
     transform-origin: 110% 110%;
     transition:transform .4s .15s;
 }
-
 a:nth-child(2){
     border-radius:0 40vmin 0 0;
     left:52.5%;
@@ -115,8 +128,9 @@ a:nth-child(4) div{
 } */
 a:nth-child(5) div{
     background-image:url('../img/mylogo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
 span{
     position:relative;
     display:block;
@@ -128,7 +142,6 @@ span{
     transform:translateZ(0px);
     opacity: 1
 }
-
 span span{
     position:absolute;
     width:60%;height:15px;
@@ -143,27 +156,21 @@ span span:after, span span:before{
   width:100%; height:100%;
   background:inherit;
 }
-
 span span:after{
   top:6vmin;
 }
-
 span:hover + .wrap, .wrap:hover{
   transform:scale(.8) translateZ(0px);
   opacity:1;
 }
-
 span:hover + .wrap a, .wrap:hover a{
   transform:scale(1) translatez(0px);
-
 }
-
 a:hover div{ 
 /* a:hover + a:nth-child(1), a:nth-child(2), a:nth-child(3), a:nth-child(4) { */
   opacity:1;
-  background-color: #a49bbe;
-
-
+  background-color: #0d0d0e;
+  /* border: solid  #ffffff; */
 }
 
 
