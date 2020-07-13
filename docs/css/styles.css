@@ -24,7 +24,7 @@ body{
 /* .main{
     align-items: center;
 } */
-.wrap_quadrants{ /*hidden until hover*/
+.wrap_quadrants{ /*hidden until hover on span*/
     position:relative;
     width:80vmin; height:80vmin;
     top: -40vmin;
@@ -32,6 +32,31 @@ body{
     transform:scale(0.2) translatez(0px);
     opacity:0;
     transition:transform .5s, opacity .5s;
+}
+.wrap_circles{
+    position:relative;
+    margin: 0;
+    width: 20vmin;
+    height: 20vmin;
+    top: -90vmin;
+    left: 30vmin;
+}
+.sub_quadrant{ /*hidden until hover on quadrant*/
+    position: absolute;
+    width: 35vmin;
+    height: 35vmin;
+    top: -6vmin;
+    margin:0 auto;
+    transform:scale(0.2) translatez(0px);
+    opacity:0;
+    transition:transform .5s, opacity .5s;
+}
+.sq_01{
+    background-color: #f01919;
+    /* opacity: 1; */
+    border-radius: 100%;
+    transform-origin: 225% 85%;
+    transition:transform .4s .5s;
 }
 /* a{
     text-decoration: none;
@@ -188,6 +213,9 @@ span:hover + .wrap_quadrants a, .wrap_quadrants:hover a{
     /* transform:scale(1); */
     /* opacity:.9; */
 }
+/* .q_01:hover .sq_01{
+    opacity:1;
+} */
 
 
 
