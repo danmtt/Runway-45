@@ -6,28 +6,29 @@ body,html{
     height:100%;}
 body{
     display: flex; /* Flexbox is the selected grid for the site */
+    align-items: center;
     flex-direction: column;
     background:#3d3d3d;
-    /* box-shadow: inset 0 5vmin 30vmin 0 #5f5e5e; */
+    width: 100%;
 }
-header{
-    display: flex;
+.wrap_header{
     /* background-color: #5f5e5e; */
     /* box-shadow: inset 0 5vmin 0 30vmin #5f5e5e; */
-    justify-content: space-evenly;
-    
+    margin: 5vmin 5vmin;
+    justify-content: space-evenly;    
     font-family: 'Bangers', cursive;
     font-size: 5vmin;
     text-align: center;
     text-shadow: -.5vmin .5vmin #eeeaea;
 }
-.wrap{
-    /* flex-direction: row; */
+/* .main{
+    align-items: center;
+} */
+.wrap_quadrants{ /*hidden until hover*/
     position:relative;
     width:80vmin; height:80vmin;
-    top: -20vmin;
+    top: -40vmin;
     margin:0 auto;
-    background:inherit;
     transform:scale(0.2) translatez(0px);
     opacity:0;
     transition:transform .5s, opacity .5s;
@@ -114,9 +115,6 @@ header{
     opacity: 1;
     border-radius:0;
 }
-
-
-
 .m_01{
     left:11vmin ;
     top:12vmin;
@@ -149,7 +147,7 @@ span{
     position:relative;
     display:block;
     margin:0 auto;
-    top:35vmin;
+    top:15vmin;
     width:30vmin; height:30vmin;
     border-radius:100%;
     background:#585247;
@@ -173,11 +171,11 @@ span span:after, span span:before{
 span span:after{
   top:6vmin;
 }
-span:hover + .wrap, .wrap:hover{
+span:hover + .wrap_quadrants, .wrap_quadrants:hover{
   transform:scale(.8) translateZ(0px);
   opacity:1;
 }
-span:hover + .wrap a, .wrap:hover a{
+span:hover + .wrap_quadrants a, .wrap_quadrants:hover a{
   transform:scale(1) translatez(0px);
 }
 .quadrant:hover {
