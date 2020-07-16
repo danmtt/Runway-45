@@ -24,87 +24,87 @@ header{
 main{
     height:70vh;
     align-items: center;}
-.wrap_nav_sim{
-    position: relative;
-    top: 25%;
-    width: 50%;
-    height: 32%;
-    border-radius:100%;
-    background:#585247;}
 .nav_bar_sim{
     position: relative;
-    top: -1%;
-    width: 30%;
-    height: 3%;
-    margin: 3%;
-    border-radius: 10%;
-    background:#ACA696;}
-.wrap_quadrant{
+    top: 17vh;
+    width: 50vw;
+    height: 22vh;
+    border-radius:100%;
+    background-image: url(../img/nav_bar_sim.png);
+    background-size: cover;
+    background-repeat: no-repeat;}
+.quadrant{
     position:absolute;
-    width: 120vw;
-    height: 55vh;
-    top: 14%;
-    transform:scale(0.2) translatez(0px);
-    transition:transform .5s, opacity .5s;
-    opacity:0; /*Hidden until hover on wrap_nav_sim*/}
-        .quadrant{
-            position:absolute;
-            width:47.5%;
-            height:47.5%;    
-            overflow:hidden;
-            /* transition:opacity .5s; */
-            background: #afaaaa;
-            /* transform:scale(.5) translateZ(0px); */}
-        .q_01{
-            border-radius:40vmin 0 0 0;
-            transform-origin: 110% 110%;
-            transition:transform .4s .5s;}
-        .q_02{
-            border-radius:0 40vmin 0 0;
-            left:52.5%;
-            transform-origin: -10% 110%;
-            transition:transform .4s .2s;}
-        .q_03{
-            border-radius:0 0 40vmin 0;
-            top:52.5%; left:52.5%;
-            transform-origin: -10% -10%;
-            transition:transform .4s .3s;}
-        .q_04{
-            border-radius:0 0 0 40vmin;
-            top:52.5%;
-            transform-origin: 110% -10%;
-            transition:transform .4s .25s;}
-        .q_center{
-            position:absolute;
-            /* left:0; top:0; */
-            /* width:47.5%; height:47.5%;     */
-            /* opacity:.7; */
-            overflow:hidden;
-            transition:opacity .5s;
-            /* border-radius:inherit; */
-            /* background: #ffffff; */
-            /* transform:scale(.5) translateZ(0px); */
-            
-            width:55%;height:55%;
-            left:22.5%; top:22.5%;
-            border-radius:50vmin;
-            box-shadow:0 0 0 3vmin #3d3d3d;
-            transform:scale(1);
-            background-image:url('../img/mylogo.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;}
-        .quadrant span{
-                margin:0;
-                position: relative;    
-                overflow:hidden;
-                background-color: transparent;
-                font-family: 'Bangers', cursive;
-                font-size: 6.5vmin;
-                font-weight: bolder;
-                text-transform: uppercase;  
-                text-align: center;
-                opacity: 1;
-                border-radius:0;}
+    width: 56vw;
+    height: 25vh;
+    overflow:hidden;
+    background: #afaaaa;
+    opacity:0; /*Hidden until hover on wrap_nav_sim*/
+    transform:scale(.5) translatez(0px);
+    transition:transform .8s, opacity .8s;}
+.q_01{
+    top: 18vh;
+    left: -1vw;
+    border-radius: 100% 0 0 0;}
+.q_02{
+    top: 18vh;
+    left: 47vw;
+    border-radius: 0 100% 0 0;}
+.q_03{
+    top: 39vh;
+    left: 47vw;
+    border-radius: 0 0 100% 0;}
+.q_04{
+    top: 39vh;
+    left: -1vw;
+    border-radius: 0 0 0 100%;}
+.q_05{
+    width: 58vw;
+    height: 26vh;
+    left: 21vw;
+    top: 28vh;
+    border-radius: 100%;
+    background-image: url(../img/mylogo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 3vw #ffffff;}
+
+    .m_01{
+        left:11vmin ;
+        top:12vmin;
+        transform: rotate(315deg);
+        /* opacity: 1;  */
+        /* transform-origin: 10% 10%; */
+        /* transition: transform 5s, opacity 5s; */}
+    .m_02{
+        left:-3vmin;
+        top:13vmin;
+        transform: rotate(45deg);
+        /* opacity: 1;  */
+        /* transform-origin: 10% 10%; */
+        /* transition: transform 5s, opacity 5s; */}
+    .m_03{
+        left:12vmin ;
+        top:14vmin;
+        transform: rotate(315deg);
+        /* opacity:0;  */}
+    .m_04{
+        left:-5vmin;
+        top:12vmin;
+        transform: rotate(45deg);}
+    .quadrant span{
+        /* margin:0; */
+        position: relative;    
+        overflow:hidden;
+        /* background-color: transparent; */
+        font-family: 'Bangers', cursive;
+        font-size: 12vw;
+        font-weight: bolder;
+        text-transform: uppercase;  
+        /* text-align: center; */
+        /* opacity: 1; */
+        /* border-radius:0; */}
+
     .wrap_circles{
                     position:relative;
                     margin: 0;
@@ -113,43 +113,20 @@ main{
                     top: -90vmin;
                     left: 30vmin;}
         .sub_quadrant{ /*hidden until hover on quadrant*/
-                    position: absolute;
-                    width: 35vmin;
-                    height: 35vmin;
-                    top: -6vmin;
-                    margin:0 auto;
-                    transform:scale(0.2) translatez(0px);
-                    opacity:0;
-                    transition:transform .5s, opacity .5s;}
+            position: absolute;
+            width: 35vmin;
+            height: 35vmin;
+            top: -6vmin;
+            margin:0 auto;
+            transform:scale(0.2) translatez(0px);
+            opacity:0;
+            transition:transform .5s, opacity .5s;}
         .sq_01{
-                    background-color: #f01919;
-                    /* opacity: 1; */
-                    border-radius: 100%;
-                    transform-origin: 225% 85%;
-                    transition:transform .4s .5s;}
-        .m_01{
-                    left:11vmin ;
-                    top:12vmin;
-                    transform: rotate(315deg);
-                    /* opacity: 1;  */
-                    /* transform-origin: 10% 10%; */
-                    /* transition: transform 5s, opacity 5s; */}
-        .m_02{
-                    left:-3vmin;
-                    top:13vmin;
-                    transform: rotate(45deg);
-                    /* opacity: 1;  */
-                    /* transform-origin: 10% 10%; */
-                    /* transition: transform 5s, opacity 5s; */}
-        .m_03{
-            left:12vmin ;
-            top:14vmin;
-            transform: rotate(315deg);
-            /* opacity:0;  */}
-        .m_04{
-                    left:-5vmin;
-                    top:12vmin;
-                    transform: rotate(45deg);}
+            background-color: #f01919;
+            /* opacity: 1; */
+            border-radius: 100%;
+            transform-origin: 225% 85%;
+            transition:transform .4s .5s;}
     .wrap_quadrant_info{
         width:80vmin;
         height: 20vmin;
@@ -157,80 +134,21 @@ main{
         border-radius:1vmin;
         background:#585247;
         opacity:0;}
-footer{
-    height:10vh;
-    background-color: #5f5e5e;}
+    footer{
+        height:10vh;
+        background-color: #5f5e5e;}
 
 /*Display and apply transform to .wrap_quadrant after hover on wrap_nav_sim*/
-.wrap_nav_sim:hover +.wrap_quadrant, .wrap_quadrants:hover {
+.nav_bar_sim:hover ~.quadrant{
     transform:scale(0.8) translateZ(0px);
     opacity:1;}
-.nav_bar_sim:hover +.wrap_quadrant, .wrap_quadrants:hover{
-    transform:scale(0.8) translateZ(0px);
-    opacity:1;   
-}
-
-    
-/* span:hover + .wrap_quadrants, .wrap_quadrants:hover{
-  transform:scale(.8) translateZ(0px);
-  opacity:1;}
-span:hover + .wrap_quadrants a, .wrap_quadrants:hover a{
-  transform:scale(1) translatez(0px);} */
 .quadrant:hover {
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
-.quadrant:hover ~ .q_center{ 
-    /* background-image: none; */
-    /* transform:scale(1); */
-    /* opacity:.9; */
-}
-/* .q_01:hover .sq_01{
-    opacity:1;
-} */
 
-/* 
-span{
-    position:relative;
-    display:block;
-    margin:0 auto;
-    top:25vmin;
-    width:30vmin; height:30vmin;
-    border-radius:100%;
-    background:#585247;
-    transform:translateZ(0px);
-    opacity: 1
-}
-span span{
-    position:absolute;
-    width:60%;height:15px;
-    background:#ACA696;
-    left:6vmin; top:14vmin;
-    border-radius:0;
-}
-span span:after, span span:before{
-  content:'';
-  position:absolute;
-  left:0; top:-6vmin; 
-  width:100%; height:100%;
-  background:inherit;
-}
-span span:after{
-  top:6vmin;
-}
-a{
-    text-decoration: none;
-    color: #000000; 
-    position:absolute;
-    left:0; top:0;
-    width:47.5%; height:47.5%;
-    overflow:hidden;
-    transform:scale(.5) translateZ(0px);
-    background:#585247;
-}
-a:hover{color:#e9e7e5}
-a:visited{color:#0eec20}
-*/
+
+
 
 
 
