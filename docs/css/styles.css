@@ -9,24 +9,27 @@ body, header, main, footer{
     display: flex;
     flex-direction: column;}
 header{
+    height: 20vh;
     text-align: center;}
 .wrap_header{
-        font-family: 'Bangers', cursive;
-        font-size: 10vw;}
+    height: 70%; /* Allow 30% for more stuff*/}
 .wrap_header h1,h6{   
-        margin: 0;
-        padding: 0;}
+    margin: 0;
+    padding: 0;
+    font-family: 'Bangers', cursive;}
 .wrap_header h1{
-        background-color: #585247;
-        text-shadow: -.5vmin .5vmin #ffffff;}
+    font-size: 25vw;
+    background-color: #585247;
+    text-shadow: -.5vmin .5vmin #ffffff;}
 .wrap_header h6{
-        background:#ffffff;}
+    font-size: 8vw;
+    background:#ffffff;}
 main{
-    height:70vh;
+    height:75vh;
     align-items: center;}
 .nav_bar_sim{
     position: relative;
-    top: 17vh;
+    top: 8vh;
     width: 50vw;
     height: 22vh;
     border-radius:100%;
@@ -35,39 +38,47 @@ main{
     background-repeat: no-repeat;}
 .quadrant{
     position:absolute;
-    width: 56vw;
-    height: 25vh;
+    /* width: 56vw; */
+    /* height: 25vh; */
     overflow:hidden;
     background: #afaaaa;
     opacity:0; /*Hidden until hover on wrap_nav_sim*/
     transform:scale(.5) translatez(0px);
     transition:transform .8s, opacity .8s;}
 .q_01{
-    top: 18vh;
+    width: 56vw;
+    height: 25vh;
+    top: 14vh;
     left: -1vw;
     border-radius: 100% 0 0 0;}
 .q_02{
-    top: 18vh;
+    width: 56vw;
+    height: 25vh;
+    top: 14vh;
     left: 47vw;
     border-radius: 0 100% 0 0;}
 .q_03{
-    top: 39vh;
+    width: 56vw;
+    height: 25vh;
+    top: 35vh;
     left: 47vw;
     border-radius: 0 0 100% 0;}
 .q_04{
-    top: 39vh;
+    width: 56vw;
+    height: 25vh;
+    top: 35vh;
     left: -1vw;
     border-radius: 0 0 0 100%;}
 .q_05{
     width: 58vw;
     height: 26vh;
-    left: 21vw;
-    top: 28vh;
+    top: 24vh;
     border-radius: 100%;
     background-image: url(../img/mylogo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 0 0 0 3vw #ffffff;}
+    box-shadow: 0 0 0 3vw #ffffff;
+    opacity: 0;}
 
     .m_01{
         left:11vmin ;
@@ -127,16 +138,20 @@ main{
             border-radius: 100%;
             transform-origin: 225% 85%;
             transition:transform .4s .5s;}
-    .wrap_quadrant_info{
-        width:80vmin;
-        height: 20vmin;
-        margin:5vmin auto;
-        border-radius:1vmin;
+    .q_info{
+        /* position: relative; */
+        width: 100vw;
+        height: 30vh;
+        top: 55vh;
+        margin: 5vw;
+        border-radius: 5%;
         background:#585247;
-        opacity:0;}
-    footer{
-        height:10vh;
-        background-color: #5f5e5e;}
+        opacity:0;
+        /* opacity:1; */
+}
+footer{
+    height:15vh;
+    background-color: #5f5e5e;}
 
 /*Display and apply transform to .wrap_quadrant after hover on wrap_nav_sim*/
 .nav_bar_sim:hover ~.quadrant{
@@ -148,7 +163,56 @@ main{
     color: #ffffff;}
 
 
-
-
+/* MEDIA QUERIES */
+/* Based on Chrome DevTools Breakpoints */
+/* Mobile-M */
+@media (min-width: 374px) {
+    .nav_bar_sim {
+        height: 26vh;}
+}
+/* Mobile-L */
+@media (min-width: 424px) {
+    .nav_bar_sim {
+        height: 30vh;}
+}
+/* Tablet */
+@media (min-width: 767px) {
+    .wrap_header h1 {
+        font-size: 15vw;
+    }
+    .wrap_header h6 {
+        font-size: 5vw;
+    }
+    .nav_bar_sim {
+            top: 10vh;
+            width: 35vw;
+            height: 37vh;}
+    }
+/* Laptop */
+@media (min-width: 1023px) {
+    .wrap_header h1 {
+        font-size: 11vw;
+    }
+    .wrap_header h6 {
+        font-size: 4vw;
+    }
+    .nav_bar_sim {
+        top: 6vh;
+        width: 25vw;
+        height: 35vh;}
+    }
+/* Laptop-L */
+@media (min-width: 1440px) {
+    .wrap_header h1 {
+        font-size: 7vw;
+    }
+    .wrap_header h6 {
+        font-size: 2.5vw;
+    }
+    .nav_bar_sim {
+        top: 0vh;
+        width: 18vw;
+        height: 35vh;}
+    }
 
 
