@@ -31,18 +31,24 @@ main{
     position: relative;
     top: 8vh;
     width: 50vw;
-    height: 22vh;
+    height:auto;
     border-radius:100%;
     background-image: url(../img/nav_bar_sim.png);
     background-size: cover;
     background-repeat: no-repeat;}
+.central_logo{
+    width: 58vw;
+    height:auto;
+    top: 24vh;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 3vw #ffffff;}
 .quadrant{
+    opacity:0; /*Hidden until hover on .nav_bar_sim*/
     position:absolute;
-    /* width: 56vw; */
-    /* height: 25vh; */
     overflow:hidden;
     background: #afaaaa;
-    opacity:0; /*Hidden until hover on wrap_nav_sim*/
     transform:scale(.5) translatez(0px);
     transition:transform .8s, opacity .8s;}
 .q_01{
@@ -69,16 +75,7 @@ main{
     top: 35vh;
     left: -1vw;
     border-radius: 0 0 0 100%;}
-.q_05{
-    width: 58vw;
-    height: 26vh;
-    top: 24vh;
-    border-radius: 100%;
-    background-image: url(../img/mylogo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0 0 0 3vw #ffffff;
-    opacity: 0;}
+
 
     .m_01{
         left:11vmin ;
@@ -165,15 +162,16 @@ footer{
 
 /* MEDIA QUERIES */
 /* Based on Chrome DevTools Breakpoints */
+
 /* Mobile-M */
 @media (min-width: 374px) {
-    .nav_bar_sim {
-        height: 26vh;}
+    /* .nav_bar_sim {
+        height: 26vh;} */
 }
 /* Mobile-L */
 @media (min-width: 424px) {
-    .nav_bar_sim {
-        height: 30vh;}
+    /* .nav_bar_sim {
+        height: 30vh;} */
 }
 /* Tablet */
 @media (min-width: 767px) {
@@ -183,10 +181,10 @@ footer{
     .wrap_header h6 {
         font-size: 5vw;
     }
-    .nav_bar_sim {
+    /* .nav_bar_sim {
             top: 10vh;
             width: 35vw;
-            height: 37vh;}
+            height: 37vh;} */
     }
 /* Laptop */
 @media (min-width: 1023px) {
@@ -196,10 +194,10 @@ footer{
     .wrap_header h6 {
         font-size: 4vw;
     }
-    .nav_bar_sim {
+    /* .nav_bar_sim {
         top: 6vh;
         width: 25vw;
-        height: 35vh;}
+        height: 35vh;} */
     }
 /* Laptop-L */
 @media (min-width: 1440px) {
@@ -209,10 +207,10 @@ footer{
     .wrap_header h6 {
         font-size: 2.5vw;
     }
-    .nav_bar_sim {
+    /* .nav_bar_sim {
         top: 0vh;
         width: 18vw;
-        height: 35vh;}
+        height: 35vh;} */
     }
 
 
