@@ -36,21 +36,33 @@ main{
     background-image: url(../img/nav_bar_sim.png);
     background-size: cover;
     background-repeat: no-repeat;}
-.central_logo{
+.central_logo{    
     width: 58vw;
     height:auto;
     top: 24vh;
+    opacity:0; /*Hidden until hover on .nav_bar_sim*/
+    position:absolute;
+    overflow:hidden;
     border-radius: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 0 0 3vw #ffffff;}
-.quadrant{
-    opacity:0; /*Hidden until hover on .nav_bar_sim*/
+.quadrant{/*Hidden until hover on .nav_bar_sim*/
+    opacity:0;
+    display: none;
+    /* visibility: hidden; */
     position:absolute;
     overflow:hidden;
-    background: #afaaaa;
-    transform:scale(.5) translatez(0px);
+    /* background: #afaaaa; */ 
+    transform:scale(.6) translatez(0px);
     transition:transform .8s, opacity .8s;}
+.circles{
+    width: 124vw;
+    height: auto;
+    top: 5vh;
+
+
+}
 .q_01{
     width: 56vw;
     height: 25vh;
@@ -153,12 +165,15 @@ footer{
 /*Display and apply transform to .wrap_quadrant after hover on wrap_nav_sim*/
 .nav_bar_sim:hover ~.quadrant{
     transform:scale(0.8) translateZ(0px);
-    opacity:1;}
+    opacity:1;
+    display:block;
+    /* visibility: visible; */
+    z-index: 1;}
 .quadrant:hover {
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
-
+        
 
 /* MEDIA QUERIES */
 /* Based on Chrome DevTools Breakpoints */
