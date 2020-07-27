@@ -48,27 +48,41 @@ main{
     background-repeat: no-repeat;
     box-shadow: 0 0 0 3vw #ffffff;}
 .quadrant{/*Hidden until hover on .nav_bar_sim*/
-    opacity:0;
+    /* opacity:0; */
     display: none;
+    background-color: #f01919;
     /* visibility: hidden; */
     position:absolute;
     overflow:hidden;
     /* background: #afaaaa; */ 
     transform:scale(.6) translatez(0px);
     transition:transform .8s, opacity .8s;}
+
+path {
+    width: 20vw;
+    fill: black;
+    /* fill: transparent; */
+}
+    
+text {
+    font-family: 'Bangers', cursive;
+    /* font-size: 12vw; */
+    font-weight: bolder;
+    text-transform: uppercase; 
+    fill: #000000;
+}
 .circles{
     width: 124vw;
     height: auto;
     top: 5vh;
-
-
 }
 .q_01{
     width: 56vw;
     height: 25vh;
     top: 14vh;
     left: -1vw;
-    border-radius: 100% 0 0 0;}
+    border-radius: 100% 0 0 0;
+}
 .q_02{
     width: 56vw;
     height: 25vh;
