@@ -26,31 +26,36 @@
       </header>
       <main>
         <!-- Fake navigation menu -->
-        <img src="docs/img/nav_bar_sim.png" alt="nav bar menu" class="nav_bar_sim">
+        <div id="nav_wrap" onclick="onClickEvent()">
+          <img src="docs/img/nav_bar_sim.png" alt="nav bar menu" class="nav_bar_sim">
+        </div>
         <!-- Hidden quadrants only visible when hover on nav_bar_sim -->
-        
+
         <!-- Quadrants approach with SVG -->
+
         <!-- Learnings / Code implementation using links below -->
         <!-- https://css-tricks.com/snippets/svg/curved-text-along-path/ -->
         <!-- https://codepen.io/yayMark/pen/bKpRwe -->
         <!-- https://stackoverflow.com/questions/32750613/svg-draw-a-circle-with-4-sectors -->
         <!-- https://blog.minetlab.com/2011/02/23/svg-quarter-circle-pies/ -->
-
-        <!-- <div class="quadrant q_01">                 
-          <span class="m_01">portfolio</span>              
-        </div> -->
-        <svg class="quadrant q_01">
+        
+        <!-- <svg class="quadrant q_01">
           <path id ="curve" d="M0,0 L0,-200  A200,200 0 0,1  200,000  z" />
-          <!-- <path id ="curve" d="M20,0 a20,20 0 0,1 20,20" /> -->
-          <!-- <path id="curve" d="M 213.57 150.36 C 213.57 172.43 195.65 190.36 173.57 190.36 C 151.49 190.36 133.57 172.43 133.57 150.36 C 133.57 128.28 151.49 110.36 173.57 110.36 C 195.65 110.36 213.57 128.28 213.57 150.36 Z"/> -->
+          <path id ="curve" d="M20,0 a20,20 0 0,1 20,20" />
+          <path id="curve" d="M 213.57 150.36 C 213.57 172.43 195.65 190.36 173.57 190.36 C 151.49 190.36 133.57 172.43 133.57 150.36 C 133.57 128.28 151.49 110.36 173.57 110.36 C 195.65 110.36 213.57 128.28 213.57 150.36 Z"/>
           <text>
             <textPath xlink:href="#curve">
               portfolio
             </textPath>
           </text>
-        </svg>
+        </svg> -->
 
-        <!-- <div class="quadrant q_02">              
+        <button class="quadrant q_01">                 
+          <span class="m_01">portfolio</span>              
+        </button>
+
+
+        <div class="quadrant q_02">              
         <span class="m_02">projects</span>              
         </div>
         <div class="quadrant q_03">              
@@ -58,14 +63,14 @@
         </div>
         <div class="quadrant q_04">              
         <span class="m_04">about me</span>              
-        </div> -->
+        </div>
         <!-- <img src=docs/img/8_circle.png alt="Submenus" class="circles quadrant"> -->
         <!-- Central Logo  -->
         <img src="docs/img/mylogo.jpg" alt="Medomm logo" class="central_logo quadrant">
 
         <!-- Clockwise quadrants --> 
-        <!-- <div class="quadrant q_05"></div> --> 
-        <!-- <div class="quadrant q_info"></div> -->
+        <div class="quadrant q_05"></div> 
+        <div class="quadrant q_info"></div>
         <!-- <div class="wrap_circles">
           <div class="sub_quadrant sq_01">
             <span>CIRCLE 01</span>
@@ -74,6 +79,17 @@
 
       </main>
       <footer>        
-      </footer>        
+      </footer>  
+      <script>
+        // document.getElementById("nav_wrap").addEventListener("click", onClickEvent);
+        function onClickEvent(){
+        var quadrants= document.getElementsByClassName("quadrant");
+        // console.log(quadrants);
+        var i;
+        for (i = 0; i < quadrants.length; i++) {
+        quadrants[i].style.display = 'block';
+          }
+        }
+      </script>      
     </body>    
 </html>

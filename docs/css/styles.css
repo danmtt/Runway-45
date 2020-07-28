@@ -10,9 +10,14 @@ body, header, main, footer{
     flex-direction: column;}
 header{
     height: 20vh;
-    text-align: center;}
+    text-align: center;
+    overflow:hidden;
+    
+border:solid 2px #a7f106;
+}
 .wrap_header{
-    height: 70%; /* Allow 30% for more stuff*/}
+    /* height: 70%;  */
+    /* Allow 30% for more stuff*/}
 .wrap_header h1,h6{   
     margin: 0;
     padding: 0;
@@ -26,21 +31,32 @@ header{
     background:#ffffff;}
 main{
     height:75vh;
-    align-items: center;}
-.nav_bar_sim{
-    position: relative;
-    top: 8vh;
+    align-items: center;
+    margin-top:5vh;
+
+border:solid 2px #f01919;
+}
+#nav_wrap{
+    position: absolute;
+    top: 25vh;
     width: 50vw;
     height:auto;
     border-radius:100%;
-    background-image: url(../img/nav_bar_sim.png);
+}
+.nav_bar_sim{
+    /* position: absolute; */
+    /* top: 20vh; */
+    width: 100%;
+    height:auto;
+    /* border-radius:100%; */
+    background-image: url("../img/nav_bar_sim.png");
     background-size: cover;
     background-repeat: no-repeat;}
 .central_logo{    
     width: 58vw;
     height:auto;
     top: 24vh;
-    opacity:0; /*Hidden until hover on .nav_bar_sim*/
+    opacity:1; /*Hidden until hover on .nav_bar_sim*/
     position:absolute;
     overflow:hidden;
     border-radius: 100%;
@@ -177,12 +193,15 @@ footer{
     background-color: #5f5e5e;}
 
 /*Display and apply transform to .wrap_quadrant after hover on wrap_nav_sim*/
-.nav_bar_sim:hover ~.quadrant{
+.nav_wrap:hover ~.quadrant
+/* .nav_bar_sim:hover ~.quadrant */
+{
     transform:scale(0.8) translateZ(0px);
     opacity:1;
     display:block;
     /* visibility: visible; */
-    z-index: 1;}
+    /* z-index: 1; */
+}
 .quadrant:hover {
     cursor: pointer;
     background-color: #0d0d0e;
@@ -204,6 +223,9 @@ footer{
 }
 /* Tablet */
 @media (min-width: 767px) {
+    .main{
+        margin-top: 5vh;
+    }
     .wrap_header h1 {
         font-size: 15vw;
     }
