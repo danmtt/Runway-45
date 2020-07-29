@@ -18,6 +18,7 @@
       <link rel="stylesheet" type="text/css" href="docs/css/styles.css">
       
       <!-- JavaScript -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="docs/js/main.js"></script>
     </head>
     <body>
@@ -29,7 +30,7 @@
       </header>
       <main>
         <!-- Fake navigation menu -->
-        <div id="nav_wrap" onclick="onClickEvent()">
+        <div id="nav_wrap">
           <img src="docs/img/nav_bar_sim.png" alt="nav bar menu" class="nav_bar_sim">
         </div>
         <!-- Hidden quadrants only visible when hover on nav_bar_sim -->
@@ -53,23 +54,21 @@
           </text>
         </svg> -->
 
-        <button class="quadrant q_01">                 
+        <div class="quadrant q_01">                 
           <span class="m_01">portfolio</span>              
-        </button>
-
-
+        </div>
         <div class="quadrant q_02">              
-        <span class="m_02">projects</span>              
+          <span class="m_02">projects</span>              
         </div>
         <div class="quadrant q_03">              
-        <span class="m_03">downloads</span>              
+          <span class="m_03">downloads</span>              
         </div>
         <div class="quadrant q_04">              
-        <span class="m_04">about me</span>              
+          <span class="m_04">about me</span>              
         </div>
         <!-- <img src=docs/img/8_circle.png alt="Submenus" class="circles quadrant"> -->
         <!-- Central Logo  -->
-        <img src="docs/img/mylogo.jpg" alt="Medomm logo" class="central_logo quadrant">
+        <img id="central_logo" src="docs/img/mylogo.jpg" alt="Medomm logo" class="quadrant central_logo" >
 
         <!-- Clockwise quadrants --> 
         <div class="quadrant q_05"></div> 
