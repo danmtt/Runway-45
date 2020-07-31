@@ -11,50 +11,36 @@ body, header, main, footer{
 header{
     height: 20vh;
     text-align: center;
-    overflow:hidden;    
-/* border:solid 2px #a7f106; */
-}
+    overflow:hidden;}
 .wrap_header h1,h6{   
     margin: 0;
     padding: 0;
     font-family: 'Bangers', cursive;}
 .wrap_header h1{
-    font-size: 25vw;
+    font-size: 22vw;
     background-color: #585247;
     text-shadow: -.5vmin .5vmin #ffffff;}
 .wrap_header h6{
-    font-size: 8vw;
+    font-size: 6vw;
     background:#ffffff;}
 main{
     height:75vh;
     align-items: center;
-    margin-top:5vh;
-/* border:solid 2px #f01919; */
-}
-#nav_wrap{
-    position: absolute;
+    margin-top:5vh;}
+#nav_wrap, #central_logo{
+    position:absolute; 
     top: 25vh;
     width: 50vw;
-    height:auto;
-    border-radius:100%;}
+    height:auto;}
 .nav_bar_sim{
-    width: 100%;
-    height:auto;
-    background-image: url("../img/nav_bar_sim.png");
-    background-size: cover;
-    background-repeat: no-repeat;}
-.central_logo{ 
+    width: 100%;}
+#central_logo{ 
     display: none;
-    position:absolute;   
-    width: 50vw;
     height: auto;
-    top: 25vh;
     border-radius: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
     box-shadow: 0 0 0 4vw #ffffff;}
 .quadrant{
-    /* display: none; */
+    display: none;
     position:absolute;
     text-align: center;
     overflow:hidden;
@@ -62,67 +48,41 @@ main{
     height: 15vh;
     border-radius: 10% 10% 0 0;
     transform: scale(0.6);}
-.quadrant span{
+.quadrant_text{
     overflow:hidden;
-    /* background-color: #f01919; */
     font-family: 'Bangers', cursive;
     font-size: 10vw;
     font-weight: bolder;
-    text-transform: uppercase;}        
+    text-transform: uppercase;}
+#q01, #q02{top: 21.5vh;}
+#q03, #q04{top: 35vh;}              
 #q01{
-    top: 22.5vh;
     left: 10vw;
     transform: rotate(-45deg);}
 #q02{
-    top: 22vh;
     left: 39vw;
     transform: rotate(45deg);}
 #q03{
-    top: 35vh;
     left: 39vw;
     transform: rotate(135deg);}
 #q04{
-    top: 35vh;
     left: 10vw;
-    transform: rotate(225deg);
-}
-#sp01{
-    /* left:11vmin ;
-    top:12vmin;    
-    opacity: 1; 
-    transform-origin: 10% 10%;
-    transition: transform 5s, opacity 5s; */
-}
-#sp02{
-/* left:-3vw;
-top:13vh;
-opacity: 1; 
-transform-origin: 10% 10%;
-transition: transform 5s, opacity 5s; */
-}
-#sp03{
-    /* left:12vmin ;
-    top:14vmin; */
-}
-#sp04{
-    /* left:-5vmin;
-    top:12vmin; */
-    /* transform: scaleX(-1); */
-}
+    transform: rotate(225deg);}
+/* #sp01, #sp02, #sp03, #sp04 */
+/* No CSS properties needed / Only defined for JS purposes */
 #qinfo{
+    display:none;
     position: relative;
-    width: 80vw;
-    height: 30vh;
     top: 33vh;
     margin: 2vw;
+    width: 80vw;
+    height: 30vh;
     border-radius: 5vw;
-    background:#585247;
-    display:none;}
+    background:#585247;}
 .quadrant:hover {
     cursor: pointer;
     background-color: #0d0d0e;
-    color: #ffffff;
-}
+    color: #ffffff;}
 footer{
     height:15vh;
     background-color: #5f5e5e;}        
@@ -131,12 +91,37 @@ footer{
 /* Based on Chrome DevTools Breakpoints */
 
 /* Mobile-M */
-@media (min-width: 374px) {
-
+@media (min-width: 360px) {
+    #nav_wrap, #central_logo{
+        top: 30vh;
+        width: 45vw;}
+    #q01, #q02{top: 26.5vh;}            
+    #q03, #q04{top: 42.5vh;}        
+    #qinfo{
+        top: 41vh;
+        margin: 1vw;
+        width: 80vw;
+        height: 22vh;
+        border-radius: 3vw;}
 }
 /* Mobile-L */
 @media (min-width: 424px) {
-
+    #nav_wrap, #central_logo{
+        top: 30vh;
+        width: 40vw;}
+    .quadrant {width: 47vw;}
+    #q01, #q02{top: 26.5vh;}            
+    #q01{left: 10vw;} 
+    #q02{left: 39vw;}
+    #q03, #q04{top: 42.5vh;}        
+    #q03{left: 39vw;}
+    #q04{left: 10vw;}
+    #qinfo{
+        top: 41vh;
+        margin: 1vw;
+        width: 80vw;
+        height: 22vh;
+        border-radius: 3vw;}
 }
 /* Tablet */
 @media (min-width: 767px) {
