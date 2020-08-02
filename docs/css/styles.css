@@ -46,7 +46,7 @@ main{
     overflow:hidden;
     width: 50vw;
     height: 15vh;
-    border-radius: 10% 10% 0 0;
+    border-radius: 10% 10% 10% 10% ;
     transform: scale(0.6);}
 .quadrant_text{
     overflow:hidden;
@@ -64,12 +64,20 @@ main{
     transform: rotate(45deg);}
 #q03{
     left: 39vw;
+    /*transform: rotate(-45deg);*/
     transform: rotate(135deg);}
 #q04{
     left: 10vw;
+    /*transform: rotate(45deg);*/
     transform: rotate(225deg);}
 /* #sp01, #sp02, #sp03, #sp04 */
 /* No CSS properties needed / Only defined for JS purposes */
+#sp03, #sp04{
+ /* position: relative;*/
+  /*vertical-align: bottom;*/
+}
+
+
 #qinfo{
     display:none;
     position: relative;
