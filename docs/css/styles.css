@@ -42,8 +42,7 @@ main{
 .quadrant{
     display: none;
     position:absolute;
-    /* align-items: center; */
-    justify-content: center;
+    text-align: center;
     overflow:hidden;
     width: 50vw;
     height: 15vh;
