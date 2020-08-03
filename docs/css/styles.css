@@ -57,25 +57,30 @@ main{
     text-transform: uppercase;}
 /* Quadrants positioning and rotations */
 #q01, #q02{top: 21.5vh;}
-#q03, #q04{top: 35vh;}
+#q03, #q04{
+  display:flex;
+  top: 38vh;
+  align-items:flex-end;
+}
 #q01, #q04{left: 10vw;}
 #q02, #q03{left: 39vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 /* Bottom quadrants: Align and center span text to the bottom of the div */
 #sp03, #sp04{
-    position: absolute;
-    bottom: 0;}
+    /*position: absolute;
+    bottom: 0;*/
+}
 span a{
     color: inherit;
     text-decoration: none;}
 #qinfo{
     display:none;
     position: relative;
-    top: 33vh;
+    top: 36vh;
     margin: 2vw;
     width: 80vw;
-    height: 30vh;
+    height: 25vh;
     border-radius: 5vw;
     background:#585247;}
 .quadrant:hover {
