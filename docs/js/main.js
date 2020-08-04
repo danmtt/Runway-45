@@ -40,6 +40,10 @@ $(document).ready(
     $("#q02").fadeOut(650);
     $("#q03").fadeOut(650);
     $("#q04").fadeOut(650);
+    var q01 = document.getElementById("sp01").innerHTML;
+   console.log(q01);
+   document.getElementById("#")
+    $("#qinfoheader").data("value", q01);
     $("#qinfo").fadeIn(650);
   });
   $("#q02").click(function(){
