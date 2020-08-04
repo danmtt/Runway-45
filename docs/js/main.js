@@ -9,15 +9,18 @@ $(document).ready(
     $("#q01").fadeIn(1650);    
     $("#q02").fadeIn(450);    
     $("#q03").fadeIn(850);
-    $("#q04").fadeIn(1250);    
+    // Flex display call out to move its intrenal elements span texts, to the bottom
+    $('#q03').css('display', 'flex');
+    $("#q04").fadeIn(1250);
+    // Flex display call out to move its intrenal elements span texts, to the bottom
+    $("#q04").css('display', 'flex');
     $("#sp01").fadeIn(1650);
     $("#sp02").fadeIn(450);
     $("#sp03").fadeIn(850);
     $("#sp04").fadeIn(1250);
     $("#central_logo").fadeIn(550);
   });
-  // fadeOut quadrants when clicking on central logo
-  // Also hiding quadrant text, quadrant info and this (central logo)
+  // fadeOut quadrants when clicking on central logo. Also hiding quadrant text, quadrant info and this (central logo)
   $("#central_logo").click(function(){
     $("#q01").fadeOut(450);
     $("#q02").fadeOut(1050);

@@ -58,9 +58,8 @@ main{
 /* Quadrants positioning and rotations */
 #q01, #q02{top: 21.5vh;}
 #q03, #q04{
-  display:flex;
   top: 38vh;
-  align-items:flex-end;
+  align-items:flex-end;/* Only applied when Flex is called via jQuery. This moves internal elements, span texts, to the bottom of this element.*/
 }
 #q01, #q04{left: 10vw;}
 #q02, #q03{left: 39vw;}
