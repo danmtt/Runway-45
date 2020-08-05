@@ -83,17 +83,21 @@ span a{
     width: 80vw;
     height: 25vh;
     border-radius: 5vw;
-    background:#585247;}
-#qinfoheader{
+    border: solid 1vw #000000;
+    background:#ffffff;}
+#qinfoheader, #qinfofooter, #qinfotext{
     margin: 0;
-    padding: 0;
-    font-family: 'Bangers', cursive;
-    text-align: center;
-}
+    padding: 0;}
+#qinfoheader, #qinfofooter{
+  height: 25vh;
+  text-align: center;}
 #qinfotext{
-    overflow: hidden;
+    height: 75vh;
+    overflow: hidden;}
+#qinfofooter a{
+    color: red;
+    text-decoration: none;
 }
-
 
 footer{
     height:15vh;
