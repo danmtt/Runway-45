@@ -28,27 +28,31 @@ $(document).ready(
     $("#sp03").fadeOut(850);
     $("#sp04").fadeOut(650);
     $("#central_logo").fadeOut(1250);
-    $("#qinfo").fadeOut(1250);
+   // $("#qinfo").fadeOut(1250);
   };
+  function quadrantInfoFadeIn(){
+    $("#qinfo").fadeIn(650);
+    // Flex call out to organize quadrant info box when displayed
+    $("#qinfo").css("display", "flex");
+  };
+  
+  
   // jQuery targetting fake nav menu on click event.   
   $("#nav_wrap").click(function(){
     quadrantsFadeIn();
+    $("#qinfo").fadeOut(1250);
   });
   // jQuery targetting central logo on click event.
   $("#central_logo").click(function(){
     quadrantsFadeOut();
+    $("#qinfo").fadeOut(1250);
   });
   // jQuery functions (4) on click events targetting individual elements one at a time:
   // call out to fadeOut unnecesary elements not clicked 
   // + call out to fadeIn #qinfo(quadrants info box) with header optimization. 
   $("#q01").click(function(){
     quadrantsFadeOut();
-    // $("#q02").fadeOut(650);
-    // $("#q03").fadeOut(650);
-    // $("#q04").fadeOut(650);    
-    $("#qinfo").fadeIn(650);
-    // Flex call out to organize quadrant info box when displayed
-    $("#qinfo").css("display", "flex");
+    quadrantInfoFadeIn();
     document.getElementById("qinfofooter").innerHTML ="";
     var q01 = document.getElementById("sp01").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q01;
@@ -59,12 +63,7 @@ $(document).ready(
   });
   $("#q02").click(function(){
     quadrantsFadeOut();
-    // $("#q01").fadeOut(650);
-    // $("#q03").fadeOut(650);
-    // $("#q04").fadeOut(650);
-    $("#qinfo").fadeIn(650);
-    // Flex call out to organize quadrant info box when displayed
-    $("#qinfo").css("display", "flex");
+    quadrantInfoFadeIn();
     document.getElementById("qinfofooter").innerHTML = "";
     var q02 = document.getElementById("sp02").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q02;
@@ -75,12 +74,7 @@ $(document).ready(
   });
   $("#q03").click(function(){
     quadrantsFadeOut();
-    // $("#q01").fadeOut(650);
-    // $("#q02").fadeOut(650);
-    // $("#q04").fadeOut(650);
-    $("#qinfo").fadeIn(650);
-    // Flex call out to organize quadrant info box when displayed
-    $("#qinfo").css("display", "flex");
+    quadrantInfoFadeIn();
     document.getElementById("qinfofooter").innerHTML = "";
     var q03 = document.getElementById("sp03").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q03;
@@ -91,12 +85,7 @@ $(document).ready(
   });
   $("#q04").click(function(){
     quadrantsFadeOut();
-    // $("#q01").fadeOut(650);
-    // $("#q02").fadeOut(650);
-    // $("#q03").fadeOut(650);
-    $("#qinfo").fadeIn(650);
-    // Flex call out to organize quadrant info box when displayed
-    $("#qinfo").css("display", "flex");
+    quadrantInfoFadeIn();
     document.getElementById("qinfofooter").innerHTML = "";
     var q04 = document.getElementById("sp04").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q04;

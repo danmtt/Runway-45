@@ -54,24 +54,25 @@ main{
     background-color: #0d0d0e;
     color: #ffffff;}
 .quadrant_text{
-overflow:hidden;
-width:100%;
-font-family: 'Bangers', cursive;
-font-size: 10vw;
-font-weight: bolder;
-text-transform: uppercase;}
+    overflow:hidden;
+    width:100%;
+    font-family: 'Bangers', cursive;
+    font-size: 10vw;
+    font-weight: bolder;
+    text-transform: uppercase;}
 /* Quadrants specific properties: position and rotations */
 #q01, #q02{top: 21.5vh;}
 #q03, #q04{
-  top: 38vh;
-  align-items:flex-end;/* Only applied when Flex is called via jQuery. This moves internal elements, span texts, to the bottom of this element.*/}
+    top: 38vh;
+    align-items:flex-end;}
+    /* Only applied when Flex is called via jQuery. This moves internal elements, span texts, to the bottom of this element.*/
 #q01, #q04{left: 10vw;}
 #q02, #q03{left: 39vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 span a{
     color: inherit;
-    text-decoration: none;}
+    text-decoration: none;} 
 #qinfo{
     display:none;
     position: relative;
