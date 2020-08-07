@@ -53,46 +53,46 @@ $(document).ready(
   $("#q01").click(function(){
     quadrantsFadeOut();
     quadrantInfoFadeIn();
-    document.getElementById("qinfofooter").innerHTML ="";
+    document.getElementById("qinfolink").innerHTML ="";
     var q01 = document.getElementById("sp01").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q01;
     var q01_link = document.createElement("a");
     q01_link.href = "";
     q01_link.innerText = "Go to " + q01;
-    document.getElementById("qinfofooter").appendChild(q01_link);
+    document.getElementById("qinfolink").appendChild(q01_link);
   });
   $("#q02").click(function(){
     quadrantsFadeOut();
     quadrantInfoFadeIn();
-    document.getElementById("qinfofooter").innerHTML = "";
+    document.getElementById("qinfolink").innerHTML = "";
     var q02 = document.getElementById("sp02").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q02;
     var q02_link = document.createElement("a");
     q02_link.href = "";
     q02_link.innerText = "Go to " + q02;
-    document.getElementById("qinfofooter").appendChild(q02_link);
+    document.getElementById("qinfolink").appendChild(q02_link);
   });
   $("#q03").click(function(){
     quadrantsFadeOut();
     quadrantInfoFadeIn();
-    document.getElementById("qinfofooter").innerHTML = "";
+    document.getElementById("qinfolink").innerHTML = "";
     var q03 = document.getElementById("sp03").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q03;
     var q03_link = document.createElement("a");
     q03_link.href = "";
     q03_link.innerText = "Go to " + q03;
-    document.getElementById("qinfofooter").appendChild(q03_link);
+    document.getElementById("qinfolink").appendChild(q03_link);
   });
   $("#q04").click(function(){
     quadrantsFadeOut();
     quadrantInfoFadeIn();
-    document.getElementById("qinfofooter").innerHTML = "";
+    document.getElementById("qinfolink").innerHTML = "";
     var q04 = document.getElementById("sp04").innerHTML;
     document.getElementById("qinfoheader").innerHTML = q04;
     var q04_link = document.createElement("a");
     q04_link.href = "";
     q04_link.innerText = "Go to " + q04;
-    document.getElementById("qinfofooter").appendChild(q04_link);
+    document.getElementById("qinfolink").appendChild(q04_link);
   });
 
 });

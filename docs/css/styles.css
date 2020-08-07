@@ -89,17 +89,30 @@ span a{
 #qinfoheader, #qinfofooter, #qinfotext{
     margin: 0;
     padding: 0;}
-#qinfoheader, #qinfofooter{
-  height: 25vh;
+#qinfoheader{
+  height: 15vh;
   text-align: center;}
 #qinfotext{
-    height: 75vh;
+    height: 70vh;
     overflow: hidden;}
-#qinfofooter a{
+#qinfofooter{
+  height: 15vh; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#qinfolink a{
    font-size:8vw;
-  /*padding:0 0 5vh 0;*/
+  padding:0 0 5vh 0;
     color: red;
     text-decoration: none;
+}
+#qinfofooter button {
+  height: 5vh;
+  font-size: 8vw;
+  padding: 0 0 5vh 0;
+  color: red;
+  text-decoration: none;
 }
 
 footer{
