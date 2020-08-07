@@ -55,7 +55,7 @@ $(document).ready(
     quadrantInfoFadeIn();
     document.getElementById("qinfolink").innerHTML ="";
     var q01 = document.getElementById("sp01").innerHTML;
-    document.getElementById("qinfoheader").innerHTML = q01;
+    document.getElementById("qinfotitle").innerHTML = q01;
     var q01_link = document.createElement("a");
     q01_link.href = "";
     q01_link.innerText = "Go to " + q01;
@@ -66,7 +66,7 @@ $(document).ready(
     quadrantInfoFadeIn();
     document.getElementById("qinfolink").innerHTML = "";
     var q02 = document.getElementById("sp02").innerHTML;
-    document.getElementById("qinfoheader").innerHTML = q02;
+    document.getElementById("qinfotitle").innerHTML = q02;
     var q02_link = document.createElement("a");
     q02_link.href = "";
     q02_link.innerText = "Go to " + q02;
@@ -77,7 +77,7 @@ $(document).ready(
     quadrantInfoFadeIn();
     document.getElementById("qinfolink").innerHTML = "";
     var q03 = document.getElementById("sp03").innerHTML;
-    document.getElementById("qinfoheader").innerHTML = q03;
+    document.getElementById("qinfotitle").innerHTML = q03;
     var q03_link = document.createElement("a");
     q03_link.href = "";
     q03_link.innerText = "Go to " + q03;
@@ -88,7 +88,7 @@ $(document).ready(
     quadrantInfoFadeIn();
     document.getElementById("qinfolink").innerHTML = "";
     var q04 = document.getElementById("sp04").innerHTML;
-    document.getElementById("qinfoheader").innerHTML = q04;
+    document.getElementById("qinfotitle").innerHTML = q04;
     var q04_link = document.createElement("a");
     q04_link.href = "";
     q04_link.innerText = "Go to " + q04;
