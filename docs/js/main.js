@@ -4,6 +4,7 @@ $(document).ready(
   // Var definitions
   // -------------------------------------  
   var element_clicked;
+  var central_logo;
 
   // Functions
   // -------------------------------------  
@@ -46,6 +47,18 @@ $(document).ready(
     document.getElementById("qinfo_title").innerHTML = quadrant_name;
     document.getElementById("qinfo_link").innerHTML = quadrant_name;
   };
+function displayCentralLogo(){    
+  // var quadrant_name = document.getElementById(element_clicked).innerHTML;
+  if (element_clicked = "q01")
+    {document.getElementById("central_logo").src = "../img/portfolio.png";}
+    else if (element_clicked = "q02")
+    {document.getElementById("central_logo").src = "../img/projects.png";}
+      else if (element_clicked = "q03")
+      {document.getElementById("central_logo").src = "../img/gitHub.png";}
+        else if (element_clicked = "q04")
+        {document.getElementById("central_logo").src = "../img/aboutme";}
+};
+
 
   // jQuery on click events
   // -------------------------------------  
@@ -65,24 +78,28 @@ $(document).ready(
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
+    displayCentralLogo()
   });
   $("#q02").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
+    displayCentralLogo()
   });
   $("#q03").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
+    displayCentralLogo()
   });
   $("#q04").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
+    displayCentralLogo()
   });
   // jQuery targetting quadrant info elements on click events
   $("#qinfo_home").click(function(){
