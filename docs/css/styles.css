@@ -61,10 +61,10 @@ main{
     font-size: 10vw;}
 /* Quadrants specific properties: position and rotations */
 #q01, #q02{top: 21.5vh;}
-#q03, #q04{
-    top: 38vh;
+#q03, #q04{    top: 38vh;
+    /* Only applied when Flex is called via jQuery. 
+    This moves internal elements, span texts, to the bottom of this element.*/
     align-items:flex-end;}
-    /* Only applied when Flex is called via jQuery. This moves internal elements, span texts, to the bottom of this element.*/
 #q01, #q04{left: 10vw;}
 #q02, #q03{left: 39vw;}
 #q01, #q03{transform: rotate(-45deg);}
@@ -121,15 +121,7 @@ span a{
     border: solid 2px #000000;
     border-radius: 10%;}
 #qinfo_link span{
-    font-size:3vh;
-}
-/* #qinfo_link{
-    color: #000000;
-    text-decoration: none;} */
-/* #qinfo_home{
-  width: 50%;
-    font-size: 3vh;
-    }  */
+    font-size:3vh;}
 #qinfo_link:hover, #qinfo_home:hover{
     cursor: pointer;
     background-color: #0d0d0e;
