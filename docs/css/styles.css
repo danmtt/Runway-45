@@ -117,12 +117,12 @@ span a{
     width: 50%;
     font-size:3vh;}
 #qinfo_link a{
-    color: #00000;
+    color: #000000;
     text-decoration: none;}
 #qinfo_home{
   width: 50%;
     font-size: 3vh;
-    color:#00000;}
+    color:#000000;}
 #qinfo_link:hover, #qinfo_home:hover{
     cursor: pointer;
     background-color: #0d0d0e;
