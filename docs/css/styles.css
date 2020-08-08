@@ -113,16 +113,23 @@ span a{
 #qinfo_brief{
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;}
-#qinfo_link{
-    width: 50%;
-    font-size:3vh;}
-#qinfo_link a{
+#qinfo_link, #qinfo_home {
+    width: 35%;
+    font-size:3vh;
+    color:#000000;
+    background-color: #3f3e3e00;
+    border: solid 2px #000000;
+    border-radius: 10%;}
+#qinfo_link span{
+    font-size:3vh;
+}
+/* #qinfo_link{
     color: #000000;
-    text-decoration: none;}
-#qinfo_home{
+    text-decoration: none;} */
+/* #qinfo_home{
   width: 50%;
     font-size: 3vh;
-    color:#000000;}
+    }  */
 #qinfo_link:hover, #qinfo_home:hover{
     cursor: pointer;
     background-color: #0d0d0e;
