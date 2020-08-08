@@ -58,7 +58,7 @@ $(document).ready(
     document.getElementById("qinfo_link").innerHTML ="";
     var q01_link = document.createElement("a");
     q01_link.href = "";
-    q01_link.innerText = "Go to " + q01;
+    q01_link.innerText = q01;
     document.getElementById("qinfo_link").appendChild(q01_link);
   });
   $("#q02").click(function(){
@@ -69,7 +69,7 @@ $(document).ready(
     document.getElementById("qinfo_link").innerHTML ="";
     var q02_link = document.createElement("a");
     q02_link.href = "";
-    q02_link.innerText = "Go to " + q02;
+    q02_link.innerText = q02;
     document.getElementById("qinfo_link").appendChild(q02_link);
   });
   $("#q03").click(function(){
@@ -80,7 +80,7 @@ $(document).ready(
     document.getElementById("qinfo_link").innerHTML ="";
     var q03_link = document.createElement("a");
     q03_link.href = "";
-    q03_link.innerText = "Go to " + q03;
+    q03_link.innerText = q03;
     document.getElementById("qinfo_link").appendChild(q03_link);
   });
   $("#q04").click(function(){
@@ -91,7 +91,7 @@ $(document).ready(
     document.getElementById("qinfo_link").innerHTML ="";
     var q04_link = document.createElement("a");
     q04_link.href = "";
-    q04_link.innerText = "Go to " + q04;
+    q04_link.innerText = q04;
     document.getElementById("qinfo_link").appendChild(q04_link);
   });
 
