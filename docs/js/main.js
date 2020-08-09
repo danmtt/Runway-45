@@ -50,19 +50,19 @@ $(document).ready(
   function displayCentralLogo(){    
     switch(element_clicked) {
       case "q01":
-        $("#central_logo").attr("src", "docs/img/portfolio.png");
+        $("#central_logo").attr("src", "docs/img/portfolio.jpg");
         $("#central_logo").attr("alt", "My portfolio");
         break;
       case "q02":
-        $("#central_logo").attr("src", "docs/img/projects.png");
+        $("#central_logo").attr("src", "docs/img/projects.jpg");
         $("#central_logo").attr("alt", "My projects");
         break;
       case "q03":
-        $("#central_logo").attr("src", "docs/img/gitHub.png");
+        $("#central_logo").attr("src", "docs/img/gitHub.jpg");
         $("#central_logo").attr("alt", "My gitHub");
         break;
       case "q04":
-        $("#central_logo").attr("src", "docs/img/aboutme.png");
+        $("#central_logo").attr("src", "docs/img/aboutme.jpg");
         $("#central_logo").attr("alt", "About me");
         break;
       default:
