@@ -4,7 +4,6 @@ $(document).ready(
   // Var definitions
   // -------------------------------------  
   var element_clicked;
-  var central_logo;
 
   // Functions
   // -------------------------------------  
@@ -47,24 +46,38 @@ $(document).ready(
     document.getElementById("qinfo_title").innerHTML = quadrant_name;
     document.getElementById("qinfo_link").innerHTML = quadrant_name;
   };
-function displayCentralLogo(){    
-  // var quadrant_name = document.getElementById(element_clicked).innerHTML;
-  if (element_clicked = "q01")
-    {document.getElementById("central_logo").src = "../img/portfolio.png";}
-    else if (element_clicked = "q02")
-    {document.getElementById("central_logo").src = "../img/projects.png";}
-      else if (element_clicked = "q03")
-      {document.getElementById("central_logo").src = "../img/gitHub.png";}
-        else if (element_clicked = "q04")
-        {document.getElementById("central_logo").src = "../img/aboutme";}
+  // Function to display a different image as the central logo attending to the quadrant element clicked.
+  function displayCentralLogo(){    
+    switch(element_clicked) {
+      case "q01":
+        $("#central_logo").attr("src", "docs/img/portfolio.png");
+        $("#central_logo").attr("alt", "My portfolio");
+        break;
+      case "q02":
+        $("#central_logo").attr("src", "docs/img/projects.png");
+        $("#central_logo").attr("alt", "My projects");
+        break;
+      case "q03":
+        $("#central_logo").attr("src", "docs/img/gitHub.png");
+        $("#central_logo").attr("alt", "My gitHub");
+        break;
+      case "q04":
+        $("#central_logo").attr("src", "docs/img/aboutme.png");
+        $("#central_logo").attr("alt", "About me");
+        break;
+      default:
+        $("#central_logo").attr("src", "docs/img/mylogo.jpg");
+        $("#central_logo").attr("alt", "Meddom logo");
+    }
 };
-
 
   // jQuery on click events
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
   $("#nav_wrap").click(function(){
+    element_clicked = $(this).attr("id");
     quadrantsFadeIn();
+    displayCentralLogo();
   });
   // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
   $("#central_logo").click(function(){
@@ -78,28 +91,28 @@ function displayCentralLogo(){
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo()
+    displayCentralLogo();
   });
   $("#q02").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo()
+    displayCentralLogo();
   });
   $("#q03").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo()
+    displayCentralLogo();
   });
   $("#q04").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo()
+    displayCentralLogo();
   });
   // jQuery targetting quadrant info elements on click events
   $("#qinfo_home").click(function(){
