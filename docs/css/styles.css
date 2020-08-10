@@ -60,13 +60,15 @@ main{
     font-weight: bolder;
     font-size: 10vw;}
 /* Quadrants specific properties: position and rotations */
-#q01, #q02{top: 21.5vh;}
-#q03, #q04{    top: 38vh;
+#q01{top: 21.5vh;left: -14vw;}
+#q02{top: 21.5vh;left: 14vw;}
+#q03{top: 33vh;left: 57vw;}
+#q04{top: 55vh;left: -7vw;
     /* Only applied when Flex is called via jQuery. 
     This moves internal elements, span texts, to the bottom of this element.*/
-    align-items:flex-end;}
-#q01, #q04{left: 10vw;}
-#q02, #q03{left: 39vw;}
+    /* align-items:flex-end; */
+}
+
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 span a{
