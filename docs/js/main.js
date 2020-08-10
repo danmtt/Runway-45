@@ -4,6 +4,7 @@ $(document).ready(
   // Var definitions
   // -------------------------------------  
   var element_id;
+  var qinfo_link_text;
 
   // Functions
   // -------------------------------------  
@@ -42,9 +43,15 @@ $(document).ready(
   };
   // Function to identify element from quadrant and export to quadrant info box elements.
   function exportQuadrantElement(){    
-    var quadrant_name = document.getElementById(element_id).innerHTML;
-    document.getElementById("qinfo_title").innerHTML = quadrant_name;
-    document.getElementById("qinfo_link").innerHTML = quadrant_name;
+    var quadrant_text = document.getElementById(element_id).innerHTML;
+    document.getElementById("qinfo_title").innerHTML = quadrant_text;
+    document.getElementById("qinfo_link").innerHTML = quadrant_text;
+  };
+  function exportQinfoLinkText(){    
+    var qinfo_link_text = document.getElementById(element_id).innerHTML;
+    console.log(element_id);
+    console.log(qinfo_link_text);
+
   };
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){ 
@@ -74,49 +81,49 @@ $(document).ready(
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displaySubQMenus(){
-    switch(element_id) {
-      case "q01":
+    switch(qinfo_link_text) {
+      case "portfolio":
         quadrantsFadeIn;
-        document.getElementById("sp01").innerHTML = "Rockanrolla";
-        document.getElementById("sp02").innerHTML = "Retaped";
-        document.getElementById("sp03").innerHTML = "";
-        document.getElementById("sp04").innerHTML = "";   
+        document.getElementById("q01").innerHTML = "Rockanrolla";
+        document.getElementById("q02").innerHTML = "Retaped";
+        document.getElementById("q03").innerHTML = "";
+        document.getElementById("q04").innerHTML = "";   
         break;
-      case "q02":
-        document.getElementById("sp01").innerHTML = "Tourtrip";
-        document.getElementById("sp02").innerHTML = "Alphabet";
-        document.getElementById("sp03").innerHTML = "";
-        document.getElementById("sp04").innerHTML = "";   
+      case "projects":
+        document.getElementById("q01").innerHTML = "Tourtrip";
+        document.getElementById("q02").innerHTML = "Alphabet";
+        document.getElementById("q03").innerHTML = "";
+        document.getElementById("q04").innerHTML = "";   
         break;
-      case "q03":
-        document.getElementById("sp01").innerHTML = "sp01";
-        document.getElementById("sp02").innerHTML = "sp02";
-        document.getElementById("sp03").innerHTML = "sp03";
-        document.getElementById("sp04").innerHTML = "sp04";   
+      case "gitHub":
+        document.getElementById("q01").innerHTML = "sp01";
+        document.getElementById("q02").innerHTML = "sp02";
+        document.getElementById("q03").innerHTML = "sp03";
+        document.getElementById("q04").innerHTML = "sp04";   
         break;
-      case "q04":
-        document.getElementById("sp01").innerHTML = "sp01";
-        document.getElementById("sp02").innerHTML = "sp02";
-        document.getElementById("sp03").innerHTML = "sp03";
-        document.getElementById("sp04").innerHTML = "sp04";   
+      case "about me":
+        document.getElementById("q01").innerHTML = "sp01";
+        document.getElementById("q02").innerHTML = "sp02";
+        document.getElementById("q03").innerHTML = "sp03";
+        document.getElementById("q04").innerHTML = "sp04";   
         break;
       case "home":
-        document.getElementById("sp01").innerHTML = "portfolio";
-        document.getElementById("sp02").innerHTML = "projects";
-        document.getElementById("sp03").innerHTML = "github";
-        document.getElementById("sp04").innerHTML = "about me"; 
+        document.getElementById("q01").innerHTML = "portfolio";
+        document.getElementById("q02").innerHTML = "projects";
+        document.getElementById("q03").innerHTML = "github";
+        document.getElementById("q04").innerHTML = "about me"; 
         break;
       case "nav_wrap":
-        document.getElementById("sp01").innerHTML = "portfolio";
-        document.getElementById("sp02").innerHTML = "projects";
-        document.getElementById("sp03").innerHTML = "github";
-        document.getElementById("sp04").innerHTML = "about me";  
+        document.getElementById("q01").innerHTML = "portfolio";
+        document.getElementById("q02").innerHTML = "projects";
+        document.getElementById("q03").innerHTML = "github";
+        document.getElementById("q04").innerHTML = "about me";  
         break;  
       default:
-        document.getElementById("sp01").innerHTML = "portfolio";
-        document.getElementById("sp02").innerHTML = "projects";
-        document.getElementById("sp03").innerHTML = "github";
-        document.getElementById("sp04").innerHTML = "about me";   
+        document.getElementById("q01").innerHTML = "portfolio";
+        document.getElementById("q02").innerHTML = "projects";
+        document.getElementById("q03").innerHTML = "github";
+        document.getElementById("q04").innerHTML = "about me";   
     }
 };
 
@@ -181,6 +188,7 @@ $(document).ready(
     // RETHINK, PERHAPS QUADRANTS ID IS ENOUGH TO REDIRECT INITIALLY, BUT WHAT ABOUT WHEN ISIDE DIFFERENT SUBMENUS?
     quadrantsFadeIn();
     displaySubQMenus();
+    exportQinfoLinkText();
     $("#qinfo").fadeOut(1250);
   });
 
