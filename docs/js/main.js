@@ -3,7 +3,7 @@ $(document).ready(
 
   // Var definitions
   // -------------------------------------  
-  var element_clicked;
+  var element_id;
 
   // Functions
   // -------------------------------------  
@@ -42,13 +42,14 @@ $(document).ready(
   };
   // Function to identify element from quadrant and export to quadrant info box elements.
   function exportQuadrantElement(){    
-    var quadrant_name = document.getElementById(element_clicked).innerHTML;
+    var quadrant_name = document.getElementById(element_id).innerHTML;
     document.getElementById("qinfo_title").innerHTML = quadrant_name;
     document.getElementById("qinfo_link").innerHTML = quadrant_name;
   };
   // Function to display a different image as the central logo attending to the quadrant element clicked.
-  function displayCentralLogo(){    
-    switch(element_clicked) {
+  function displayCentralLogo(){ 
+    console.log(element_id);   
+    switch(element_id) {
       case "q01":
         $("#central_logo").attr("src", "docs/img/portfolio.jpg");
         $("#central_logo").attr("alt", "My portfolio");
@@ -73,27 +74,49 @@ $(document).ready(
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displaySubQMenus(){
-    var qinfo_value = document.getElementById(element_clicked).innerHTML;
-    switch(qinfo_value) {
-      case "sp01":
+    switch(element_id) {
+      case "q01":
+        quadrantsFadeIn;
         document.getElementById("sp01").innerHTML = "Rockanrolla";
-        quadrantsFadeIn();
+        document.getElementById("sp02").innerHTML = "Retaped";
+        document.getElementById("sp03").innerHTML = "";
+        document.getElementById("sp04").innerHTML = "";   
         break;
       case "q02":
-        $("#central_logo").attr("src", "docs/img/projects.jpg");
-        $("#central_logo").attr("alt", "My projects");
+        document.getElementById("sp01").innerHTML = "Tourtrip";
+        document.getElementById("sp02").innerHTML = "Alphabet";
+        document.getElementById("sp03").innerHTML = "";
+        document.getElementById("sp04").innerHTML = "";   
         break;
       case "q03":
-        $("#central_logo").attr("src", "docs/img/gitHub.jpg");
-        $("#central_logo").attr("alt", "My gitHub");
+        document.getElementById("sp01").innerHTML = "sp01";
+        document.getElementById("sp02").innerHTML = "sp02";
+        document.getElementById("sp03").innerHTML = "sp03";
+        document.getElementById("sp04").innerHTML = "sp04";   
         break;
       case "q04":
-        $("#central_logo").attr("src", "docs/img/aboutme.jpg");
-        $("#central_logo").attr("alt", "About me");
+        document.getElementById("sp01").innerHTML = "sp01";
+        document.getElementById("sp02").innerHTML = "sp02";
+        document.getElementById("sp03").innerHTML = "sp03";
+        document.getElementById("sp04").innerHTML = "sp04";   
         break;
+      case "home":
+        document.getElementById("sp01").innerHTML = "portfolio";
+        document.getElementById("sp02").innerHTML = "projects";
+        document.getElementById("sp03").innerHTML = "github";
+        document.getElementById("sp04").innerHTML = "about me"; 
+        break;
+      case "nav_wrap":
+        document.getElementById("sp01").innerHTML = "portfolio";
+        document.getElementById("sp02").innerHTML = "projects";
+        document.getElementById("sp03").innerHTML = "github";
+        document.getElementById("sp04").innerHTML = "about me";  
+        break;  
       default:
-        $("#central_logo").attr("src", "docs/img/mylogo.jpg");
-        $("#central_logo").attr("alt", "Meddom logo");
+        document.getElementById("sp01").innerHTML = "portfolio";
+        document.getElementById("sp02").innerHTML = "projects";
+        document.getElementById("sp03").innerHTML = "github";
+        document.getElementById("sp04").innerHTML = "about me";   
     }
 };
 
@@ -102,9 +125,10 @@ $(document).ready(
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
   $("#nav_wrap").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
     quadrantsFadeIn();
     displayCentralLogo();
+    displaySubQMenus();
   });
   // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
   $("#central_logo").click(function(){
@@ -114,28 +138,29 @@ $(document).ready(
   });
   // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
   $("#q01").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
     displayCentralLogo();
   });
   $("#q02").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
     displayCentralLogo();
   });
   $("#q03").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
+    element_data_id = $(this).attr("data-id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
     displayCentralLogo();
   });
   $("#q04").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
@@ -143,13 +168,18 @@ $(document).ready(
   });
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
-    element_clicked = $(this).attr("id");
+    element_id = $(this).attr("id");
     $("#qinfo").fadeOut(1250);
     quadrantsFadeIn();
     displayCentralLogo();
+    displaySubQMenus();
   });
   $("#qinfo_link").click(function() {
-    element_clicked = $(this).next().attr("id");
+    // element_id = $(this).attr("id"); 
+    // IMPORTANT, FIND A WAY TO EXTRACT TEXT INSIDE ELEMENT TO REDIRECTIONS
+    // NOW element_id STORES LAST ELEMENT ID
+    // RETHINK, PERHAPS QUADRANTS ID IS ENOUGH TO REDIRECT INITIALLY, BUT WHAT ABOUT WHEN ISIDE DIFFERENT SUBMENUS?
+    quadrantsFadeIn();
     displaySubQMenus();
     $("#qinfo").fadeOut(1250);
   });
