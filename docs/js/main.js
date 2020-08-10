@@ -85,7 +85,7 @@ $(document).ready(
     $("#central_logo").fadeOut(1250);
     $("#qinfo").fadeOut(1250);
   });
-  // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box . 
+  // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
   $("#q01").click(function(){
     element_clicked = $(this).attr("id");
     quadrantsFadeOut();
@@ -114,11 +114,12 @@ $(document).ready(
     exportQuadrantElement();
     displayCentralLogo();
   });
-  // jQuery targetting quadrant info elements on click events
+  // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
     element_clicked = $(this).attr("id");
     $("#qinfo").fadeOut(1250);
-    quadrantsFadeIn(); 
+    quadrantsFadeIn();
+    displayCentralLogo();
   });
 
 });
