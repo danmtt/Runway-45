@@ -71,6 +71,33 @@ $(document).ready(
     }
 };
 
+  // Function to display a different image as the central logo attending to the quadrant element clicked.
+  function displaySubQMenus(){
+    var qinfo_value = document.getElementById(element_clicked).innerHTML;
+    switch(qinfo_value) {
+      case "sp01":
+        document.getElementById("sp01").innerHTML = "Rockanrolla";
+        quadrantsFadeIn();
+        break;
+      case "q02":
+        $("#central_logo").attr("src", "docs/img/projects.jpg");
+        $("#central_logo").attr("alt", "My projects");
+        break;
+      case "q03":
+        $("#central_logo").attr("src", "docs/img/gitHub.jpg");
+        $("#central_logo").attr("alt", "My gitHub");
+        break;
+      case "q04":
+        $("#central_logo").attr("src", "docs/img/aboutme.jpg");
+        $("#central_logo").attr("alt", "About me");
+        break;
+      default:
+        $("#central_logo").attr("src", "docs/img/mylogo.jpg");
+        $("#central_logo").attr("alt", "Meddom logo");
+    }
+};
+
+
   // jQuery on click events
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
@@ -120,6 +147,11 @@ $(document).ready(
     $("#qinfo").fadeOut(1250);
     quadrantsFadeIn();
     displayCentralLogo();
+  });
+  $("#qinfo_link").click(function() {
+    element_clicked = $(this).next().attr("id");
+    displaySubQMenus();
+    $("#qinfo").fadeOut(1250);
   });
 
 });
