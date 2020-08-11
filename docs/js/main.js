@@ -1,6 +1,9 @@
 $(document).ready(
   function(){
 
+    $("#nav_logo").attr("src", "docs/img/nav_logo.png");
+    $("#nav_logo").attr("alt", "Navigation");
+
   // Var definitions
   // -------------------------------------  
   var element_id;
@@ -131,7 +134,7 @@ $(document).ready(
   // jQuery on click events
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
-  $("#nav_wrap").click(function(){
+  $("#nav_logo").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeIn();
     displayCentralLogo();
