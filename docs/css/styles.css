@@ -11,7 +11,13 @@ body, header, main, footer{
 header{
     height: 20vh;
     text-align: center;
-    overflow:hidden;}
+    overflow:hidden;
+   border: solid 1px yellow;
+}
+.wrap_header{
+  width: 100vw;
+  height: 100vh;
+}
 .wrap_header h1,h6{   
     margin: 0;
     padding: 0;
@@ -25,8 +31,24 @@ header{
     background:#ffffff;}
 main{
     height:75vh;
+     margin:0;
+     padding:0;
+    
     align-items: center;
-    margin-top:5vh;}
+    }
+.wrappermain{
+  display: flex;
+  margin:0;
+  padding:0;
+  width: 100vw;
+  height: 50vh;
+  border: solid 1px red;
+}
+#wrappermain_top{
+  height:60vh;}
+#wrappermain_bottom{
+  height:40vh;}
+
 #nav_wrap, #central_logo{
     position:absolute; 
     top: 25vh;
