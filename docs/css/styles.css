@@ -23,17 +23,16 @@ header{
     padding: 0;
     font-family: 'Bangers', cursive;}
 .wrap_header h1{
-    font-size: 22vw;
+    font-size: 18vw;
     background-color: #585247;
     text-shadow: -.5vmin .5vmin #ffffff;}
 .wrap_header h6{
-    font-size: 6vw;
+    font-size: 5vw;
     background:#ffffff;}
 main{
     height:75vh;
-     margin:0;
-     padding:0;
-    
+    margin:0;
+    padding:0;
     align-items: center;
     }
 .wrappermain{
@@ -48,11 +47,19 @@ main{
   height:60vh;}
 #wrappermain_bottom{
   height:40vh;}
+#wrapper_nav{
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 3px green;
+}
 
-#nav_wrap, #central_logo{
-    position:absolute; 
-    top: 25vh;
-    width: 50vw;
+#nav, #central_logo{
+    /*position:absolute; */
+    /*top: 25vh;*/
+    border: solid;
+    margin: 30vw;
+    width: 40vw;
     height:auto;}
 .nav_bar_sim{
     width: 100%;}
