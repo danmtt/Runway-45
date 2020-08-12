@@ -1,60 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 html, body{
-    width:100vw;    
-    height:100vh;
-    margin: 0;
-    padding:0;}
+  margin: 0;
+  padding:0;
+  width:100vw;    
+  height:100vh;}
 body, header, main, footer{
-    display: flex;
-    flex-direction: column;}
+  display: flex;
+  flex-direction: column;}
 header{
-    height: 20vh;
-    text-align: center;
-    overflow:hidden;
-   border: solid 1px yellow;
-}
+border: solid 1px yellow;
+  height: 20vh;
+  text-align: center;
+  overflow:hidden;}
 #wrapper_header{
   width: 100vw;
   height: auto;}
 #wrapper_header h1,h6{   
-    margin: 0;
-    padding: 0;
-    font-family: 'Bangers', cursive;}
+  margin: 0;
+  padding: 0;
+  font-family: 'Bangers', cursive;}
 #wrapper_header h1{
-    font-size: 28vw;
-    background-color: #585247;
-    text-shadow: -.5vmin .5vmin #ffffff;}
+  font-size: 28vw;
+  background-color: #585247;
+  text-shadow: -.5vmin .5vmin #ffffff;}
 #wrapper_header h6{
-    font-size: 8vw;
-    background:#ffffff;}
+  font-size: 8vw;
+  background:#ffffff;}
 main{
-    height:75vh;
-    margin:0;
-    padding:0;
-    width: 100vw;
-    height: auto;
-    align-items: center;
 border: solid 1px red;
-}
-#wrapper_nav{
+  margin:0;
+  padding:0;
   width: 100vw;
-  justify-content: space-around;
-  align-items: center;
+  height:75vh;}
+.main_common{
+  position: absolute;
+  margin:0;
+  padding:0;
+  width: 50vw;
+  height: auto;}
+#wrapper_nav, #wrapper_quadrant, #wrapper_logo{
 border: solid 3px green;
-}
+  top: 25vh;
+  left: 25vw;}
 
 #nav_logo, #central_logo{
-    margin: 25vw;
-    width: 45vw;
-    height:auto;}
+  top: 0vh;
+  left: 0vw;}
 #central_logo{ 
-    display: none;
-    position:absolute;
-    top: 21vh;
-    left: 0vw;
-    border-radius: 100%;
-    box-shadow: 0 0 0 4vw #ffffff;}
+  display: none;
+  border-radius: 100%;
+  box-shadow: 0 0 0 4vw #ffffff;}
 /* Quadrants common properties*/
 .quadrant{
     display: none;
@@ -71,15 +67,15 @@ border: solid 3px green;
     color: #ffffff;}
 .quadrant_text{
     overflow:hidden;
-    width:100%;
+    /*width:100%;*/
     font-family: 'Bangers', cursive;
     font-weight: bolder;
     font-size: 10vw;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: 28vh;left: -15vw;}
-#q02{top: 28vh;left: 14vw;}
-#q03{top: 38vh;left: 56vw;}
-#q04{top: 59vh;left: -9vw;
+#q01{top: -3vh;left: -18vw;}
+#q02{top: -3vh;left: 16vw;}
+#q03{top: 20vh;left: 28vw;}
+#q04{top: 20vh;left: -26vw;
     /* Only applied when Flex is called via jQuery. 
     This moves internal elements, span texts, to the bottom of this element.*/
     /* align-items:flex-end; */
@@ -87,9 +83,6 @@ border: solid 3px green;
 
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
-span a{
-    color: inherit;
-    text-decoration: none;} 
 #qinfo{
     display:none;
     position: relative;
