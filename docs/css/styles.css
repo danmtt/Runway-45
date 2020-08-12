@@ -1,56 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 html, body{
-  margin: 0;
-  padding:0;
-  width:100vw;    
-  height:100vh;}
+    margin: 0;
+    padding:0;
+    width:100vw;    
+    height:100vh;}
 body, header, main, footer{
-  display: flex;
-  flex-direction: column;}
+    display: flex;
+    flex-direction: column;}
+.mp0{margin:0; padding:0}
 header{
-border: solid 1px yellow;
-  height: 20vh;
-  text-align: center;
-  overflow:hidden;}
+    border: solid 1px yellow;
+    height: 20vh;
+    text-align: center;
+    overflow:hidden;}
 #wrapper_header{
-  width: 100vw;
-  height: auto;}
-#wrapper_header h1,h6{   
-  margin: 0;
-  padding: 0;
-  font-family: 'Bangers', cursive;}
+    width: 100vw;
+    height: auto;}
+#wrapper_header h1,h6{font-family: 'Bangers', cursive;}
 #wrapper_header h1{
-  font-size: 28vw;
-  background-color: #585247;
-  text-shadow: -.5vmin .5vmin #ffffff;}
+    font-size: 28vw;
+    background-color: #585247;
+    text-shadow: -.5vmin .5vmin #ffffff;}
 #wrapper_header h6{
-  font-size: 8vw;
-  background:#ffffff;}
+    font-size: 8vw;
+    background:#ffffff;}
 main{
-border: solid 1px red;
-  margin:0;
-  padding:0;
-  width: 100vw;
-  height:75vh;}
+    border: solid 1px red;
+    width: 100vw;
+    height:75vh;}
 .main_common{
-  position: absolute;
-  margin:0;
-  padding:0;
-  width: 50vw;
-  height: auto;}
+    position: absolute;
+    width: 50vw;
+    height: auto;}
+#wrappermain_top, #wrappermain_bottom{
+border: solid 1px green;}
+    /* height: auto;} */
+#wrappermain_top{height: 60vh;}
+#wrappermain_bottom{height: 40vh;}
 #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
 border: solid 3px green;
-  top: 25vh;
-  left: 25vw;}
-
+    top: 25vh;
+    left: 25vw;}
 #nav_logo, #central_logo{
-  top: 0vh;
-  left: 0vw;}
+    top: 0vh;
+    left: 0vw;}
 #central_logo{ 
-  display: none;
-  border-radius: 100%;
-  box-shadow: 0 0 0 4vw #ffffff;}
+    display: none;
+    border-radius: 100%;
+    box-shadow: 0 0 0 4vw #ffffff;}
 /* Quadrants common properties*/
 .quadrant{
     display: none;
@@ -75,30 +73,30 @@ border: solid 3px green;
 #q01{top: -3vh;left: -18vw;}
 #q02{top: -3vh;left: 16vw;}
 #q03{top: 20vh;left: 28vw;}
-#q04{top: 20vh;left: -26vw;
-    /* Only applied when Flex is called via jQuery. 
-    This moves internal elements, span texts, to the bottom of this element.*/
-    /* align-items:flex-end; */
-}
-
+#q04{top: 20vh;left: -26vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
+
+#wrappermain_bottom{
+border: solid 1px #b803ff;
+    z-index: -1;
+    width: 100vw;
+    height: 40vh;}
 #qinfo{
-    display:none;
-    position: relative;
+    display: none;
+    /* position: absolute; */
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items:center;
-    top: 36vh;
-    margin: 3vw;
+    top: 23vh;
+    margin: 5vw 10vw;
     width: 80vw;
-    height: 25vh;
+    height: 22vh;
     border-radius: 5vw;
     border: solid 1vw #000000;
-    background:#ffffff;}
+    background:#ffffff;
+}
 #qinfoheader, #qinfomain, #qinfofooter{
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     width: 100%;
     display: flex;
     align-items: center;}
