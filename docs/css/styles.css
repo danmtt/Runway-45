@@ -87,7 +87,6 @@ border: solid 1px #b803ff;
     height: 40vh;}
 #qinfo{
     display: none;
-    /* position: absolute; */
     flex-direction: column;
     top: 23vh;
     margin: 5vw 10vw;
@@ -98,8 +97,6 @@ border: solid 1px #b803ff;
     background:#ffffff;
 }
 #qinfoheader, #qinfomain, #qinfofooter{
-    /* margin: 0;
-    padding: 0; */
     width: 100%;
     display: flex;
     align-items: center;}
@@ -122,19 +119,24 @@ border: solid 1px #b803ff;
     font-weight: bolder;}
 #qinfo_title{
     font-size:4vh;}
+#qinfo_title:hover{
+/*button:hover{*/
+    cursor: pointer;
+    background-color: #0d0d0e;
+    color: #ffffff;}
 #qinfo_brief{
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;}
-#qinfo_link, #qinfo_home {
+#qinfo_link, #qinfo_home{
     width: 35%;
     font-size:3vh;
     color:#000000;
     background-color: #3f3e3e00;
     border: solid 2px #000000;
     border-radius: 10%;}
-#qinfo_link span{
-    font-size:3vh;}
-#qinfo_link:hover, #qinfo_home:hover{
+/*#qinfo_link:hover, #qinfo_home:hover{*/
+#qinfo_link:hover{
+/*button:hover{*/
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}

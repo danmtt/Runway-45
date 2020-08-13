@@ -46,7 +46,7 @@ $(document).ready(
     var qinfo_link_text = document.getElementById(element_id).innerHTML;
     console.log(element_id);
     console.log(qinfo_link_text);
-
+ 
   };
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){ 
@@ -78,7 +78,7 @@ $(document).ready(
   function displaySubQMenus(){
     switch(qinfo_link_text) {
       case "portfolio":
-        quadrantsFadeIn;
+        quadrantsFadeIn();
         document.getElementById("q01").innerHTML = "Rockanrolla";
         document.getElementById("q02").innerHTML = "Retaped";
         document.getElementById("q03").innerHTML = "";
@@ -176,8 +176,8 @@ $(document).ready(
     displayCentralLogo();
     displaySubQMenus();
   });
-  $("#qinfo_link").click(function() {
-    // element_id = $(this).attr("id"); 
+  $("#qinfo_link").click(function(){
+    element_id = $(this).attr("id");
     // IMPORTANT, FIND A WAY TO EXTRACT TEXT INSIDE ELEMENT TO REDIRECTIONS
     // NOW element_id STORES LAST ELEMENT ID
     // RETHINK, PERHAPS QUADRANTS ID IS ENOUGH TO REDIRECT INITIALLY, BUT WHAT ABOUT WHEN ISIDE DIFFERENT SUBMENUS?
