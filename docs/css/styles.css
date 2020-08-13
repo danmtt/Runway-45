@@ -33,13 +33,11 @@ main{
     position: absolute;
     width: 50vw;
     height: auto;}
-#wrappermain_top, #wrappermain_bottom{
-border: solid 1px green;}
-    /* height: auto;} */
+
 #wrappermain_top{height: 60vh;}
 #wrappermain_bottom{height: 40vh;}
 #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
-border: solid 3px green;
+
     top: 25vh;
     left: 25vw;}
 #nav_logo, #central_logo{
@@ -65,7 +63,6 @@ border: solid 3px green;
     color: #ffffff;}
 .quadrant_text{
     overflow:hidden;
-    /*width:100%;*/
     font-family: 'Bangers', cursive;
     font-weight: bolder;
     font-size: 10vw;}
@@ -77,11 +74,9 @@ border: solid 3px green;
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
-  /*display: flex;*/
   justify-content: center;
   align-items: flex-end;}
 #wrappermain_bottom{
-border: solid 1px #b803ff;
     /* z-index: -1; */
     width: 100vw;
     height: 40vh;}
@@ -94,8 +89,7 @@ border: solid 1px #b803ff;
     height: 22vh;
     border-radius: 5vw;
     border: solid 1vw #000000;
-    background:#ffffff;
-}
+    background:#ffffff;}
 #qinfoheader, #qinfomain, #qinfofooter{
     width: 100%;
     display: flex;
@@ -114,29 +108,37 @@ border: solid 1px #b803ff;
     margin: 0;
     padding: 0;
     text-align: center;}
-#qinfo_title, #qinfo_link, #qinfo_home{
+#qinfo_title, #qinfo_link, #qinfo_back, #qinfo_home{
     font-family: 'Bangers', cursive;
     font-weight: bolder;}
 #qinfo_title{
     font-size:4vh;}
 #qinfo_title:hover{
-/*button:hover{*/
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
 #qinfo_brief{
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;}
-#qinfo_link, #qinfo_home{
-    width: 35%;
+#qinfofooter{
+        height: 15vh;
+        margin-bottom: 1vh;
+        flex-direction: row;
+        justify-content: space-around;}
+#qinfo_link, #qinfo_steps{width: 45vw;
+    margin: 0 2vw 0;
+    flex-direction: row;
+    justify-content: space-between;}
+#qinfo_back, #qinfo_home{width: 45%;
+    }
+/* insert icons? */
+#qinfo_link, #qinfo_back, #qinfo_home{
     font-size:3vh;
     color:#000000;
     background-color: #3f3e3e00;
     border: solid 2px #000000;
     border-radius: 10%;}
-/*#qinfo_link:hover, #qinfo_home:hover{*/
-#qinfo_link:hover{
-/*button:hover{*/
+#qinfo_link:hover, #qinfo_back:hover, #qinfo_home:hover{
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
@@ -204,4 +206,15 @@ footer{
         font-size: 2.5vw;}
 }
 
+/* For design process purposes only (Border all)
+To used on android devices mainly (no devtools) */
 
+/* #wrappermain_top, #wrappermain_bottom{
+    border: solid 1px green;} */
+/* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
+    border: solid 3px red;}*/
+/* #wrappermain_top, #wrappermain_bottom{
+    border: solid 1px #b803ff; */
+/* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #qinfo_steps, #qinfo_back, #qinfo_home{
+    border: solid 1px blue;
+    } */

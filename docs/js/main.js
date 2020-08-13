@@ -177,7 +177,7 @@ $(document).ready(
     displaySubQMenus();
   });
   $("#qinfo_link").click(function(){
-    element_id = $(this).attr("id");
+    // element_id = $(this).attr("id");
     // IMPORTANT, FIND A WAY TO EXTRACT TEXT INSIDE ELEMENT TO REDIRECTIONS
     // NOW element_id STORES LAST ELEMENT ID
     // RETHINK, PERHAPS QUADRANTS ID IS ENOUGH TO REDIRECT INITIALLY, BUT WHAT ABOUT WHEN ISIDE DIFFERENT SUBMENUS?
