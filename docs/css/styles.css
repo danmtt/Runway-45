@@ -70,13 +70,16 @@ border: solid 3px green;
     font-weight: bolder;
     font-size: 10vw;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: -3vh;left: -18vw;}
+#q01{top: -2vh;left: -17vw;}
 #q02{top: -3vh;left: 16vw;}
-#q03{top: 20vh;left: 28vw;}
-#q04{top: 20vh;left: -26vw;}
+#q03{top: 12vh;left: 15vw;}
+#q04{top: 11vh;left: -17vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
-
+#q03, #q04{
+  /*display: flex;*/
+  justify-content: center;
+  align-items: flex-end;}
 #wrappermain_bottom{
 border: solid 1px #b803ff;
     z-index: -1;

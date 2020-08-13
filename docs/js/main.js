@@ -16,16 +16,12 @@ $(document).ready(
     $("#q01").fadeIn(1650);    
     $("#q02").fadeIn(450);    
     $("#q03").fadeIn(850);
-    // Flex display call out to move its internal elements, span texts, to container bottom
-    $("#q03").css("display", "flex");
     $("#q04").fadeIn(1250);
-    // Flex display call out to move its internal elements, span texts, to container bottom
-    $("#q04").css("display", "flex");
-    $("#sp01").fadeIn(1650);
-    $("#sp02").fadeIn(450);
-    $("#sp03").fadeIn(850);
-    $("#sp04").fadeIn(1250);
     $("#central_logo").fadeIn(550);
+    // Flex display call out to apply propertties after fadeIn and move texts to container bottom
+    $("#q03").css("display", "flex");
+    $("#q04").css("display", "flex");
+    
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
   function quadrantsFadeOut(){
@@ -33,10 +29,6 @@ $(document).ready(
     $("#q02").fadeOut(1050);
     $("#q03").fadeOut(850);
     $("#q04").fadeOut(650);
-    $("#sp01").fadeOut(450);
-    $("#sp02").fadeOut(1050);
-    $("#sp03").fadeOut(850);
-    $("#sp04").fadeOut(650); 
   };
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
