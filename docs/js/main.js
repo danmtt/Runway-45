@@ -16,16 +16,12 @@ $(document).ready(
     $("#q01").fadeIn(1650);    
     $("#q02").fadeIn(450);    
     $("#q03").fadeIn(850);
-    // Flex display call out to move its internal elements, span texts, to container bottom
-    $("#q03").css("display", "flex");
     $("#q04").fadeIn(1250);
-    // Flex display call out to move its internal elements, span texts, to container bottom
-    $("#q04").css("display", "flex");
-    $("#sp01").fadeIn(1650);
-    $("#sp02").fadeIn(450);
-    $("#sp03").fadeIn(850);
-    $("#sp04").fadeIn(1250);
     $("#central_logo").fadeIn(550);
+    // Flex display call out to apply propertties after fadeIn and move texts to container bottom
+    $("#q03").css("display", "flex");
+    $("#q04").css("display", "flex");
+    
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
   function quadrantsFadeOut(){
@@ -33,10 +29,6 @@ $(document).ready(
     $("#q02").fadeOut(1050);
     $("#q03").fadeOut(850);
     $("#q04").fadeOut(650);
-    $("#sp01").fadeOut(450);
-    $("#sp02").fadeOut(1050);
-    $("#sp03").fadeOut(850);
-    $("#sp04").fadeOut(650); 
   };
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
@@ -54,7 +46,7 @@ $(document).ready(
     var qinfo_link_text = document.getElementById(element_id).innerHTML;
     console.log(element_id);
     console.log(qinfo_link_text);
-
+ 
   };
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){ 
@@ -86,7 +78,7 @@ $(document).ready(
   function displaySubQMenus(){
     switch(qinfo_link_text) {
       case "portfolio":
-        quadrantsFadeIn;
+        quadrantsFadeIn();
         document.getElementById("q01").innerHTML = "Rockanrolla";
         document.getElementById("q02").innerHTML = "Retaped";
         document.getElementById("q03").innerHTML = "";
@@ -184,8 +176,8 @@ $(document).ready(
     displayCentralLogo();
     displaySubQMenus();
   });
-  $("#qinfo_link").click(function() {
-    // element_id = $(this).attr("id"); 
+  $("#qinfo_link").click(function(){
+    element_id = $(this).attr("id");
     // IMPORTANT, FIND A WAY TO EXTRACT TEXT INSIDE ELEMENT TO REDIRECTIONS
     // NOW element_id STORES LAST ELEMENT ID
     // RETHINK, PERHAPS QUADRANTS ID IS ENOUGH TO REDIRECT INITIALLY, BUT WHAT ABOUT WHEN ISIDE DIFFERENT SUBMENUS?
