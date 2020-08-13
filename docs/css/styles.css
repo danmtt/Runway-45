@@ -79,7 +79,7 @@ border: solid 3px green;
 
 #wrappermain_bottom{
 border: solid 1px #b803ff;
-    z-index: -1;
+    /* z-index: -1; */
     width: 100vw;
     height: 40vh;}
 #qinfo{
