@@ -27,15 +27,24 @@ header{
 main{
     width: 100vw;
     /*Height bigger than suppsed to show half of footer in purpose, to create curiousity*/
-    height:90vh;} 
+    height:auto;
+  margin-top: 5vh;
+} 
 .main_common{
     position: absolute;
     width: 50vw;
-    height: auto;}
-#wrappermain_top{height: 60vh;}
-#wrappermain_bottom{height: 40vh;}
+    /*height: auto;*/
+  
+}
+#wrappermain_top{
+  /*margin-top: 5vh;*/
+  /*height: auto;*/
+  height: 50vh;
+  
+}
+#wrappermain_bottom{height: 0vh;}
 #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
-    top: 25vh;
+    top: 18vh;
     left: 25vw;}
 #nav_logo, #central_logo{
     top: 0vh;
@@ -195,13 +204,15 @@ footer{
 
 /* For design process purposes only (Border all)
 To used on android devices mainly (no devtools) */
-/*header{border: solid 1px yellow;}*/
+header{border: solid 1px yellow;}
+#wrapper_header h1,h6{border: solid 1px red;}
 /*main{border: solid 1px red;}*/
 footer{border: solid 1px green}
-/* #wrappermain_top, #wrappermain_bottom{
-    border: solid 1px green;} */
-/* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
-    border: solid 3px red;}*/
+main{border: solid 2px blue}
+#wrappermain_top, #wrappermain_bottom{
+    border: solid 1px green;} 
+ #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
+    border: solid 3px red;}
 /* #wrappermain_top, #wrappermain_bottom{
     border: solid 1px #b803ff; */
 /* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #qinfo_steps, #qinfo_back, #qinfo_home{
