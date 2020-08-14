@@ -10,7 +10,6 @@ body, header, main, footer{
     flex-direction: column;}
 .mp0{margin:0; padding:0}
 header{
-    border: solid 1px yellow;
     height: 20vh;
     text-align: center;
     overflow:hidden;}
@@ -26,18 +25,16 @@ header{
     font-size: 8vw;
     background:#ffffff;}
 main{
-    border: solid 1px red;
     width: 100vw;
-    height:75vh;}
+    /*Height bigger than suppsed to show half of footer in purpose, to create curiousity*/
+    height:90vh;} 
 .main_common{
     position: absolute;
     width: 50vw;
     height: auto;}
-
 #wrappermain_top{height: 60vh;}
 #wrappermain_bottom{height: 40vh;}
 #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
-
     top: 25vh;
     left: 25vw;}
 #nav_logo, #central_logo{
@@ -81,10 +78,12 @@ main{
     width: 100vw;
     height: 40vh;}
 #qinfo{
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
+    display: flex;
     flex-direction: column;
     top: 23vh;
-    margin: 5vw 10vw;
+    margin: 4vh 10vw 1vh;
     width: 80vw;
     height: 22vh;
     border-radius: 5vw;
@@ -97,13 +96,6 @@ main{
 #qinfoheader{
     height: 15vh;
     justify-content: center;}
-#qinfomain{
-    height: 50vh;
-    overflow: hidden;}
-#qinfofooter{
-    height: 15vh;
-    flex-direction: row;
-    justify-content: space-around;}
 #qinfo_title, #qinfo_brief, #qinfo_link, #qinfo_home{
     margin: 0;
     padding: 0;
@@ -113,10 +105,6 @@ main{
     font-weight: bolder;}
 #qinfo_title{
     font-size:4vh;}
-#qinfo_title:hover{
-    cursor: pointer;
-    background-color: #0d0d0e;
-    color: #ffffff;}
 #qinfo_brief{
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;}
@@ -129,8 +117,7 @@ main{
     margin: 0 2vw 0;
     flex-direction: row;
     justify-content: space-between;}
-#qinfo_back, #qinfo_home{width: 45%;
-    }
+#qinfo_back, #qinfo_home{width: 45%;}
 /* insert icons? */
 #qinfo_link, #qinfo_back, #qinfo_home{
     font-size:3vh;
@@ -208,7 +195,9 @@ footer{
 
 /* For design process purposes only (Border all)
 To used on android devices mainly (no devtools) */
-
+/*header{border: solid 1px yellow;}*/
+/*main{border: solid 1px red;}*/
+footer{border: solid 1px green}
 /* #wrappermain_top, #wrappermain_bottom{
     border: solid 1px green;} */
 /* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{

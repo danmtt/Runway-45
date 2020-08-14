@@ -34,7 +34,8 @@ $(document).ready(
   function quadrantInfoFadeIn(){
     $("#qinfo").fadeIn(650);
     // Flex call out to organize quadrant info box when displayed
-    $("#qinfo").css("display", "flex");
+    /*$("#qinfo").css("display", "flex");*/
+    $("#qinfo").css("visibility", "visible");
   };
   // Function to identify element from quadrant and export to quadrant info box elements.
   function exportQuadrantElement(){    
@@ -171,7 +172,7 @@ $(document).ready(
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
-    $("#qinfo").fadeOut(1250);
+    $("#qinfo").css("visibility", "hidden")
     quadrantsFadeIn();
     displayCentralLogo();
     displaySubQMenus();
@@ -184,7 +185,7 @@ $(document).ready(
     quadrantsFadeIn();
     displaySubQMenus();
     exportQinfoLinkText();
-    $("#qinfo").fadeOut(1250);
+    $("#qinfo").css("visibility", "hidden")
   });
 
 });
