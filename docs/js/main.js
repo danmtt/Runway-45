@@ -11,44 +11,6 @@ $(document).ready(
 
   // Functions
   // -------------------------------------  
-  // Function grouping jQuery calls to fadeIn all quadrants, texts and central logo image. 
-  function quadrantsFadeIn(){
-    $("#q01").fadeIn(1650);    
-    $("#q02").fadeIn(450);    
-    $("#q03").fadeIn(850);
-    $("#q04").fadeIn(1250);
-    $("#central_logo").fadeIn(550);
-    // Flex display call out to apply propertties after fadeIn and move texts to container bottom
-    $("#q03").css("display", "flex");
-    $("#q04").css("display", "flex");
-    
-  };
-  // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
-  function quadrantsFadeOut(){
-    $("#q01").fadeOut(450);
-    $("#q02").fadeOut(1050);
-    $("#q03").fadeOut(850);
-    $("#q04").fadeOut(650);
-  };
-  // Function grouping jQuery calls to fadeIn quadrant information box. 
-  function quadrantInfoFadeIn(){
-    $("#qinfo").fadeIn(650);
-    // Flex call out to organize quadrant info box when displayed
-    /*$("#qinfo").css("display", "flex");*/
-    $("#qinfo").css("visibility", "visible");
-  };
-  // Function to identify element from quadrant and export to quadrant info box elements.
-  function exportQuadrantElement(){    
-    var quadrant_text = document.getElementById(element_id).innerHTML;
-    document.getElementById("qinfo_title").innerHTML = quadrant_text;
-    document.getElementById("qinfo_link").innerHTML = quadrant_text;
-  };
-  function exportQinfoLinkText(){    
-    var qinfo_link_text = document.getElementById(element_id).innerHTML;
-    console.log(element_id);
-    console.log(qinfo_link_text);
- 
-  };
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){ 
     console.log(element_id);   
@@ -73,7 +35,47 @@ $(document).ready(
         $("#central_logo").attr("src", "docs/img/mylogo.jpg");
         $("#central_logo").attr("alt", "Meddom logo");
     }
-};
+  };
+  // Function grouping jQuery calls to fadeIn all quadrants, texts and central logo image. 
+  function quadrantsFadeIn(){
+    $("#nav_logo").css("display", "flex");
+    $("#central_logo").css("display", "flex");
+    $("#q04").css("display", "flex");
+    $("#q01").fadeIn(1650);    
+    $("#q02").fadeIn(450);    
+    $("#q03").fadeIn(850);
+    $("#q04").fadeIn(1250);
+    $("#central_logo").fadeIn(550);
+    // Flex display call out to apply propertties after fadeIn and move texts to container bottom
+    $("#q03").css("display", "flex");
+    $("#q04").css("display", "flex");    
+  };
+  // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
+  function quadrantsFadeOut(){
+    $("#q01").fadeOut(450);
+    $("#q02").fadeOut(1050);
+    $("#q03").fadeOut(850);
+    $("#q04").fadeOut(650);
+  };
+
+  // Function grouping jQuery calls to fadeIn quadrant information box. 
+  function quadrantInfoFadeIn(){
+    $("#qinfo").fadeIn(650);   
+    $("#qinfo").css("visibility", "visible");
+  };
+  // Function to identify element from quadrant and export to quadrant info box elements.
+  function exportQuadrantElement(){    
+    var quadrant_text = document.getElementById(element_id).innerHTML;
+    document.getElementById("qinfo_title").innerHTML = quadrant_text;
+    document.getElementById("qinfo_link").innerHTML = quadrant_text;
+  };
+  function exportQinfoLinkText(){    
+    var qinfo_link_text = document.getElementById(element_id).innerHTML;
+    console.log(element_id);
+    console.log(qinfo_link_text);
+ 
+  };
+
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displaySubQMenus(){
@@ -121,13 +123,13 @@ $(document).ready(
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me";   
     }
-};
+  };
 
 
   // jQuery on click events
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
-  $("#nav_logo").click(function(){
+  $("wrapper_nav").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeIn();
     displayCentralLogo();

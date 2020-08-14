@@ -20,30 +20,38 @@ header{
 #wrapper_header h1{
     font-size: 28vw;
     background-color: #585247;
-    text-shadow: -.5vmin .5vmin #ffffff;}
+    text-shadow: -.5vw .5vw #ffffff;}
 #wrapper_header h6{
     font-size: 8vw;
     background:#ffffff;}
 main{
-    width: 100vw;
-    /*Height bigger than suppsed to show half of footer in purpose, to create curiousity*/
+    width: 100vw;    
     height:65%;
-  margin-top: 5vh;} 
+    margin-top: 1vh;} 
 .main_common{
-    position: absolute;
     width: 50vw;
-    /*height: auto;*/}
+    height: auto;}
 #wrappermain_top{
-  /*margin-top: 5vh;*/
-  /*height: auto;*/
-  height: 60%;}
-#wrappermain_bottom{height: 40%;}
-#wrapper_nav, #wrapper_quadrant, #wrapper_logo{
-    top: 18vh;
-    left: 25vw;}
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+#wrapper_nav{}
+#wrapper_quadrant, #wrapper_logo{
+    display:none;}
+
+#wrapper_nav{
+
+}
 #nav_logo, #central_logo{
-    top: 0vh;
-    left: 0vw;}
+
+    /* flex-basis: content; */
+}
+
+#wrapper_quadrant{
+    
+}
+
 #central_logo{ 
     display: none;
     border-radius: 100%;
@@ -76,11 +84,12 @@ main{
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
   justify-content: center;
-  align-items: flex-end;}
+  align-items: flex-end;}  
 #wrappermain_bottom{
     /* z-index: -1; */
     width: 100vw;
-    height: 40vh;}
+    height: 40%;
+;}
 #qinfo{
     /*display: none;*/
     visibility: hidden;
@@ -134,6 +143,7 @@ main{
     background-color: #0d0d0e;
     color: #ffffff;}
 footer{
+    /*¿¿¿¿Height bigger than suppsed to show half of footer in purpose, to create curiousity??????*/
     height:15%;
     background-color: #5f5e5e;}        
 
@@ -200,15 +210,15 @@ footer{
 /* For design process purposes only (Border all)
 To used on android devices mainly (no devtools) */
 header{border: solid 1px yellow;}
-#wrapper_header h1,h6{border: solid 1px red;}
-/*main{border: solid 1px red;}*/
-footer{border: solid 1px green}
 main{border: solid 2px blue}
-#wrappermain_top, #wrappermain_bottom{
-    border: solid 1px green;} 
- #wrapper_nav{border: solid 3px orange;}
- /*#wrapper_quadrant, #wrapper_logo{
-    border: solid 3px red;}*/
+footer{border: solid 1px green}
+#wrapper_header h1,h6{border: dashed 2px red;}
+/*main{border: solid 1px red;}*/
+#wrapper_header, #wrappermain_top, #wrappermain_bottom{
+    border: solid 2px red;} 
+ #wrapper_nav{border: dashed 2px red;}
+ #wrapper_quadrant, #wrapper_logo{
+    border: dashed 2px red;}
 /* #wrappermain_top, #wrappermain_bottom{
     border: solid 1px #b803ff; */
 /* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #qinfo_steps, #qinfo_back, #qinfo_home{
