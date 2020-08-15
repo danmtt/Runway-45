@@ -31,64 +31,68 @@ main{
 .main_common{
     width: 50vw;
     height: auto;
-  
 }
 #wrappermain_top{
-    height: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
-  flex-direction: column;
+    /* justify-content: center; */
+    flex-direction: column;
 }
-#wrapper_nav{
-  margin: 25%;
-}
-#wrapper_log, #wrapper_quadrant{
-  position: absolute;
-}
-#wrapper_nav{}
-#nav_logo, #central_logo{}
-#wrapper_quadrant{}
-
-#central_logo{ 
-    /*display: none;*/
-   /* visibility: hidden;*/
-    opacity: 1;
-    border-radius: 100%;
-    box-shadow: 0 0 0 4vw #ffffff;}
+#wrappermain_top{height: 60%;}
+#qgraphic{
+    position: absolute;
+    top: 30vh;
+    border-radius: 5vw;
+    border: solid 1vw #000000;
+    background:#ffffff;}
+#wrapper_nav, #wrapper_log, #wrapper_quadrant{}
+#wrapper_nav{z-index: 0;}
+#wrapper_log{z-index: 1;}
+#wrapper_quadrant{z-index: -1;}
+#nav_logo, #central_logo, #q01, #q02, #q03, #q04{
+    position: relative;}
+#nav_logo{top: 0vh;}
 /* Quadrants common properties*/
 .quadrant{
     display: none;
-    /*position:absolute;*/
     text-align: center;
     overflow:hidden;
     width: 50vw;
     height: 15vh;
     border-radius: 10% 10% 10% 10% ;
-    transform: scale(0.6);}
-.quadrant:hover {
-    cursor: pointer;
-    background-color: #0d0d0e;
-    color: #ffffff;}
-.quadrant_text{
-    overflow:hidden;
+    transform: scale(0.6);    
     font-family: 'Bangers', cursive;
     font-weight: bolder;
-    font-size: 10vw;}
+    font-size: 10vw;
+    overflow:hidden;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: -2vh;left: -17vw;}
-#q02{top: -3vh;left: 16vw;}
-#q03{top: 12vh;left: 15vw;}
-#q04{top: 11vh;left: -17vw;}
+#q01{top: -28vh;left: -17vw;}
+#q02{top: -42vh;left: 16vw;}
+#q03{top: -42vh;left: 15vw;}
+#q04{top: -58vh;left: -17vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
   justify-content: center;
   align-items: flex-end;}  
+#central_logo{ 
+    top: -84vh;
+    border-radius: 100%;
+    box-shadow: 0 0 0 4vw #ffffff;}
+
+.quadrant:hover {
+    cursor: pointer;
+    background-color: #0d0d0e;
+    color: #ffffff;}
+
+
 #wrappermain_bottom{
     /* z-index: -1; */
-    /*width: 100vw;*/
-    /*height: 40%;*/
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 #qinfo{
     display: flex;
