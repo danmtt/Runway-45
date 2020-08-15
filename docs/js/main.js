@@ -3,6 +3,8 @@ $(document).ready(
 
     $("#nav_logo").attr("src", "docs/img/nav_logo.png");
     $("#nav_logo").attr("alt", "Navigation");
+    
+    $("#qinfo").css("visibility", "visible");
 
   // Var definitions
   // -------------------------------------  
@@ -13,7 +15,6 @@ $(document).ready(
   // -------------------------------------  
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){ 
-    console.log(element_id);   
     switch(element_id) {
       case "q01":
         $("#central_logo").attr("src", "docs/img/portfolio.jpg");
@@ -38,9 +39,8 @@ $(document).ready(
   };
   // Function grouping jQuery calls to fadeIn all quadrants, texts and central logo image. 
   function quadrantsFadeIn(){
-    $("#nav_logo").css("display", "flex");
-    $("#central_logo").css("display", "flex");
-    $("#q04").css("display", "flex");
+    // $("#nav_logo").css("display", "flex");
+    // $("#central_logo").css("display", "flex");
     $("#q01").fadeIn(1650);    
     $("#q02").fadeIn(450);    
     $("#q03").fadeIn(850);
@@ -48,7 +48,11 @@ $(document).ready(
     $("#central_logo").fadeIn(550);
     // Flex display call out to apply propertties after fadeIn and move texts to container bottom
     $("#q03").css("display", "flex");
-    $("#q04").css("display", "flex");    
+    $("#q04").css("display", "flex"); 
+    document.getElementById("q01").innerHTML = "portfolio";
+    document.getElementById("q02").innerHTML = "projects";
+    document.getElementById("q03").innerHTML = "github";
+    document.getElementById("q04").innerHTML = "about me";
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
   function quadrantsFadeOut(){
@@ -60,8 +64,8 @@ $(document).ready(
 
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
-    $("#qinfo").fadeIn(650);   
-    $("#qinfo").css("visibility", "visible");
+   // $("#qinfo").fadeIn(650);   
+   
   };
   // Function to identify element from quadrant and export to quadrant info box elements.
   function exportQuadrantElement(){    
@@ -111,11 +115,11 @@ $(document).ready(
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me"; 
         break;
-      case "nav_wrap":
+      case "wrapper_nav":
         document.getElementById("q01").innerHTML = "portfolio";
         document.getElementById("q02").innerHTML = "projects";
         document.getElementById("q03").innerHTML = "github";
-        document.getElementById("q04").innerHTML = "about me";  
+        document.getElementById("q04").innerHTML = "about me";
         break;  
       default:
         document.getElementById("q01").innerHTML = "portfolio";
@@ -129,17 +133,18 @@ $(document).ready(
   // jQuery on click events
   // -------------------------------------  
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
-  $("wrapper_nav").click(function(){
+  $("#nav_logo").click(function(){
     element_id = $(this).attr("id");
+    console.log("JUST CLICKED ON:" + element_id )
     quadrantsFadeIn();
     displayCentralLogo();
-    displaySubQMenus();
+    // displaySubQMenus();
   });
   // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
   $("#central_logo").click(function(){
     quadrantsFadeOut();
     $("#central_logo").fadeOut(1250);
-    $("#qinfo").fadeOut(1250);
+    //$("#qinfo").fadeOut(1250);
   });
   // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
   $("#q01").click(function(){
@@ -174,7 +179,7 @@ $(document).ready(
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
-    $("#qinfo").css("visibility", "hidden")
+    //$("#qinfo").css("visibility", "hidden")
     quadrantsFadeIn();
     displayCentralLogo();
     displaySubQMenus();
@@ -187,7 +192,7 @@ $(document).ready(
     quadrantsFadeIn();
     displaySubQMenus();
     exportQinfoLinkText();
-    $("#qinfo").css("visibility", "hidden")
+    //$("#qinfo").css("visibility", "hidden")
   });
 
 });

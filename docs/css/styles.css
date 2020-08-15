@@ -30,36 +30,36 @@ main{
     margin-top: 1vh;} 
 .main_common{
     width: 50vw;
-    height: auto;}
+    height: auto;
+  
+}
 #wrappermain_top{
     height: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;}
-#wrapper_nav{}
-#wrapper_quadrant, #wrapper_logo{
-    display:none;}
-
+    justify-content: center;
+  flex-direction: column;
+}
 #wrapper_nav{
-
+  margin: 25%;
 }
-#nav_logo, #central_logo{
-
-    /* flex-basis: content; */
+#wrapper_log, #wrapper_quadrant{
+  position: absolute;
 }
-
-#wrapper_quadrant{
-    
-}
+#wrapper_nav{}
+#nav_logo, #central_logo{}
+#wrapper_quadrant{}
 
 #central_logo{ 
-    display: none;
+    /*display: none;*/
+   /* visibility: hidden;*/
+    opacity: 1;
     border-radius: 100%;
     box-shadow: 0 0 0 4vw #ffffff;}
 /* Quadrants common properties*/
 .quadrant{
     display: none;
-    position:absolute;
+    /*position:absolute;*/
     text-align: center;
     overflow:hidden;
     width: 50vw;
@@ -87,12 +87,12 @@ main{
   align-items: flex-end;}  
 #wrappermain_bottom{
     /* z-index: -1; */
-    width: 100vw;
-    height: 40%;
-;}
+    /*width: 100vw;*/
+    /*height: 40%;*/
+}
 #qinfo{
-    /*display: none;*/
-    visibility: hidden;
+    display: flex;
+    visibility: visible;
     display: flex;
     flex-direction: column;
     top: 23vh;
