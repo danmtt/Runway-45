@@ -34,24 +34,13 @@ main{
 #wrappermain_top{
     position: relative;
     height: 45vh;}
+#qgraphic, #wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: absolute;}
 #qgraphic{
-    position: absolute;
     margin:25%;
     border-radius: 5vw;}
-#wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: absolute;}
-/* #wrapper_nav{top: 0vh} */
-/* #wrapper_logo{top: -84vh;} */
 #central_logo{ 
-    /* display: none; */
     border-radius: 100%;
     box-shadow: 0 0 0 4vw #ffffff;}
-
-/* Tried this and then especific position property*/
-/* #nav_logo, #central_logo, #q01, #q02, #q03, #q04{
-position: relative;} */
-/* #nav_logo{top: 0vh;} */
-/* #wrapper_quadrant{top: -84vh;} */
-/* Quadrants common properties*/
 .quadrant{
     display: none;
     text-align: center;
@@ -77,22 +66,16 @@ position: relative;} */
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
   justify-content: center;
-  align-items: flex-end;}  
-
+  align-items: flex-end;}
 #wrappermain_bottom{
     height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
+    flex-direction: column;}
 #qinfo{
-    /* display: flex; */
-    /* visibility: visible; */
     display: flex;
     flex-direction: column;
-    /* top: 23vh; */
-    /* margin: 4vh 10vw 1vh; */
     width: 80vw;
     height: 22vh;
     border-radius: 5vw;
@@ -118,10 +101,10 @@ position: relative;} */
     font-family: 'Roboto Condensed', sans-serif;
     overflow: hidden;}
 #qinfofooter{
-        height: 15vh;
-        margin-bottom: 1vh;
-        flex-direction: row;
-        justify-content: space-around;}
+    height: 15vh;
+    margin-bottom: 1vh;
+    flex-direction: row;
+    justify-content: space-around;}
 #qinfo_link, #qinfo_steps{width: 45vw;
     margin: 0 2vw 0;
     flex-direction: row;
@@ -140,7 +123,8 @@ position: relative;} */
     color: #ffffff;}
 footer{
     /*¿¿¿¿Height bigger than suppsed to show half of footer in purpose, to create curiousity??????*/
-    height:auto;
+    height:10vh;
+    height: auto;
     background-color: #5f5e5e;}        
 
 /* MEDIA QUERIES */
