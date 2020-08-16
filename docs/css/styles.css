@@ -10,7 +10,7 @@ body, header, main, footer{
     flex-direction: column;}
 .mp0{margin:0; padding:0}
 header{
-    height: 20%;
+    height: auto;
     text-align: center;
     overflow:hidden;}
 #wrapper_header{
@@ -26,29 +26,23 @@ header{
     background:#ffffff;}
 main{
     width: 100vw;    
-    height:65%;
+    height:auto;
     margin-top: 1vh;} 
 .main_common{
     width: 50vw;
-    height: auto;
-}
+    height: 50vw;}
 #wrappermain_top{
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-}
-#wrappermain_top{height: 60%;}
+    position: relative;
+    height: 45vh;}
 #qgraphic{
     position: absolute;
-    top: 30vh;
-    border-radius: 5vw;
-
-    background:#ffffff;}
-#wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: relative;}
-#wrapper_nav{top: 0vh}
-#wrapper_logo{top: -84vh;}
+    margin:25%;
+    border-radius: 5vw;}
+#wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: absolute;}
+/* #wrapper_nav{top: 0vh} */
+/* #wrapper_logo{top: -84vh;} */
 #central_logo{ 
+    /* display: none; */
     border-radius: 100%;
     box-shadow: 0 0 0 4vw #ffffff;}
 
@@ -56,7 +50,7 @@ main{
 /* #nav_logo, #central_logo, #q01, #q02, #q03, #q04{
 position: relative;} */
 /* #nav_logo{top: 0vh;} */
-#wrapper_quadrant{top: -84vh;}
+/* #wrapper_quadrant{top: -84vh;} */
 /* Quadrants common properties*/
 .quadrant{
     display: none;
@@ -75,10 +69,10 @@ position: relative;} */
     background-color: #0d0d0e;
     color: #ffffff;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: 58vh;left: -17vw;}
-#q02{top: 42vh;left: 16vw;}
-#q03{top: 42vh;left: 15vw;}
-#q04{top: 26vh;left: -17vw;}
+#q01{top: -3vh;left: -17vw;}
+#q02{top: -3vh;left: 16vw;}
+#q03{top: 11vh;left: 15vw;}
+#q04{top: 10vh;left: -17vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
@@ -86,19 +80,19 @@ position: relative;} */
   align-items: flex-end;}  
 
 #wrappermain_bottom{
-    height: 40%;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 #qinfo{
-    display: flex;
-    visibility: visible;
+    /* display: flex; */
+    /* visibility: visible; */
     display: flex;
     flex-direction: column;
-    top: 23vh;
-    margin: 4vh 10vw 1vh;
+    /* top: 23vh; */
+    /* margin: 4vh 10vw 1vh; */
     width: 80vw;
     height: 22vh;
     border-radius: 5vw;
@@ -146,7 +140,7 @@ position: relative;} */
     color: #ffffff;}
 footer{
     /*¿¿¿¿Height bigger than suppsed to show half of footer in purpose, to create curiousity??????*/
-    height:15%;
+    height:auto;
     background-color: #5f5e5e;}        
 
 /* MEDIA QUERIES */
