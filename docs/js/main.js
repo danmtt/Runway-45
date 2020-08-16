@@ -131,13 +131,15 @@ $(document).ready(
 
 
   // jQuery on click events
-  // -------------------------------------  
+  // ----------------------
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
-  $("#nav_logo").click(function(){
+  $("#wrapper_nav").click(function(){
     element_id = $(this).attr("id");
     console.log("JUST CLICKED ON:" + element_id )
     quadrantsFadeIn();
     displayCentralLogo();
+    $("#wrapper_nav").fadeOut(1250);
+
     // displaySubQMenus();
   });
   // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
@@ -146,6 +148,9 @@ $(document).ready(
     $("#central_logo").fadeOut(1250);
     //$("#qinfo").fadeOut(1250);
   });
+
+  // QUADRANTS EVENTS
+  // -------------------------
   // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
   $("#q01").click(function(){
     element_id = $(this).attr("id");
@@ -176,6 +181,9 @@ $(document).ready(
     exportQuadrantElement();
     displayCentralLogo();
   });
+
+  // QUADRANTS INFO BOX EVENTS
+  // -------------------------
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
