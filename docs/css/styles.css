@@ -65,8 +65,8 @@ main{
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
-  justify-content: center;
-  align-items: flex-end;}
+    justify-content: center;
+    align-items: flex-end;}
 #wrappermain_bottom{
     height: 30vh;
     display: flex;
@@ -190,12 +190,12 @@ footer{
 /* For design process purposes only (Border all)
 To used on android devices mainly (no devtools) */
 /* header{border: solid 1px yellow;} */
-main{border: solid 2px blue}
+/* main{border: solid 2px blue} */
 /* footer{border: solid 1px green} */
 /* #wrapper_header h1,h6{border: dashed 2px red;} */
 /*main{border: solid 1px red;}*/
-#wrapper_header, #wrappermain_top, #wrappermain_bottom{
-    border: solid 2px red;} 
+/* #wrapper_header, #wrappermain_top, #wrappermain_bottom{
+    border: solid 2px red;}  */
 /* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
     border: dashed 2px red;} */
 /* #qgraphic{ border: solid 1vw #000000;} */
