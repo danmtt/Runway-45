@@ -43,15 +43,20 @@ main{
     position: absolute;
     top: 30vh;
     border-radius: 5vw;
-    border: solid 1vw #000000;
+
     background:#ffffff;}
-#wrapper_nav, #wrapper_log, #wrapper_quadrant{}
-#wrapper_nav{z-index: 0;}
-#wrapper_log{z-index: 1;}
-#wrapper_quadrant{z-index: -1;}
-#nav_logo, #central_logo, #q01, #q02, #q03, #q04{
-    position: relative;}
-#nav_logo{top: 0vh;}
+#wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: relative;}
+#wrapper_nav{top: 0vh}
+#wrapper_logo{top: -84vh;}
+#central_logo{ 
+    border-radius: 100%;
+    box-shadow: 0 0 0 4vw #ffffff;}
+
+/* Tried this and then especific position property*/
+/* #nav_logo, #central_logo, #q01, #q02, #q03, #q04{
+position: relative;} */
+/* #nav_logo{top: 0vh;} */
+#wrapper_quadrant{top: -84vh;}
 /* Quadrants common properties*/
 .quadrant{
     display: none;
@@ -65,29 +70,22 @@ main{
     font-weight: bolder;
     font-size: 10vw;
     overflow:hidden;}
+.quadrant:hover {
+    cursor: pointer;
+    background-color: #0d0d0e;
+    color: #ffffff;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: -28vh;left: -17vw;}
-#q02{top: -42vh;left: 16vw;}
-#q03{top: -42vh;left: 15vw;}
-#q04{top: -58vh;left: -17vw;}
+#q01{top: 58vh;left: -17vw;}
+#q02{top: 42vh;left: 16vw;}
+#q03{top: 42vh;left: 15vw;}
+#q04{top: 26vh;left: -17vw;}
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
   justify-content: center;
   align-items: flex-end;}  
-#central_logo{ 
-    top: -84vh;
-    border-radius: 100%;
-    box-shadow: 0 0 0 4vw #ffffff;}
-
-.quadrant:hover {
-    cursor: pointer;
-    background-color: #0d0d0e;
-    color: #ffffff;}
-
 
 #wrappermain_bottom{
-    /* z-index: -1; */
     height: 40%;
     display: flex;
     align-items: center;
@@ -213,16 +211,16 @@ footer{
 
 /* For design process purposes only (Border all)
 To used on android devices mainly (no devtools) */
-header{border: solid 1px yellow;}
+/* header{border: solid 1px yellow;} */
 main{border: solid 2px blue}
-footer{border: solid 1px green}
-#wrapper_header h1,h6{border: dashed 2px red;}
+/* footer{border: solid 1px green} */
+/* #wrapper_header h1,h6{border: dashed 2px red;} */
 /*main{border: solid 1px red;}*/
 #wrapper_header, #wrappermain_top, #wrappermain_bottom{
     border: solid 2px red;} 
- #wrapper_nav{border: dashed 2px red;}
- #wrapper_quadrant, #wrapper_logo{
-    border: dashed 2px red;}
+/* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
+    border: dashed 2px red;} */
+/* #qgraphic{ border: solid 1vw #000000;} */
 /* #wrappermain_top, #wrappermain_bottom{
     border: solid 1px #b803ff; */
 /* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #qinfo_steps, #qinfo_back, #qinfo_home{
