@@ -38,6 +38,7 @@ main{
 #qgraphic{
     margin:25%;
     border-radius: 5vw;}
+#wrapper_logo, #wrapper_quadrant{display:none}
 /* #wrapper_nav{z-index: 0;}
 #wrapper_logo{z-index: -1;}
 #wrapper_quadrant, #q01, #q02, #q03, #q04{z-index:-2} */
@@ -77,7 +78,7 @@ main{
     justify-content: center;
     flex-direction: column;}
 #qinfo{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 80vw;
     height: 22vh;
