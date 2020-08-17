@@ -38,11 +38,10 @@ main{
 #qgraphic{
     margin:25%;
     border-radius: 5vw;}
-#wrapper_logo, #wrapper_quadrant{display:none}
-/* #wrapper_nav{z-index: 0;}
-#wrapper_logo{z-index: -1;}
-#wrapper_quadrant, #q01, #q02, #q03, #q04{z-index:-2} */
-#central_logo{ 
+#wrapper_nav, #wrapper_logo, #wrapper_quadrant{
+    display:none;}
+#nav_logo, #initial_logo, #second_logo{
+    display: none;
     border-radius: 100%;
     box-shadow: 0 0 0 4vw #ffffff;}
 .quadrant{
@@ -136,7 +135,7 @@ footer{
 
 /* Mobile-M */
 @media (min-width: 360px) {
-    #nav_wrap, #central_logo{
+    #nav_wrap, #initial_logo, #second_logo{
         top: 30vh;
         width: 45vw;}
     #q01, #q02{top: 26.5vh;}            
@@ -150,7 +149,7 @@ footer{
 }
 /* Mobile-L */
 @media (min-width: 424px) {
-    #nav_wrap, #central_logo{
+    #nav_wrap, #initial_logo, #second_logo{
         top: 30vh;
         width: 40vw;}
     .quadrant {width: 47vw;}

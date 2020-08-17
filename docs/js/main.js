@@ -1,67 +1,19 @@
 $(document).ready(
   function(){
 
-    $("#nav_logo").attr("src", "docs/img/nav_logo.png");
-    $("#nav_logo").attr("alt", "Navigation");
-
-
-  // Var definitions
+  // Initial call out on loading page
+  displayNavLogo()
+  
+    // Var definitions
   // -------------------------------------  
   var element_id;
-  var qinfo_link_text;
+  var clicked_text;
+  
 
-  // Functions
-  // -------------------------------------  
-  // Function to display a different image as the central logo attending to the quadrant element clicked.
-  function displayCentralLogo(){
-    $("#central_logo").fadeIn(1650);
-    switch(qinfo_link_text) {
-      case "portfolio":
-        $("#central_logo").attr("src", "docs/img/portfolio.jpg");
-        $("#central_logo").attr("alt", "My portfolio");
-        /*$("#central_logo").fadeIn(1650);*/
-        break;
-      case "projects":
-        $("#central_logo").attr("src", "docs/img/projects.jpg");
-        $("#central_logo").attr("alt", "My projects");
-        break;
-      case "github":
-        $("#central_logo").attr("src", "docs/img/gitHub.jpg");
-        $("#central_logo").attr("alt", "My gitHub");
-        break;
-      case "about me":
-        $("#central_logo").attr("src", "docs/img/aboutme.jpg");
-        $("#central_logo").attr("alt", "About me");
-        break;
-      default:
-        $("#central_logo").attr("src", "docs/img/mylogo.jpg");
-        $("#central_logo").attr("alt", "Meddom logo");
-    }
-  };
-  // Function grouping jQuery calls to fadeIn all quadrants, texts and central logo image. 
-  function quadrantsFadeIn(){
-    $("#wrapper_logo").fadeIn(550);
-    $("#wrapper_quadrant").fadeIn(550);
-    $("#q01").fadeIn(1650);    
-    $("#q02").fadeIn(450);    
-    $("#q03").fadeIn(850);
-    $("#q04").fadeIn(1250);
-    // Flex display call out to apply properties after fadeIn and move texts to container bottom
-    $("#q03").css("display", "flex")
-    $("#q04").css("display", "flex");
-    
-    /*document.getElementById("q01").innerHTML = "portfolio";
-    document.getElementById("q02").innerHTML = "projects";
-    document.getElementById("q03").innerHTML = "github";
-    document.getElementById("q04").innerHTML = "about me";*/
-  };
-  // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
-  function quadrantsFadeOut(){
-    $("#q01").fadeOut(450);
-    $("#q02").fadeOut(1050);
-    $("#q03").fadeOut(850);
-    $("#q04").fadeOut(650);
-  };
+
+
+
+
 
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
@@ -71,20 +23,117 @@ $(document).ready(
   };
   // Function to identify element from quadrant and export to quadrant info box elements.
   function exportQuadrantElement(){    
-    var quadrant_text = document.getElementById(element_id).innerHTML;
+    quadrant_text = document.getElementById(element_id).innerHTML;
     document.getElementById("qinfo_title").innerHTML = quadrant_text;
     document.getElementById("qinfo_link").innerHTML = quadrant_text;
+    console.log(element_id);
+    console.log(quadrant_text); 
   };
   function exportQinfoLinkText(){    
-    var qinfo_link_text = document.getElementById(element_id).innerHTML;
+    qinfo_link_text = document.getElementById(element_id).innerHTML;
     console.log(element_id);
     console.log(qinfo_link_text); 
   };
 
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
-  function displayMenus(){    
-    switch(qinfo_link_text) {
+  
+
+
+  // LOGO FUNCTIONS / EVENTS
+  // -----------------------
+  
+  function displayNavLogo(){
+    $("#wrapper_logo").fadeOut();
+    $("#initial_logo").fadeOut(625);
+    $("#nav_logo").attr("src", "docs/img/nav_logo.png");
+    $("#nav_logo").attr("alt", "Navigation");
+    $("#wrapper_nav").fadeIn();
+    $("#nav_logo").fadeIn(1650);
+  };
+
+  function displayInitialLogo(){
+    $("#wrapper_nav").fadeOut();
+    $("#nav_logo").fadeOut(625);
+    $("#wrapper_logo").fadeIn();
+    $("#initial_logo").fadeIn(1650);
+    $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
+    $("#initial_logo").attr("alt", "Meddom logo");
+    }
+
+  // Function to display a different image as the central logo attending to the quadrant element clicked.
+  function displaySelectedLogo(){
+    element_id = $(this).attr("id");
+    document.getElementById(element_id).innerHTML = clicked_text;
+    $("#initial_logo").fadeOut(625);
+    $("#second_logo").fadeIn(625);
+    switch(clicked_text) {
+      case "portfolio":
+        $("#second_logo").attr("src", "docs/img/portfolio.jpg");
+        $("#second_logo").attr("alt", "My portfolio");
+        break;
+      case "projects":
+        $("#second_logo").attr("src", "docs/img/projects.jpg");
+        $("#second_logo").attr("alt", "My projects");
+        break;
+      case "github":
+        $("#second_logo").attr("src", "docs/img/gitHub.jpg");
+        $("#second_logo").attr("alt", "My gitHub");
+        break;
+      case "about me":
+        $("#second_logo").attr("src", "docs/img/aboutme.jpg");
+        $("#second_logo").attr("alt", "About me");
+        break;
+      default:
+        $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
+        $("#initial_logo").attr("alt", "Meddom logo");
+    }
+  };
+  
+  // jQuery targetting fake nav menu to fadeIn quadrants elements. 
+  $("#wrapper_nav").click(function(){
+    element_id = $(this).attr("id");
+    clicked_text = element_id;
+    console.log(element_id);
+    console.log(clicked_text); 
+    displayInitialLogo();    
+    quadrantsFadeIn();
+    addQuadrantsText();
+    $("#wrapper_nav").fadeOut(625);
+  });
+  // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
+  $("#wrapper_logo").click(function(){
+    element_id = $(this).attr("id");
+    quadrantsFadeOut();
+    exportQuadrantElement();
+    $("#wrapper_logo").fadeOut(1250);
+    $("#wrapper_nav").fadeIn(625);
+    $("#qinfo").fadeOut(1250);
+  });
+
+  // QUADRANTS  FUNCTIONS / EVENTS
+  // -----------------------------
+
+  // Function grouping jQuery calls to fadeIn all quadrants, texts and central logo image. 
+  function quadrantsFadeIn(){    
+    $("#wrapper_quadrant").fadeIn(550);
+    $("#q01").fadeIn(1650);    
+    $("#q02").fadeIn(450);    
+    $("#q03").fadeIn(850);
+    $("#q04").fadeIn(1250);
+    // Flex display call out to apply properties after fadeIn and move texts to container bottom
+    $("#q03").css("display", "flex")
+    $("#q04").css("display", "flex");
+  };
+  // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and initial_logo image. 
+  function quadrantsFadeOut(){
+    $("#q01").fadeOut(450);
+    $("#q02").fadeOut(1050);
+    $("#q03").fadeOut(850);
+    $("#q04").fadeOut(650);
+  };
+  function addQuadrantsText(){    
+    switch(clicked_text) {
       case "portfolio":        
         document.getElementById("q01").innerHTML = "Rockanrolla";
         document.getElementById("q02").innerHTML = "Retaped";
@@ -136,77 +185,59 @@ $(document).ready(
         quadrantsFadeIn();   
     }
   };
-
-
-  // LOGO EVENTS
-  // ----------------
-  // jQuery targetting fake nav menu to fadeIn quadrants elements. 
-  $("#wrapper_nav").click(function(){
-    element_id = $(this).attr("id");
-    qinfo_link_text =""
-    quadrantsFadeIn();
-    displayCentralLogo();
-    $("#wrapper_nav").fadeOut(625);
-    displayMenus();
-  });
-  // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
-  $("#wrapper_logo").click(function(){
-    element_id = $(this).attr("id");
-    quadrantsFadeOut();
-    exportQuadrantElement();
-    $("#wrapper_logo").fadeOut(1250);
-    $("#wrapper_nav").fadeIn(625);
-    $("#qinfo").fadeOut(1250);
-  });
-
-  // QUADRANTS EVENTS
-  // ----------------
   // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
   $("#q01").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo();
+    // displayCentralLogo();
   });
   $("#q02").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo();
+    // displayCentralLogo();
   });
   $("#q03").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo();
+    // displayCentralLogo();
   });
   $("#q04").click(function(){
     element_id = $(this).attr("id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
-    displayCentralLogo();
+    // displayCentralLogo();
   });
 
   // QUADRANTS INFO BOX EVENTS
   // -------------------------
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
-  $("#qinfo_home").click(function(){
-    element_id = $(this).attr("id");
-    exportQinfoLinkText();
-    quadrantsFadeIn();
-    displayCentralLogo();
-    displayMenus();
-  });
   $("#qinfo_link").click(function(){
     element_id = $(this).attr("id");
-    $("#central_logo").fadeOut(1650);
-    exportQinfoLinkText();
-    displayCentralLogo();
-    displayMenus();    
+    $("#initial_logo").fadeOut(1650);
+
+ 
   });
+  $("#qinfo_back").click(function(){
+    element_id = $(this).attr("id");
+    displayInitialLogo();
+    quadrantsFadeOut();
+    quadrantsFadeIn();
+  }); 
+  $("#qinfo_home").click(function(){
+    element_id = $(this).attr("id");
+    displayNavLogo();
+    $("#qinfo").fadeOut(1250);
+
+
+
+  });
+
 
 });
