@@ -14,20 +14,22 @@ $(document).ready(
   // -------------------------------------  
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displayCentralLogo(){
-    switch(element_id) {
-      case "q01":
+    $("#central_logo").fadeIn(1650);
+    switch(qinfo_link_text) {
+      case "portfolio":
         $("#central_logo").attr("src", "docs/img/portfolio.jpg");
         $("#central_logo").attr("alt", "My portfolio");
+        /*$("#central_logo").fadeIn(1650);*/
         break;
-      case "q02":
+      case "projects":
         $("#central_logo").attr("src", "docs/img/projects.jpg");
         $("#central_logo").attr("alt", "My projects");
         break;
-      case "q03":
+      case "github":
         $("#central_logo").attr("src", "docs/img/gitHub.jpg");
         $("#central_logo").attr("alt", "My gitHub");
         break;
-      case "q04":
+      case "about me":
         $("#central_logo").attr("src", "docs/img/aboutme.jpg");
         $("#central_logo").attr("alt", "About me");
         break;
@@ -45,12 +47,13 @@ $(document).ready(
     $("#q03").fadeIn(850);
     $("#q04").fadeIn(1250);
     // Flex display call out to apply properties after fadeIn and move texts to container bottom
-    $("#q03").css("display", "flex");
-    $("#q04").css("display", "flex"); 
-    document.getElementById("q01").innerHTML = "portfolio";
+    $("#q03").css("display", "flex")
+    $("#q04").css("display", "flex");
+    
+    /*document.getElementById("q01").innerHTML = "portfolio";
     document.getElementById("q02").innerHTML = "projects";
     document.getElementById("q03").innerHTML = "github";
-    document.getElementById("q04").innerHTML = "about me";
+    document.getElementById("q04").innerHTML = "about me";*/
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and central_logo image. 
   function quadrantsFadeOut(){
@@ -80,7 +83,7 @@ $(document).ready(
 
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
-  function displaySubQMenus(){    
+  function displayMenus(){    
     switch(qinfo_link_text) {
       case "portfolio":        
         document.getElementById("q01").innerHTML = "Rockanrolla";
@@ -123,8 +126,9 @@ $(document).ready(
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me";
         quadrantsFadeIn();
-        break;  
-      default:
+        break;
+        case "":
+      /*default:*/
         document.getElementById("q01").innerHTML = "portfolio";
         document.getElementById("q02").innerHTML = "projects";
         document.getElementById("q03").innerHTML = "github";
@@ -139,14 +143,17 @@ $(document).ready(
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
   $("#wrapper_nav").click(function(){
     element_id = $(this).attr("id");
+    qinfo_link_text =""
     quadrantsFadeIn();
     displayCentralLogo();
     $("#wrapper_nav").fadeOut(625);
-    // displaySubQMenus();
+    displayMenus();
   });
   // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
   $("#wrapper_logo").click(function(){
+    element_id = $(this).attr("id");
     quadrantsFadeOut();
+    exportQuadrantElement();
     $("#wrapper_logo").fadeOut(1250);
     $("#wrapper_nav").fadeIn(625);
     $("#qinfo").fadeOut(1250);
@@ -171,7 +178,6 @@ $(document).ready(
   });
   $("#q03").click(function(){
     element_id = $(this).attr("id");
-    element_data_id = $(this).attr("data-id");
     quadrantsFadeOut();
     quadrantInfoFadeIn();
     exportQuadrantElement();
@@ -190,14 +196,17 @@ $(document).ready(
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
+    exportQinfoLinkText();
     quadrantsFadeIn();
     displayCentralLogo();
-    displaySubQMenus();
+    displayMenus();
   });
   $("#qinfo_link").click(function(){
     element_id = $(this).attr("id");
+    $("#central_logo").fadeOut(1650);
     exportQinfoLinkText();
-    displaySubQMenus();    
+    displayCentralLogo();
+    displayMenus();    
   });
 
 });
