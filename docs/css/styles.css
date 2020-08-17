@@ -135,17 +135,17 @@ footer{
 
 /* Mobile-M */
 @media (min-width: 360px) {
-    #nav_wrap, #initial_logo, #second_logo{
+    /* #nav_wrap, #initial_logo, #second_logo{
         top: 30vh;
-        width: 45vw;}
-    #q01, #q02{top: 26.5vh;}            
-    #q03, #q04{top: 42.5vh;}        
-    #qinfo{
+        width: 45vw;} */
+    /* #q01, #q02{top: 26.5vh;}             */
+    #q03, #q04{top: 14vh;}        
+    /* #qinfo{
         top: 41vh;
         margin: 1vw;
         width: 80vw;
         height: 22vh;
-        border-radius: 3vw;}
+        border-radius: 3vw;} */
 }
 /* Mobile-L */
 @media (min-width: 424px) {
