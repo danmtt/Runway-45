@@ -34,11 +34,11 @@ main{
 #wrappermain_top{
     position: relative;
     height: 45vh;}
-#qgraphic, #wrapper_nav, #wrapper_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: absolute;}
+#qgraphic, #wrapper_nav, #wrapper_logo,#wrapper_sub_logo, #wrapper_quadrant, #q01, #q02, #q03, #q04{position: absolute;}
 #qgraphic{
     margin:25%;
     border-radius: 5vw;}
-#wrapper_nav, #wrapper_logo, #wrapper_quadrant{
+#wrapper_nav, #wrapper_logo, #wrapper_sub_logo, #wrapper_quadrant{
     display:none;}
 #nav_logo, #initial_logo, #second_logo{
     display: none;
