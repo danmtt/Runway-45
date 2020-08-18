@@ -64,10 +64,6 @@ $(document).ready(
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
   function displaySelectedLogo(){
-    element_id = $(this).attr("id");
-    document.getElementById(element_id).innerHTML = clicked_text;
-    $("#initial_logo").fadeOut(625);
-    $("#second_logo").fadeIn(625);
     switch(clicked_text) {
       case "portfolio":
         $("#second_logo").attr("src", "docs/img/portfolio.jpg");
@@ -216,6 +212,8 @@ $(document).ready(
     element_id = $(this).attr("id");
     clicked_text = document.getElementById(element_id).innerHTML;
     $("#initial_logo").fadeOut(1650);
+    $("#second_logo").fadeIn(625);
+    
     quadrantsFadeOut();
     addQuadrantsText();
     quadrantsFadeIn();
