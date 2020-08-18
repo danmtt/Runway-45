@@ -211,7 +211,9 @@ $(document).ready(
   $("#qinfo_link").click(function(){
     element_id = $(this).attr("id");
     clicked_text = document.getElementById(element_id).innerHTML;
-    $("#initial_logo").fadeOut(1650);
+    $("#wrapper_logo").fadeOut(1650);
+   // $("#initial_logo").fadeOut(1650);
+    $("#wrapper_sub_logo").fadeIn();
     $("#second_logo").fadeIn(625);
     
     quadrantsFadeOut();
