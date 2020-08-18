@@ -46,6 +46,7 @@ $(document).ready(
   function displayNavLogo(){
     $("#wrapper_logo").fadeOut();
     $("#initial_logo").fadeOut(625);
+    quadrantsFadeOut();
     $("#nav_logo").attr("src", "docs/img/nav_logo.png");
     $("#nav_logo").attr("alt", "Navigation");
     $("#wrapper_nav").fadeIn();
@@ -93,7 +94,7 @@ $(document).ready(
   // jQuery targetting fake nav menu to fadeIn quadrants elements. 
   $("#wrapper_nav").click(function(){
     element_id = $(this).attr("id");
-    clicked_text = element_id;
+    clicked_text = "";
     console.log(element_id);
     console.log(clicked_text); 
     displayInitialLogo();    
@@ -132,49 +133,43 @@ $(document).ready(
     $("#q03").fadeOut(850);
     $("#q04").fadeOut(650);
   };
-  function addQuadrantsText(){    
+  function addQuadrantsText(){
     switch(clicked_text) {
       case "portfolio":        
         document.getElementById("q01").innerHTML = "Rockanrolla";
         document.getElementById("q02").innerHTML = "Retaped";
         document.getElementById("q03").innerHTML = "";
         document.getElementById("q04").innerHTML = "";
-        quadrantsFadeIn();   
         break;
       case "projects":
         document.getElementById("q01").innerHTML = "Tourtrip";
         document.getElementById("q02").innerHTML = "Alphabet";
         document.getElementById("q03").innerHTML = "";
         document.getElementById("q04").innerHTML = ""; 
-        quadrantsFadeIn();  
         break;
-      case "gitHub":
+      case "github":
         document.getElementById("q01").innerHTML = "sp01";
         document.getElementById("q02").innerHTML = "sp02";
         document.getElementById("q03").innerHTML = "sp03";
         document.getElementById("q04").innerHTML = "sp04"; 
-        quadrantsFadeIn();  
         break;
       case "about me":
         document.getElementById("q01").innerHTML = "sp01";
         document.getElementById("q02").innerHTML = "sp02";
         document.getElementById("q03").innerHTML = "sp03";
         document.getElementById("q04").innerHTML = "sp04"; 
-        quadrantsFadeIn();  
         break;
       case "home":
         document.getElementById("q01").innerHTML = "portfolio";
         document.getElementById("q02").innerHTML = "projects";
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me";
-        quadrantsFadeIn(); 
         break;
       case "wrapper_nav":
         document.getElementById("q01").innerHTML = "portfolio";
         document.getElementById("q02").innerHTML = "projects";
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me";
-        quadrantsFadeIn();
         break;
         case "":
       /*default:*/
@@ -182,7 +177,6 @@ $(document).ready(
         document.getElementById("q02").innerHTML = "projects";
         document.getElementById("q03").innerHTML = "github";
         document.getElementById("q04").innerHTML = "about me";
-        quadrantsFadeIn();   
     }
   };
   // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
@@ -220,15 +214,20 @@ $(document).ready(
   // jQuery targetting quadrant info box button home to display quadrants and central logo.
   $("#qinfo_link").click(function(){
     element_id = $(this).attr("id");
+    clicked_text = document.getElementById(element_id).innerHTML;
     $("#initial_logo").fadeOut(1650);
-
- 
+    quadrantsFadeOut();
+    addQuadrantsText();
+    quadrantsFadeIn();
+    displaySelectedLogo();
   });
   $("#qinfo_back").click(function(){
     element_id = $(this).attr("id");
+    clicked_text="";
     displayInitialLogo();
-    quadrantsFadeOut();
+    /*quadrantsFadeOut();*/
     quadrantsFadeIn();
+    addQuadrantsText();
   }); 
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
