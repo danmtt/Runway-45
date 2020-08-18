@@ -46,6 +46,9 @@ $(document).ready(
   function displayNavLogo(){
     $("#wrapper_logo").fadeOut();
     $("#initial_logo").fadeOut(625);
+    $("#wrapper_sub_logo").fadeOut();
+    $("#second_logo").fadeOut(625);
+    
     quadrantsFadeOut();
     $("#nav_logo").attr("src", "docs/img/nav_logo.png");
     $("#nav_logo").attr("alt", "Navigation");
@@ -124,6 +127,7 @@ $(document).ready(
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and initial_logo image. 
   function quadrantsFadeOut(){
+    $("#wrapper_quadrant").fadeOut(550);
     $("#q01").fadeOut(450);
     $("#q02").fadeOut(1050);
     $("#q03").fadeOut(850);
@@ -225,7 +229,7 @@ $(document).ready(
     element_id = $(this).attr("id");
     clicked_text="";
     displayInitialLogo();
-    /*quadrantsFadeOut();*/
+    quadrantsFadeOut();
     quadrantsFadeIn();
     addQuadrantsText();
   }); 
