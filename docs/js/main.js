@@ -8,6 +8,7 @@ $(document).ready(
   // -------------------------------------  
   var element_id;
   var clicked_text;
+  var clicked_steps = [];
 
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
@@ -23,11 +24,11 @@ $(document).ready(
     console.log(element_id);
     console.log(quadrant_text); 
   };
-  function exportQinfoLinkText(){    
+/*  function exportQinfoLinkText(){    
     qinfo_link_text = document.getElementById(element_id).innerHTML;
     console.log(element_id);
     console.log(qinfo_link_text); 
-  };
+  };*/
 
 
   // Function to display a different image as the central logo attending to the quadrant element clicked.
@@ -90,8 +91,8 @@ $(document).ready(
   $("#wrapper_nav").click(function(){
     element_id = $(this).attr("id");
     clicked_text = "";
-    console.log(element_id);
-    console.log(clicked_text); 
+    /*console.log(element_id);*/
+    /*console.log(clicked_text);*/ 
     displayInitialLogo();    
     quadrantsFadeIn();
     addQuadrantsText();
@@ -118,16 +119,16 @@ $(document).ready(
     $("#q03").fadeIn(850);
     $("#q04").fadeIn(1250);
     // Flex display call out to apply properties after fadeIn and move texts to container bottom
-    $("#q03").css("display", "flex")
+    $("#q03").css("display", "flex");
     $("#q04").css("display", "flex");
   };
   // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and initial_logo image. 
   function quadrantsFadeOut(){
     $("#wrapper_quadrant").fadeOut(550);
-    $("#q01").fadeOut(450);
-    $("#q02").fadeOut(1050);
-    $("#q03").fadeOut(850);
-    $("#q04").fadeOut(650);
+    /*$("#q01").fadeOut(450);*/
+    /*$("#q02").fadeOut(1050);*/
+    /*$("#q03").fadeOut(850);*/
+    /*$("#q04").fadeOut(650);*/
   };
   function addQuadrantsText(){
     switch(clicked_text) {
@@ -223,11 +224,12 @@ $(document).ready(
   });
   $("#qinfo_back").click(function(){
     element_id = $(this).attr("id");
-    clicked_text="";
+    /*clicked_text="";*/
     displayInitialLogo();
     /*quadrantsFadeOut();*/
     quadrantsFadeIn();
     addQuadrantsText();
+    $("#qinfo").fadeOut(1250);
   }); 
   $("#qinfo_home").click(function(){
     element_id = $(this).attr("id");
