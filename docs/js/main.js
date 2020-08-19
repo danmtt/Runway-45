@@ -8,12 +8,6 @@ $(document).ready(
   // -------------------------------------  
   var element_id;
   var clicked_text;
-  
-
-
-
-
-
 
   // Function grouping jQuery calls to fadeIn quadrant information box. 
   function quadrantInfoFadeIn(){
@@ -59,6 +53,8 @@ $(document).ready(
   function displayInitialLogo(){
     $("#wrapper_nav").fadeOut();
     $("#nav_logo").fadeOut(625);
+    $("#wrapper_sub_logo").fadeOut();
+    $("#second_logo").fadeOut(625);
     $("#wrapper_logo").fadeIn();
     $("#initial_logo").fadeIn(1650);
     $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
@@ -229,7 +225,7 @@ $(document).ready(
     element_id = $(this).attr("id");
     clicked_text="";
     displayInitialLogo();
-    quadrantsFadeOut();
+    /*quadrantsFadeOut();*/
     quadrantsFadeIn();
     addQuadrantsText();
   }); 
