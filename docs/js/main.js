@@ -187,34 +187,36 @@ $(document).ready(
     };
     // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
     $("#q01").click(function() {
-      stepTrack();
+      /*stepTrack();*/
+      element_id = $(this).attr("id");
+      clicked_text = document.getElementById(element_id).innerHTML;
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       // displayCentralLogo();
     });
     $("#q02").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;
-      clicked_steps.push(clicked_text);
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       // displayCentralLogo();
     });
     $("#q03").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;
-      clicked_steps.push(clicked_text);
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       // displayCentralLogo();
     });
     $("#q04").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;
-      clicked_steps.push(clicked_text);
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -225,23 +227,22 @@ $(document).ready(
     // -------------------------
     // jQuery targetting quadrant info box button home to display quadrants and central logo.
     $("#qinfo_link").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;
-      clicked_steps.push(element_id);
-      clicked_steps.push(clicked_text);
       $("#wrapper_logo").fadeOut(1650);
       // $("#initial_logo").fadeOut(1650);
       $("#wrapper_sub_logo").fadeIn();
       $("#second_logo").fadeIn(625);
-
       quadrantsFadeOut();
       addQuadrantsText();
       quadrantsFadeIn();
       displaySelectedLogo();
     });
     $("#qinfo_back").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
-      console.log(clicked_steps);
+      clicked_text = ""
       displayInitialLogo();
       /*quadrantsFadeOut();*/
       quadrantsFadeIn();
@@ -249,7 +250,9 @@ $(document).ready(
       $("#qinfo").fadeOut(1250);
     });
     $("#qinfo_home").click(function() {
+      /*stepTrack();*/
       element_id = $(this).attr("id");
+      clicked_text = document.getElementById(element_id).innerHTML;
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
 
