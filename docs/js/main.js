@@ -7,19 +7,22 @@ $(document).ready(
     // Var definitions
     // -------------------------------------  
     var element_id;
+    var data_index;
     var clicked_text;
     var clicked_steps = [];
+    var click_count = 0;
     
-    function stepTrack(){
-      /*element_id = $(this).attr("id");*/
-      /*clicked_text = document.getElementById(element_id).innerHTML;*/
-      clicked_steps.push(element_id);
-      clicked_steps.push(clicked_text);
-      console.log(element_id);
-      console.log(clicked_text);
-      console.log(clicked_steps)
+    function stepTrack() {
+      /*clicked_steps.push(element_id);*/
+      clicked_steps.push(data_index);
+      clicked_steps.push(click_count);
+      /*clicked_steps.push(clicked_text);*/
+      /*console.log(element_id);*/
+      /*console.log(clicked_text);*/
+      console.log(clicked_steps);
+      console.log(click_count);
     };
-
+    
     // Function grouping jQuery calls to fadeIn quadrant information box. 
     function quadrantInfoFadeIn() {
       $("#qinfo").fadeIn(650);
@@ -43,8 +46,6 @@ $(document).ready(
 
     // Function to display a different image as the central logo attending to the quadrant element clicked.
 
-
-
     // LOGO FUNCTIONS / EVENTS
     // -----------------------
 
@@ -53,11 +54,12 @@ $(document).ready(
       $("#initial_logo").fadeOut(625);
       $("#wrapper_sub_logo").fadeOut();
       $("#second_logo").fadeOut(625);
-
       quadrantsFadeOut();
       $("#nav_logo").attr("src", "docs/img/nav_logo.png");
       $("#nav_logo").attr("alt", "Navigation");
+      
       $("#wrapper_nav").fadeIn();
+      $("#wrapper_nav").attr("data", "000");
       $("#nav_logo").fadeIn(1650);
     };
     function displayInitialLogo() {
@@ -69,8 +71,9 @@ $(document).ready(
       $("#initial_logo").fadeIn(1650);
       $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
       $("#initial_logo").attr("alt", "Meddom logo");
-    }
-
+      
+      $("#wrapper_logo").attr("data", "001");
+    };
     // Function to display a different image as the central logo attending to the quadrant element clicked.
     function displaySelectedLogo() {
       switch (clicked_text) {
@@ -99,6 +102,8 @@ $(document).ready(
     // jQuery targetting fake nav menu to fadeIn quadrants elements. 
     $("#wrapper_nav").click(function() {
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data");
+      click_count = click_count+1;
       clicked_text = "nav_logo";
       stepTrack();
       displayInitialLogo();
@@ -110,6 +115,7 @@ $(document).ready(
     $("#wrapper_logo").click(function() {
       /*stepTrack();*/
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data");
       clicked_text = "initial_logo";
       stepTrack();
       quadrantsFadeOut();
@@ -192,9 +198,8 @@ $(document).ready(
     // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
     $("#q01").click(function() {
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       stepTrack();
-      /*element_id = $(this).attr("id");
-      clicked_text = document.getElementById(element_id).innerHTML;*/
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -202,6 +207,7 @@ $(document).ready(
     });
     $("#q02").click(function() {
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       stepTrack();
       /*element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;*/
@@ -212,6 +218,7 @@ $(document).ready(
     });
     $("#q03").click(function() {
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       stepTrack();
       /*element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;*/
@@ -222,6 +229,7 @@ $(document).ready(
     });
     $("#q04").click(function() {
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       stepTrack();
       /*element_id = $(this).attr("id");
       clicked_text = document.getElementById(element_id).innerHTML;*/
@@ -237,6 +245,7 @@ $(document).ready(
     $("#qinfo_link").click(function() {
       /*stepTrack();*/
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       clicked_text = document.getElementById(element_id).innerHTML;
       $("#wrapper_logo").fadeOut(1650);
       // $("#initial_logo").fadeOut(1650);
@@ -250,6 +259,7 @@ $(document).ready(
     $("#qinfo_back").click(function() {
       /*stepTrack();*/
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       clicked_text = ""
       displayInitialLogo();
       /*quadrantsFadeOut();*/
@@ -260,6 +270,7 @@ $(document).ready(
     $("#qinfo_home").click(function() {
       /*stepTrack();*/
       element_id = $(this).attr("id");
+      data_index = $(this).attr("data")
       clicked_text = document.getElementById(element_id).innerHTML;
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
