@@ -106,7 +106,6 @@ $(document).ready(
       // data_index = $(this).attr("data");
       clicked_text = "nav_logo";
       click_count = click_count+1;
-
       stepTrack();
       displayInitialLogo();
       quadrantsFadeIn();
@@ -114,12 +113,12 @@ $(document).ready(
       $("#wrapper_nav").fadeOut(625);
     });
     // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
+    /*
     $("#wrapper_logo").click(function() {
       element_id = $(this).attr("id");
       // data_index = $(this).attr("data");
       clicked_text = "initial_logo";
       click_count = click_count+1;
-      
       stepTrack();
       quadrantsFadeOut();
       exportQuadrantElement();
@@ -128,6 +127,22 @@ $(document).ready(
       $("#nav_logo").fadeIn(625);
       $("#qinfo").fadeOut(1250);
     });
+    */
+    /*
+    $("#wrapper_sub_logo").click(function() {
+      element_id = $(this).attr("id");
+      // data_index = $(this).attr("data");
+      clicked_text = "sub_logo";
+      click_count = click_count + 1;
+      stepTrack();
+      quadrantsFadeOut();
+      exportQuadrantElement();
+      $("#wrapper_sub_logo").fadeOut(1250);
+      $("#wrapper_logo").fadeIn(625);
+      $("#initial_logo").fadeIn(625);
+      $("#qinfo").fadeOut(1250);
+    });
+    */
 
     // QUADRANTS  FUNCTIONS / EVENTS
     // -----------------------------
