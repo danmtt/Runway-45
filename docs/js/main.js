@@ -170,8 +170,9 @@ $(document).ready(
     function addQuadrantsText() {
       switch (clicked_text) {
         case "portfolio":
-          document.getElementById("q01").innerHTML = "Rockanrolla";
-          document.getElementById("q02").innerHTML = "Retaped";
+          document.getElementById("q01").innerHTML = "Rock 'n' r";
+          /*$("#q01").css("font-size",  "8vw");*/
+          document.getElementById("q02").innerHTML = "Re - taped";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "";
           break;
