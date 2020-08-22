@@ -212,6 +212,7 @@ $(document).ready(
     });
     $("#q02").click(function() {
       element_id = $(this).attr("id");
+      clicked_text = document.getElementById("q02").innerHTML;
       // data_index = $(this).attr("data");
       click_count = click_count+1;
       stepTrack();
@@ -222,6 +223,7 @@ $(document).ready(
     });
     $("#q03").click(function() {
       element_id = $(this).attr("id");
+      clicked_text = document.getElementById("q03").innerHTML;
       // data_index = $(this).attr("data");
       click_count = click_count+1;
       stepTrack();
@@ -231,6 +233,7 @@ $(document).ready(
     });
     $("#q04").click(function() {
       element_id = $(this).attr("id");
+      clicked_text = document.getElementById("q04").innerHTML;
       // data_index = $(this).attr("data");
       click_count = click_count+1;
       stepTrack();
