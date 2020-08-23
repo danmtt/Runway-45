@@ -25,6 +25,7 @@ header{
     font-size: 8vw;
     background:#ffffff;}
 main{
+    background-color: brown;
     width: 100vw;    
     height:auto;
     margin-top: 1vh;} 
@@ -61,10 +62,15 @@ main{
     background-color: #0d0d0e;
     color: #ffffff;}
 /* Quadrants specific properties: position and rotations */
-#q01{top: -3vh;left: -17vw;}
+#q01, #q02{top: -3vh;}
+#q03, #q04{top: 11vh;}
+#q01, #q04{left: -17vw;}
+#q02, #q03{left: 17vw;}
+
+/* #q01{top: -3vh;left: -17vw;}
 #q02{top: -3vh;left: 16vw;}
 #q03{top: 11vh;left: 15vw;}
-#q04{top: 10vh;left: -17vw;}
+#q04{top: 10vh;left: -17vw;} */
 #q01, #q03{transform: rotate(-45deg);}
 #q02, #q04{transform: rotate(45deg);}
 #q03, #q04{
@@ -138,21 +144,19 @@ footer{
 
 /* Mobile-M */
 @media (min-width: 360px) {
-    /* #nav_wrap, #initial_logo, #second_logo{
-        top: 30vh;
-        width: 45vw;} */
-    /* #q01, #q02{top: 26.5vh;}             */
-    #q03, #q04{top: 14vh;}        
-    /* #qinfo{
-        top: 41vh;
-        margin: 1vw;
-        width: 80vw;
-        height: 22vh;
-        border-radius: 3vw;} */
+
+    #q01, #q02{top: -4vh;}
+    #q03, #q04{top: 16vh;}
+    #wrappermain_bottom{margin-top: 8vw;}
 }
 /* Mobile-L */
 @media (min-width: 424px) {
-    #nav_wrap, #initial_logo, #second_logo{
+    #wrapper_quadrant{
+        width: 45vw;
+        height: 45vw
+    }
+
+    /* #nav_wrap, #initial_logo, #second_logo{
         top: 30vh;
         width: 40vw;}
     .quadrant {width: 47vw;}
@@ -167,7 +171,7 @@ footer{
         margin: 1vw;
         width: 80vw;
         height: 22vh;
-        border-radius: 3vw;}
+        border-radius: 3vw;} */
 }
 /* Tablet */
 @media (min-width: 767px) {
