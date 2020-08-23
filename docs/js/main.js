@@ -1,24 +1,23 @@
 $(document).ready(
   // Initial function on loading page
-  function() {  
-   
+  function() {     
 
     // Var definitions
     // -------------------------------------  
     var clickedCount = 0;
     var elementId;
     // var data_index;
-    var clickedText; 
+    var clickedTxt; 
     var clickedSteps = []; // Array containing all click events info
-    
-    var projectsText = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner."
-    displayNavLogo()
+    var quadrantBrief;
+    var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner."
+    displayNavLogo();
 
     // Function to track user click events.   
     function stepTrack() {      
       clickedSteps.push(clickedCount);
       clickedSteps.push(elementId);
-      clickedSteps.push(clickedText);      
+      clickedSteps.push(clickedTxt);      
       console.log(clickedSteps);
     };
     
@@ -29,19 +28,20 @@ $(document).ready(
       $("#qinfo").css("display", "flex");
     };
     // Function to identify element from quadrant and export to quadrant info box elements.
-    function exportQuadrantElement() {
-      quadrant_text = document.getElementById(elementId).innerHTML;
-      document.getElementById("qinfo_title").innerHTML = quadrant_text;
-      document.getElementById("qinfo_link").innerHTML = quadrant_text;
+    function exportQuadrantElement() { 
+      document.getElementById("qinfo_title").innerHTML = clickedTxt;      
+      document.getElementById("qinfo_link").innerHTML = clickedTxt;
     };
-    /*  function exportQinfoLinkText(){    
-        qinfo_link_text = document.getElementById(elementId).innerHTML;
-        console.log(elementId);
-        console.log(qinfo_link_text); 
-      };*/
-
-
-    // Function to display a different image as the central logo attending to the quadrant element clicked.
+    function exportQuadrantBrief() {
+      switch (clickedTxt){
+        case "projects":
+          document.getElementById("qinfomain").innerHTML = projectsTxt;
+          break;
+        default :
+          document.getElementById("qinfomain").innerHTML = "NOT UPDATED";
+          // CONTINUE BUILDING CASES / BRIEFINGS FOR EACH DIFFERENT CASE
+      }
+    };
 
     // LOGO FUNCTIONS / EVENTS
     // -----------------------
@@ -73,27 +73,26 @@ $(document).ready(
     };
     // Function to display a different image as the central logo attending to the quadrant element clicked.
     function displaySelectedLogo() {
-      switch (clickedText) {
+      switch (clickedTxt) {
         case "portfolio":
           $("#second_logo").attr("src", "docs/img/portfolio.jpg");
           $("#second_logo").attr("alt", "My portfolio");
-          clickedText = "My portfolio logo";
+          clickedTxt = "My portfolio logo";
           break;
         case "projects":
           $("#second_logo").attr("src", "docs/img/projects.jpg");
           $("#second_logo").attr("alt", "My projects");
-          document.getElementById("qinfomain").innerHTML = projectsText;
-          clickedText = "My projects logo";
+          clickedTxt = "My projects logo";
           break;
         case "github":
           $("#second_logo").attr("src", "docs/img/gitHub.jpg");
           $("#second_logo").attr("alt", "My gitHub");
-          clickedText = "My gitHub logo";
+          clickedTxt = "My gitHub logo";
           break;
         case "about me":
           $("#second_logo").attr("src", "docs/img/aboutme.jpg");
           $("#second_logo").attr("alt", "About me");
-          clickedText = "About me logo";
+          clickedTxt = "About me logo";
           break;
         default:
           $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
@@ -103,47 +102,15 @@ $(document).ready(
 
     // jQuery targetting fake nav menu to fadeIn quadrants elements. 
     $("#wrapper_nav").click(function() {
-      elementId = $(this).attr("id");
-      // data_index = $(this).attr("data");
-      clickedText = "nav_logo";
-      clickedCount = clickedCount+1;
-      stepTrack();
-      displayInitialLogo();
-      quadrantsFadeIn();
-      addQuadrantsText();
-      $("#wrapper_nav").fadeOut(625);
-    });
-    // jQuery targetting central logo to fadeOut quadrants elements, central logo and quadrant info box.
-    /*
-    $("#wrapper_logo").click(function() {
-      elementId = $(this).attr("id");
-      // data_index = $(this).attr("data");
-      clickedText = "initial_logo";
-      clickedCount = clickedCount+1;
-      stepTrack();
-      quadrantsFadeOut();
-      exportQuadrantElement();
-      $("#wrapper_logo").fadeOut(1250);
-      $("#wrapper_nav").fadeIn(625);
-      $("#nav_logo").fadeIn(625);
-      $("#qinfo").fadeOut(1250);
-    });
-    */
-    /*
-    $("#wrapper_sub_logo").click(function() {
-      elementId = $(this).attr("id");
-      // data_index = $(this).attr("data");
-      clickedText = "sub_logo";
-      clickedCount = clickedCount + 1;
-      stepTrack();
-      quadrantsFadeOut();
-      exportQuadrantElement();
-      $("#wrapper_sub_logo").fadeOut(1250);
-      $("#wrapper_logo").fadeIn(625);
-      $("#initial_logo").fadeIn(625);
-      $("#qinfo").fadeOut(1250);
-    });
-    */
+        elementId = $(this).attr("id");
+        clickedTxt = "nav_logo";
+        clickedCount = clickedCount+1;
+        stepTrack();
+        displayInitialLogo();
+        quadrantsFadeIn();
+        addQuadrantsText();
+        $("#wrapper_nav").fadeOut(625);
+    });  
 
     // QUADRANTS  FUNCTIONS / EVENTS
     // -----------------------------
@@ -169,15 +136,14 @@ $(document).ready(
     };
 
     function addQuadrantsText() {
-      switch (clickedText) {
+      switch (clickedTxt) {
         case "portfolio":
           document.getElementById("q01").innerHTML = "Rock 'n' r";
-          /*$("#q01").css("font-size",  "8vw");*/
           document.getElementById("q02").innerHTML = "Re - taped";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "";
           break;
-        case "projects":
+        case "projects":          
           document.getElementById("q01").innerHTML = "Alphabet";
           document.getElementById("q02").innerHTML = "Tourtrip";
           document.getElementById("q03").innerHTML = "";
@@ -208,7 +174,6 @@ $(document).ready(
           document.getElementById("q04").innerHTML = "about me";
           break;
         case "nav_logo":
-          /*default:*/
           document.getElementById("q01").innerHTML = "portfolio";
           document.getElementById("q02").innerHTML = "projects";
           document.getElementById("q03").innerHTML = "github";
@@ -218,45 +183,44 @@ $(document).ready(
     // jQuery targetting quadrants elements to fadeOut non clicked ones and to fade In and optimize quadrant info box. 
     $("#q01").click(function() {
       elementId = $(this).attr("id");
-      clickedText = document.getElementById("q01").innerHTML;
-      // data_index = $(this).attr("data");
+      clickedTxt = document.getElementById("q01").innerHTML;
       clickedCount = clickedCount+1;
+      document.getElementById("qinfomain").innerHTML = quadrantBrief;
       stepTrack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
-      // displayCentralLogo();
+      exportQuadrantBrief();
     });
     $("#q02").click(function() {
       elementId = $(this).attr("id");
-      clickedText = document.getElementById("q02").innerHTML;
-      // data_index = $(this).attr("data");
+      clickedTxt = document.getElementById("q02").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
-      // displayCentralLogo();
+      exportQuadrantBrief();
     });
     $("#q03").click(function() {
       elementId = $(this).attr("id");
-      clickedText = document.getElementById("q03").innerHTML;
-      // data_index = $(this).attr("data");
+      clickedTxt = document.getElementById("q03").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
+      exportQuadrantBrief()
     });
     $("#q04").click(function() {
       elementId = $(this).attr("id");
-      clickedText = document.getElementById("q04").innerHTML;
-      // data_index = $(this).attr("data");
+      clickedTxt = document.getElementById("q04").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
+      exportQuadrantBrief()
     });
 
     // QUADRANTS INFO BOX EVENTS
@@ -264,12 +228,10 @@ $(document).ready(
     // jQuery targetting quadrant info box button home to display quadrants and central logo.
     $("#qinfo_link").click(function() { 
       elementId = $(this).attr("id");
-      // data_index = $(this).attr("data");
       clickedCount = clickedCount+1;
-      clickedText = document.getElementById(elementId).innerHTML;
+      clickedTxt = document.getElementById(elementId).innerHTML;
       stepTrack();
       $("#wrapper_logo").fadeOut(1650);
-      // $("#initial_logo").fadeOut(1650);
       $("#wrapper_sub_logo").fadeIn();
       $("#second_logo").fadeIn(625);
       quadrantsFadeOut();
@@ -279,9 +241,8 @@ $(document).ready(
     });
     $("#qinfo_back").click(function() {
       elementId = $(this).attr("id");
-      // data_index = 666;
       clickedCount = clickedCount-1;
-      clickedText = ""
+      clickedTxt = ""
       stepTrack();
       displayInitialLogo();
       quadrantsFadeIn();
@@ -289,16 +250,13 @@ $(document).ready(
       $("#qinfo").fadeOut(1250);
     });
     $("#qinfo_home").click(function() {
-      elementId = $(this).attr("id");
-      // data_index = "button_home";      
-      clickedText = document.getElementById(elementId).innerHTML;
+      elementId = $(this).attr("id");     
+      clickedTxt = document.getElementById(elementId).innerHTML;
       stepTrack();
       clickedCount = 0
       clickedSteps = [];
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
     });
-
-
   }
 );

@@ -79,13 +79,13 @@ main{
 #qinfo{
     display: none;
     flex-direction: column;
-    width: 80vw;
-    height: 22vh;
+    width: 85vw;
+    height: 25vh;
     border-radius: 5vw;
     border: solid 1vw #000000;
     background:#ffffff;}
 #qinfoheader, #qinfomain, #qinfofooter{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     align-items: center;}
 #qinfoheader{
@@ -100,9 +100,12 @@ main{
     font-weight: bolder;}
 #qinfo_title{
     font-size:4vh;}
-#qinfo_brief{
+#qinfomain{
     font-family: 'Roboto Condensed', sans-serif;
-    overflow: hidden;}
+    font-size: 4.5vw;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2vw;}
 #qinfofooter{
     height: 15vh;
     margin-bottom: 1vh;
