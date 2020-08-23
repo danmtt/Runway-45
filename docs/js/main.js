@@ -3,13 +3,13 @@ $(document).ready(
   function() {     
 
     // Var definitions
-    // -------------------------------------  
+    // --------------------------------------------------- 
+    // Step tracking -------------------------------------  
     var clickedCount = 0;
     var elementId;
-    // var data_index;
     var clickedTxt; 
     var clickedSteps = []; // Array containing all click events info
-    var quadrantBrief;
+    // Briefings -----------------------------------------
     var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner."
     displayNavLogo();
 
@@ -185,7 +185,7 @@ $(document).ready(
       elementId = $(this).attr("id");
       clickedTxt = document.getElementById("q01").innerHTML;
       clickedCount = clickedCount+1;
-      document.getElementById("qinfomain").innerHTML = quadrantBrief;
+      // document.getElementById("qinfomain").innerHTML = quadrantBrief;
       stepTrack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
