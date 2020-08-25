@@ -9,6 +9,11 @@ $(document).ready(
     var elementId;
     var clickedTxt; 
     var clickedSteps = []; // Array containing all click events info
+    var prevStep = [];
+    var prevStepClickIndex;
+    var prevStepClickElement;
+    var prevStepClickText;
+    
     // Briefings -----------------------------------------
     var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner."
     displayNavLogo();
@@ -19,6 +24,18 @@ $(document).ready(
       clickedSteps.push(elementId);
       clickedSteps.push(clickedTxt);      
       console.log(clickedSteps);
+    };
+    function backStep() {
+      stepsLen = clickedSteps.length;
+      prevStepClickIndex = clickedSteps[stepsLen-6];
+      prevStepClickElement = clickedSteps[stepsLen-5];
+      prevStepClickText = clickedSteps[stepsLen-4]
+      
+      prevStep.push(prevStepClickIndex);
+      prevStep.push(prevStepClickElement);
+      prevStep.push(prevStepClickText);
+      
+      console.log(prevStep);
     };
     
     // Function grouping jQuery calls to fadeIn quadrant information box. 
@@ -242,8 +259,9 @@ $(document).ready(
     $("#qinfo_back").click(function() {
       elementId = $(this).attr("id");
       clickedCount = clickedCount-1;
-      clickedTxt = ""
+      clickedTxt = "back"
       stepTrack();
+      backStep();
       displayInitialLogo();
       quadrantsFadeIn();
       addQuadrantsText();
