@@ -15,7 +15,8 @@ $(document).ready(
     var prevStepClickText;
     
     // Briefings -----------------------------------------
-    var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner."
+    var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner.";
+    var gitHubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
     displayNavLogo();
 
     // Function to track user click events.   
@@ -27,6 +28,7 @@ $(document).ready(
     };
     function backStep() {
       stepsLen = clickedSteps.length;
+      prevStep = [];
       prevStepClickIndex = clickedSteps[stepsLen-6];
       prevStepClickElement = clickedSteps[stepsLen-5];
       prevStepClickText = clickedSteps[stepsLen-4]
@@ -34,6 +36,8 @@ $(document).ready(
       prevStep.push(prevStepClickIndex);
       prevStep.push(prevStepClickElement);
       prevStep.push(prevStepClickText);
+      
+      clickedTxt = prevStepClickText;
       
       console.log(prevStep);
     };
@@ -53,6 +57,9 @@ $(document).ready(
       switch (clickedTxt){
         case "projects":
           document.getElementById("qinfomain").innerHTML = projectsTxt;
+          break;
+        case "github":
+          document.getElementById("qinfomain").innerHTML = gitHubTxt;
           break;
         default :
           document.getElementById("qinfomain").innerHTML = "NOT UPDATED";
@@ -259,10 +266,10 @@ $(document).ready(
     $("#qinfo_back").click(function() {
       elementId = $(this).attr("id");
       clickedCount = clickedCount-1;
-      clickedTxt = "back"
+      
       stepTrack();
       backStep();
-      displayInitialLogo();
+      displaySelectedLogo();
       quadrantsFadeIn();
       addQuadrantsText();
       $("#qinfo").fadeOut(1250);
