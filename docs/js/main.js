@@ -39,7 +39,7 @@ $(document).ready(
       
       clickedTxt = prevStepClickText;
       
-      console.log(prevStep);
+      console.log("This is the previous step: " + prevStep);
     };
     
     // Function grouping jQuery calls to fadeIn quadrant information box. 
