@@ -97,11 +97,11 @@ main{
 #qinfoheader{
     height: 15vh;
     justify-content: center;}
-#qinfo_title, #qinfo_brief, #qinfo_link, #qinfo_home{
+#qinfo_title, #qinfo_brief, #qinfo_link, #nav_home{
     margin: 0;
     padding: 0;
     text-align: center;}
-#qinfo_title, #qinfo_link, #qinfo_back, #qinfo_home{
+#qinfo_title, #qinfo_link, #nav_back, #nav_home{
     font-family: 'Bangers', cursive;
     font-weight: bolder;}
 #qinfo_title{
@@ -117,19 +117,19 @@ main{
     margin-bottom: 1vh;
     flex-direction: row;
     justify-content: space-around;}
-#qinfo_link, #qinfo_steps{width: 45vw;
+#qinfo_link, #nav_steps{width: 100vw;
     margin: 0 2vw 0;
     flex-direction: row;
     justify-content: space-between;}
-#qinfo_back, #qinfo_home{width: 45%;}
+#nav_back, #nav_home{width: 45%;}
 /* insert icons? */
-#qinfo_link, #qinfo_back, #qinfo_home{
+#qinfo_link, #nav_back, #nav_home{
     font-size:3vh;
     color:#000000;
     background-color: #3f3e3e00;
     border: solid 2px #000000;
     border-radius: 10%;}
-#qinfo_link:hover, #qinfo_back:hover, #qinfo_home:hover{
+#qinfo_link:hover, #nav_back:hover, #nav_home:hover{
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
@@ -211,6 +211,6 @@ To used on android devices mainly (no devtools) */
 /* #qgraphic{ border: solid 1vw #000000;} */
 /* #wrappermain_top, #wrappermain_bottom{
     border: solid 1px #b803ff; */
-/* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #qinfo_steps, #qinfo_back, #qinfo_home{
+/* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #nav_steps, #nav_back, #nav_home{
     border: solid 1px blue;
     } */

@@ -263,7 +263,7 @@ $(document).ready(
       quadrantsFadeIn();
       displaySelectedLogo();
     });
-    $("#qinfo_back").click(function() {
+    $("#nav_back").click(function() {
       elementId = $(this).attr("id");
       clickedCount = clickedCount-1;
       
@@ -274,7 +274,7 @@ $(document).ready(
       addQuadrantsText();
       $("#qinfo").fadeOut(1250);
     });
-    $("#qinfo_home").click(function() {
+    $("#nav_home").click(function() {
       elementId = $(this).attr("id");     
       clickedTxt = document.getElementById(elementId).innerHTML;
       stepTrack();
