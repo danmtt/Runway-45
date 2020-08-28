@@ -76,7 +76,7 @@ main{
 #q03, #q04{
     justify-content: center;
     align-items: flex-end;}
-#wrappermain_bottom{
+#wrappermain_medium{
     height: 30vh;
     display: flex;
     align-items: center;
@@ -147,7 +147,7 @@ footer{
 
     #q01, #q02{top: -4vh;}
     #q03, #q04{top: 16vh;}
-    #wrappermain_bottom{margin-top: 8vw;}
+    #wrappermain_medium{margin-top: 8vw;}
 }
 /* Mobile-L */
 @media (min-width: 424px) {
@@ -204,12 +204,12 @@ To used on android devices mainly (no devtools) */
 /* footer{border: solid 1px green} */
 /* #wrapper_header h1,h6{border: dashed 2px red;} */
 /*main{border: solid 1px red;}*/
-/* #wrapper_header, #wrappermain_top, #wrappermain_bottom{
+/* #wrapper_header, #wrappermain_top, #wrappermain_medium{
     border: solid 2px red;}  */
 /* #wrapper_nav, #wrapper_quadrant, #wrapper_logo{
     border: dashed 2px red;} */
 /* #qgraphic{ border: solid 1vw #000000;} */
-/* #wrappermain_top, #wrappermain_bottom{
+/* #wrappermain_top, #wrappermain_medium{
     border: solid 1px #b803ff; */
 /* #qinfo_title, #qinfo_brief, #qinfofooter, #qinfo_link, #nav_steps, #nav_back, #nav_home{
     border: solid 1px blue;
