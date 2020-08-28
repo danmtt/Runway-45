@@ -9,7 +9,7 @@ $(document).ready(
     var elementId;
     var clickedTxt; 
     var clickedSteps = []; // Array containing all click events info
-    var prevStep = [];
+    var prevStep = []; // Array containing last click events info
     var prevStepClickIndex;
     var prevStepClickElement;
     var prevStepClickText;
