@@ -19,6 +19,10 @@ $(document).ready(
     var gitHubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
     displayNavLogo();
 
+    $("#nav_home").css("background-image", "url(docs/img/home.gif)");
+    // $("#nav_home").css("background", "no-repeat");
+    $("#nav_home").attr("alt", "Home");
+
     // Function to track user click events.   
     function stepTrack() {      
       clickedSteps.push(clickedCount);
@@ -93,7 +97,7 @@ $(document).ready(
       $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
       $("#initial_logo").attr("alt", "Meddom logo");
       
-      $("#wrapper_logo").attr("data", "001");
+      // $("#wrapper_logo").attr("data", "001");
     };
     // Function to display a different image as the central logo attending to the quadrant element clicked.
     function displaySelectedLogo() {
