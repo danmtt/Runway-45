@@ -143,17 +143,17 @@ main{
    /* background-color: #3f3e3e00;*/
     border: solid 2px #000000;
     border-radius: 10%;}
-#qinfo_link:hover, #nav_back:hover{
+#qinfo_link:hover{
     cursor: pointer;
     background-color: #0d0d0e;    
     color: #ffffff;}
-#nav_home:hover{
+#nav_back:hover, #nav_home:hover{
     box-shadow: 0 0 0 2vw #0d0d0e;}
-#nav_home{ 
-  
+#nav_back, #nav_home{
     display: none;
     width: 14vw;
     height: 6vh;
+    border: solid 2px #000000;
     background-color: #ffffff;
     background-size: cover;
     border-radius: 100%;

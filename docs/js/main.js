@@ -43,8 +43,13 @@ $(document).ready(
       
       console.log("This is the previous step: " + prevStep);
     };
+    function displayBack() {
+      $("#nav_back").css("display", "flex");
+      $("#nav_back").css("background-image", "url(docs/img/home.gif)");
+      // $("#nav_home").css("background", "no-repeat");
+      $("#nav_back").attr("alt", "Back");
+    };
     function displayHome(){
-      
      $("#nav_home").css("display", "flex");
      $("#nav_home").css("background-image", "url(docs/img/home.gif)");
      // $("#nav_home").css("background", "no-repeat");
@@ -221,6 +226,7 @@ $(document).ready(
       clickedCount = clickedCount+1;
       // document.getElementById("qinfomain").innerHTML = quadrantBrief;
       stepTrack();
+      displayBack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -231,6 +237,7 @@ $(document).ready(
       clickedTxt = document.getElementById("q02").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
+      displayBack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -241,6 +248,7 @@ $(document).ready(
       clickedTxt = document.getElementById("q03").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
+      displayBack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -251,6 +259,7 @@ $(document).ready(
       clickedTxt = document.getElementById("q04").innerHTML;
       clickedCount = clickedCount+1;
       stepTrack();
+      displayBack();
       quadrantsFadeOut();
       quadrantInfoFadeIn();
       exportQuadrantElement();
@@ -293,6 +302,7 @@ $(document).ready(
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
       $("#nav_home").fadeOut(1250);
+      $("#nav_back").fadeOut(1250);
     });
   }
 );
