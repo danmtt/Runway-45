@@ -19,9 +19,7 @@ $(document).ready(
     var gitHubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
     displayNavLogo();
 
-    $("#nav_home").css("background-image", "url(docs/img/home.gif)");
-    // $("#nav_home").css("background", "no-repeat");
-    $("#nav_home").attr("alt", "Home");
+
 
     // Function to track user click events.   
     function stepTrack() {      
@@ -44,6 +42,13 @@ $(document).ready(
       clickedTxt = prevStepClickText;
       
       console.log("This is the previous step: " + prevStep);
+    };
+    function displayHome(){
+      
+     $("#nav_home").css("display", "flex");
+     $("#nav_home").css("background-image", "url(docs/img/home.gif)");
+     // $("#nav_home").css("background", "no-repeat");
+     $("#nav_home").attr("alt", "Home");
     };
     
     // Function grouping jQuery calls to fadeIn quadrant information box. 
@@ -88,6 +93,7 @@ $(document).ready(
       $("#nav_logo").fadeIn(1650);
     };
     function displayInitialLogo() {
+      displayHome();
       $("#wrapper_nav").fadeOut();
       $("#nav_logo").fadeOut(625);
       $("#wrapper_sub_logo").fadeOut();
@@ -286,6 +292,7 @@ $(document).ready(
       clickedSteps = [];
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
+      $("#nav_home").fadeOut(1250);
     });
   }
 );

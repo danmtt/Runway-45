@@ -149,7 +149,9 @@ main{
     color: #ffffff;}
 #nav_home:hover{
     box-shadow: 0 0 0 2vw #0d0d0e;}
-#nav_home{   
+#nav_home{ 
+  
+    display: none;
     width: 14vw;
     height: 6vh;
     background-color: #ffffff;
