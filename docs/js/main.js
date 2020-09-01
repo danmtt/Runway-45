@@ -45,7 +45,7 @@ $(document).ready(
     };
     function displayBack() {
       $("#nav_back").css("display", "flex");
-      $("#nav_back").css("background-image", "url(docs/img/home.gif)");
+      $("#nav_back").css("background-image", "url(docs/img/back.gif)");
       // $("#nav_home").css("background", "no-repeat");
       $("#nav_back").attr("alt", "Back");
     };

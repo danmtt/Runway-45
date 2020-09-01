@@ -137,7 +137,7 @@ main{
   }
 #nav_back, #nav_home{width: 25vw;}
 /* insert icons? */
-#qinfo_link, #nav_back{
+#qinfo_link{
     font-size:3vh;
     color:#000000;
    /* background-color: #3f3e3e00;*/
