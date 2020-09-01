@@ -228,6 +228,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
+      displaySelectedLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief();
@@ -239,6 +240,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
+      displaySelectedLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief();
@@ -250,6 +252,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
+      displaySelectedLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief()
@@ -261,6 +264,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
+      displaySelectedLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief()
@@ -280,7 +284,7 @@ $(document).ready(
       quadrantsFadeOut();
       addQuadrantsText();
       quadrantsFadeIn();
-      displaySelectedLogo();
+      // displaySelectedLogo();
     });
     $("#nav_back").click(function() {
       elementId = $(this).attr("id");
