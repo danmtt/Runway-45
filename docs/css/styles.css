@@ -173,7 +173,17 @@ footer{
 
     #q01, #q02{top: -4vh;}
     #q03, #q04{top: 16vh;}
-    #wrappermain_medium{margin-top: 8vw;}
+    #wrappermain_medium{
+      margin-top: 5vh;
+      margin-bottom:2vh;
+    }
+    #wrappermain_bottom{
+      margin-bottom: 4vh;
+    }
+    #nav_back, #nav_home{
+      width: 15vw;
+      height: 8vh;
+    }
 }
 /* Mobile-L */
 @media (min-width: 424px) {
