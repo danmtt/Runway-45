@@ -1,6 +1,6 @@
 $(document).ready(
-  // Initial function on loading page
-  function() {     
+  
+  function() {
 
     // VAR DEF
     // -------
@@ -18,6 +18,8 @@ $(document).ready(
     // Briefings -----------------------------------------
     var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner.";
     var gitHubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
+    
+    // Initial function call on loading page
     displayNavLogo();
 
     // Function to track user click events.   
@@ -48,6 +50,7 @@ $(document).ready(
       // $("#nav_home").css("background", "no-repeat");
       $("#nav_back").attr("alt", "Back");
     };
+    // Function to make Home element visible and clickable 
     function displayHome(){
      $("#nav_home").css("display", "flex");
      $("#nav_home").css("background-image", "url(docs/img/home.gif)");
@@ -83,32 +86,27 @@ $(document).ready(
     // --------------
 
     function displayNavLogo() {
-      $("#wrapper_logo").fadeOut();
-      $("#initial_logo").fadeOut(625);
-      $("#wrapper_sub_logo").fadeOut();
-      $("#second_logo").fadeOut(625);
+      iniLogoFadeOut();
+      secLogoFadeOut();
       quadrantsFadeOut();
+      $("#wrapper_nav").fadeIn();
+      $("#nav_logo").fadeIn(1650);
       $("#nav_logo").attr("src", "docs/img/nav_logo.png");
       $("#nav_logo").attr("alt", "Navigation");
-      
-      $("#wrapper_nav").fadeIn();
-      $("#wrapper_nav").attr("data", "000");
-      $("#nav_logo").fadeIn(1650);
     };
     function displayInitialLogo() {
-      displayHome();
-      $("#wrapper_nav").fadeOut();
-      $("#nav_logo").fadeOut(625);
-      $("#wrapper_sub_logo").fadeOut();
-      $("#second_logo").fadeOut(625);
+      navLogoFadeOut();
+      secLogoFadeOut();
       $("#wrapper_logo").fadeIn();
       $("#initial_logo").fadeIn(1650);
       $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
       $("#initial_logo").attr("alt", "Meddom logo");
+      displayHome();
     };
     // Function to display a different image as the central logo attending to the quadrant element clicked.
-    function displaySelectedLogo() {
-      $("#wrapper_logo").fadeOut(1650);
+    function displaySecondaryLogo() {
+      navLogoFadeOut();
+      iniLogoFadeOut();
       $("#wrapper_sub_logo").fadeIn();
       $("#second_logo").fadeIn(625);
       switch (clickedTxt) {
@@ -136,6 +134,20 @@ $(document).ready(
         //   $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
         //   $("#initial_logo").attr("alt", "Meddom logo");
       }
+    };
+    function navLogoFadeOut() {
+      $("#wrapper_nav").fadeOut();
+      $("#nav_logo").fadeOut(625);
+    };
+    // Function to hide initial logo element
+    function iniLogoFadeOut(){
+      $("#wrapper_logo").fadeOut();
+      $("#initial_logo").fadeOut(625);
+    };
+  // Function to hide secondary logo element
+    function secLogoFadeOut(){
+      $("#wrapper_sub_logo").fadeOut();
+      $("#second_logo").fadeOut(625); 
     };    
 
     // QUADRANT FUNCTIONS 
@@ -230,7 +242,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
-      displaySelectedLogo();
+      displaySecondaryLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief();
@@ -242,7 +254,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
-      displaySelectedLogo();
+      displaySecondaryLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief();
@@ -254,7 +266,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
-      displaySelectedLogo();
+      displaySecondaryLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief()
@@ -266,7 +278,7 @@ $(document).ready(
       stepTrack();
       displayBack();
       quadrantsFadeOut();
-      displaySelectedLogo();
+      displaySecondaryLogo();
       quadrantInfoFadeIn();
       exportQuadrantElement();
       exportQuadrantBrief()
@@ -283,7 +295,7 @@ $(document).ready(
       quadrantsFadeOut();
       addQuadrantsText();
       quadrantsFadeIn();
-      displaySelectedLogo();
+      displaySecondaryLogo();
     });
     $("#nav_back").click(function() {
       elementId = $(this).attr("id");
@@ -291,7 +303,7 @@ $(document).ready(
       
       stepTrack();
       backStep();
-      displaySelectedLogo();
+      displaySecondaryLogo();
       quadrantsFadeIn();
       addQuadrantsText();
       $("#qinfo").fadeOut(1250);
