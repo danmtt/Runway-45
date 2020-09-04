@@ -289,9 +289,6 @@ $(document).ready(
       clickedCount = clickedCount+1;
       clickedTxt = document.getElementById(elementId).innerHTML;
       stepTrack();
-      // $("#wrapper_logo").fadeOut(1650);
-      // $("#wrapper_sub_logo").fadeIn();
-      // $("#second_logo").fadeIn(625);
       quadrantsFadeOut();
       addQuadrantsText();
       quadrantsFadeIn();

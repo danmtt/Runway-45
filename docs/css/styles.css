@@ -127,26 +127,20 @@ main{
     width: 70%;
     margin: 0 2vw 0;
     flex-direction: row;
-    justify-content: space-between;}
-#nav_steps{
-    width: 70vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /*background-color: #ffffff;*/
-  }
-#nav_back, #nav_home{width: 25vw;}
-/* insert icons? */
-#qinfo_link, #nav_back{
+    justify-content: space-between;
     font-size:3vh;
     color:#000000;
-   /* background-color: #3f3e3e00;*/
     border: solid 2px #000000;
     border-radius: 10%;}
 #qinfo_link:hover{
     cursor: pointer;
     background-color: #0d0d0e;    
     color: #ffffff;}
+#nav_steps{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;}
 #nav_back:hover, #nav_home:hover{
     box-shadow: 0 0 0 2vw #0d0d0e;}
 #nav_back, #nav_home{
@@ -157,8 +151,7 @@ main{
     background-color: #ffffff;
     background-size: cover;
     border-radius: 100%;
-    box-shadow: 0 0 0 2vw #ffffff;
-}
+    box-shadow: 0 0 0 2vw #ffffff;}
 footer{
     /*¿¿¿¿Height bigger than suppsed to show half of footer in purpose, to create curiousity??????*/
     height:10vh;
