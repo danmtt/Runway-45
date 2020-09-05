@@ -175,47 +175,47 @@ $(document).ready(
 
     function addQuadrantsText() {
       switch (clickedTxt) {
+      // initial level
+        case "wrapper_nav":
+        case "home":
+        default:
+          document.getElementById("q01").innerHTML = "portfolio";
+          document.getElementById("q02").innerHTML = "projects";
+          document.getElementById("q03").innerHTML = "github";
+          document.getElementById("q04").innerHTML = "about me";
+        break;
+      // secondary level
         case "portfolio":
           document.getElementById("q01").innerHTML = "Rock 'n' r";
           document.getElementById("q02").innerHTML = "Re - taped";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "";
-          break;
+        break;
         case "projects":          
           document.getElementById("q01").innerHTML = "Alphabet";
           document.getElementById("q02").innerHTML = "Tourtrip";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "";
-          break;
+        break;
         case "github":
-          document.getElementById("q01").innerHTML = "sp01";
-          document.getElementById("q02").innerHTML = "sp02";
-          document.getElementById("q03").innerHTML = "sp03";
-          document.getElementById("q04").innerHTML = "sp04";
-          break;
+          document.getElementById("q01").innerHTML = "profile";
+          document.getElementById("q02").innerHTML = "";
+          document.getElementById("q03").innerHTML = "";
+          document.getElementById("q04").innerHTML = "repos";
+        break;
         case "about me":
-          document.getElementById("q01").innerHTML = "sp01";
-          document.getElementById("q02").innerHTML = "sp02";
-          document.getElementById("q03").innerHTML = "sp03";
-          document.getElementById("q04").innerHTML = "sp04";
-          break;
-        case "home":
-          document.getElementById("q01").innerHTML = "portfolio";
-          document.getElementById("q02").innerHTML = "projects";
-          document.getElementById("q03").innerHTML = "github";
-          document.getElementById("q04").innerHTML = "about me";
-          break;
-        case "wrapper_nav":
-          document.getElementById("q01").innerHTML = "portfolio";
-          document.getElementById("q02").innerHTML = "projects";
-          document.getElementById("q03").innerHTML = "github";
-          document.getElementById("q04").innerHTML = "about me";
-          break;
-        case "nav_logo":
-          document.getElementById("q01").innerHTML = "portfolio";
-          document.getElementById("q02").innerHTML = "projects";
-          document.getElementById("q03").innerHTML = "github";
-          document.getElementById("q04").innerHTML = "about me";
+          document.getElementById("q01").innerHTML = "contact";
+          document.getElementById("q02").innerHTML = "cv";
+          document.getElementById("q03").innerHTML = "linkedin";
+          document.getElementById("q04").innerHTML = "video";
+        break;
+
+
+        // case "nav_logo":
+        //   document.getElementById("q01").innerHTML = "portfolio";
+        //   document.getElementById("q02").innerHTML = "projects";
+        //   document.getElementById("q03").innerHTML = "github";
+        //   document.getElementById("q04").innerHTML = "about me";
       }
     };
 
