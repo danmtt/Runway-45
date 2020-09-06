@@ -32,10 +32,14 @@ $(document).ready(
     function backStep() {
       stepsLen = clickedSteps.length;
       prevStep = [];
-      prevStepClickIndex = clickedSteps[stepsLen-6];
-      prevStepClickElement = clickedSteps[stepsLen-5];
-      prevStepClickText = clickedSteps[stepsLen-4]
+      // prevStepClickIndex = clickedSteps[stepsLen-6];
+      // prevStepClickElement = clickedSteps[stepsLen-5];
+      // prevStepClickText = clickedSteps[stepsLen-4]
       
+      prevStepClickIndex = clickedSteps[stepsLen-9];
+      prevStepClickElement = clickedSteps[stepsLen-8];
+      prevStepClickText = clickedSteps[stepsLen-7]
+
       prevStep.push(prevStepClickIndex);
       prevStep.push(prevStepClickElement);
       prevStep.push(prevStepClickText);
@@ -110,31 +114,33 @@ $(document).ready(
       $("#wrapper_sub_logo").fadeIn();
       $("#second_logo").fadeIn(625);
       switch (clickedTxt) {
+        default:
+          $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
+          $("#initial_logo").attr("alt", "Meddom logo");
         case "portfolio":
           $("#second_logo").attr("src", "docs/img/portfolio.jpg");
           $("#second_logo").attr("alt", "My portfolio");
-          // clickedTxt = "My portfolio logo";
           break;
         case "projects":
           $("#second_logo").attr("src", "docs/img/projects.jpg");
           $("#second_logo").attr("alt", "My projects");
-          // clickedTxt = "My projects logo";
           break;
         case "github":
           $("#second_logo").attr("src", "docs/img/gitHub.jpg");
           $("#second_logo").attr("alt", "My gitHub");
-          // clickedTxt = "My gitHub logo";
           break;
         case "about me":
           $("#second_logo").attr("src", "docs/img/aboutme.jpg");
           $("#second_logo").attr("alt", "About me");
-          // clickedTxt = "About me logo";
           break;
-        // default:
-        //   $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
-        //   $("#initial_logo").attr("alt", "Meddom logo");
+
       }
     };
+    function displayPreviousMenu() {
+      quadrantsFadeIn();
+      addQuadrantsText();
+      displaySecondaryLogo();
+    }
     function navLogoFadeOut() {
       $("#wrapper_nav").fadeOut();
       $("#nav_logo").fadeOut(625);
@@ -288,13 +294,12 @@ $(document).ready(
     });
     $("#nav_back").click(function() {
       elementId = $(this).attr("id");
-      clickedCount = clickedCount-1;
+      clickedCount = clickedCount+1;
       
       stepTrack();
       backStep();
-      displaySecondaryLogo();
-      quadrantsFadeIn();
-      addQuadrantsText();
+      displayPreviousMenu();
+
       $("#qinfo").fadeOut(1250);
     });
     $("#nav_home").click(function() {
