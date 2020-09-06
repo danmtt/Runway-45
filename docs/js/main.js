@@ -160,7 +160,7 @@ $(document).ready(
       $("#q02").fadeIn(450);
       $("#q03").fadeIn(850);
       $("#q04").fadeIn(1250);
-      // Flex display call out to apply properties after fadeIn and move texts to container bottom
+      // jQuery call to apply flex to bottom quadrants on fadeIn (CSS to move texts to container bottom)
       $("#q02").css("display", "flex");
       $("#q03").css("display", "flex");
     };
@@ -172,7 +172,6 @@ $(document).ready(
       /*$("#q03").fadeOut(850);*/
       /*$("#q04").fadeOut(650);*/
     };
-
     function addQuadrantsText() {
       switch (clickedTxt) {
       // initial level
@@ -186,16 +185,16 @@ $(document).ready(
         break;
       // secondary level
         case "portfolio":
-          document.getElementById("q01").innerHTML = "Rock 'n' r";
-          document.getElementById("q02").innerHTML = "Re - taped";
+          document.getElementById("q01").innerHTML = "www";
+          document.getElementById("q02").innerHTML = "";
           document.getElementById("q03").innerHTML = "";
-          document.getElementById("q04").innerHTML = "";
+          document.getElementById("q04").innerHTML = "apps";
         break;
         case "projects":          
-          document.getElementById("q01").innerHTML = "Alphabet";
-          document.getElementById("q02").innerHTML = "Tourtrip";
+          document.getElementById("q01").innerHTML = "alphabet";
+          document.getElementById("q02").innerHTML = "";
           document.getElementById("q03").innerHTML = "";
-          document.getElementById("q04").innerHTML = "";
+          document.getElementById("q04").innerHTML = "tourtrip";
         break;
         case "github":
           document.getElementById("q01").innerHTML = "profile";
@@ -205,17 +204,10 @@ $(document).ready(
         break;
         case "about me":
           document.getElementById("q01").innerHTML = "contact";
-          document.getElementById("q02").innerHTML = "cv";
+          document.getElementById("q02").innerHTML = "resume";
           document.getElementById("q03").innerHTML = "linkedin";
           document.getElementById("q04").innerHTML = "video";
         break;
-
-
-        // case "nav_logo":
-        //   document.getElementById("q01").innerHTML = "portfolio";
-        //   document.getElementById("q02").innerHTML = "projects";
-        //   document.getElementById("q03").innerHTML = "github";
-        //   document.getElementById("q04").innerHTML = "about me";
       }
     };
 
