@@ -161,8 +161,8 @@ $(document).ready(
       $("#q03").fadeIn(850);
       $("#q04").fadeIn(1250);
       // Flex display call out to apply properties after fadeIn and move texts to container bottom
+      $("#q02").css("display", "flex");
       $("#q03").css("display", "flex");
-      $("#q04").css("display", "flex");
     };
     // Function grouping jQuery calls to fadeOut quadrants, texts, quadrant info box and initial_logo image. 
     function quadrantsFadeOut() {
@@ -179,10 +179,10 @@ $(document).ready(
         case "wrapper_nav":
         case "home":
         default:
-          document.getElementById("q01").innerHTML = "portfolio";
-          document.getElementById("q02").innerHTML = "projects";
-          document.getElementById("q03").innerHTML = "github";
-          document.getElementById("q04").innerHTML = "about me";
+          document.getElementById("q01").innerHTML = "projects";
+          document.getElementById("q02").innerHTML = "github";
+          document.getElementById("q03").innerHTML = "about me";
+          document.getElementById("q04").innerHTML = "portfolio";
         break;
       // secondary level
         case "portfolio":

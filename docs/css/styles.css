@@ -61,21 +61,18 @@ main{
     cursor: pointer;
     background-color: #0d0d0e;
     color: #ffffff;}
-/* Quadrants specific properties: position and rotations */
-#q01, #q02{top: -3vh;}
-#q03, #q04{top: 11vh;}
-#q01, #q04{left: -17vw;}
-#q02, #q03{left: 17vw;}
-
-/* #q01{top: -3vh;left: -17vw;}
-#q02{top: -3vh;left: 16vw;}
-#q03{top: 11vh;left: 15vw;}
-#q04{top: 10vh;left: -17vw;} */
-#q01, #q03{transform: rotate(-45deg);}
-#q02, #q04{transform: rotate(45deg);}
-#q03, #q04{
+/* Quadrants position */
+#q01, #q04{top: -3vh;}
+#q02, #q03{top: 11vh;}
+#q01, #q02{left: 17vw;}
+#q03, #q04{left: -17vw;}
+/* Quadrants rotations */
+#q01, #q03{transform: rotate(45deg);}
+#q02, #q04{transform: rotate(-45deg);}
+/* Properties to be applied after jS Query call out to fadeIn / Moving texts to container bottom */
+#q02, #q03{
     justify-content: center;
-    align-items: flex-end;}
+    align-items: flex-end;}    
 #wrappermain_medium, #wrappermain_bottom{    
     display: flex;
     align-items: center;
