@@ -8,7 +8,8 @@ $(document).ready(
     // Step tracking -------------------------------------  
     var clickedCount = 0;
     var elementId;
-    var clickedTxt; 
+    var clickedTxt;
+    var clickedBack = 0;
     var clickedSteps = []; // Array containing all click events info
     var prevStep = []; // Array containing last click events info
     var prevStepClickIndex;
@@ -26,7 +27,8 @@ $(document).ready(
     function stepTrack() {      
       clickedSteps.push(clickedCount);
       clickedSteps.push(elementId);
-      clickedSteps.push(clickedTxt);      
+      clickedSteps.push(clickedTxt);
+      clickedSteps.push(clickedBack);
       console.log(clickedSteps);
     };
     function backStep() {
@@ -36,13 +38,14 @@ $(document).ready(
       // prevStepClickElement = clickedSteps[stepsLen-5];
       // prevStepClickText = clickedSteps[stepsLen-4]
       
-      prevStepClickIndex = clickedSteps[stepsLen-9];
-      prevStepClickElement = clickedSteps[stepsLen-8];
-      prevStepClickText = clickedSteps[stepsLen-7]
+      prevStepClickIndex = clickedSteps[stepsLen-12];
+      prevStepClickElement = clickedSteps[stepsLen-11];
+      prevStepClickText = clickedSteps[stepsLen-10];
 
       prevStep.push(prevStepClickIndex);
       prevStep.push(prevStepClickElement);
       prevStep.push(prevStepClickText);
+      prevStep.push(clickedBack);
       
       clickedTxt = prevStepClickText;
       
@@ -294,7 +297,9 @@ $(document).ready(
     });
     $("#nav_back").click(function() {
       elementId = $(this).attr("id");
-      clickedCount = clickedCount+1;
+      clickedTxt = "Back"
+      clickedBack = clickedBack-1
+      // clickedCount = clickedCount+1;
       
       stepTrack();
       backStep();
@@ -305,9 +310,10 @@ $(document).ready(
     $("#nav_home").click(function() {
       elementId = $(this).attr("id");     
       clickedTxt = document.getElementById(elementId).innerHTML;
-      stepTrack();
-      clickedCount = 0
+      clickedCount = 0;
+      clickedBack = 0;
       clickedSteps = [];
+      stepTrack();
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
       $("#nav_home").fadeOut(1250);
