@@ -6,15 +6,19 @@ $(document).ready(
     // -------
 
     // Step tracking -------------------------------------  
+    var clickedSteps = []; // Array containing all click events info
     var clickedCount = 0;
     var elementId;
     var clickedTxt;
-    var clickedBack = 0;
-    var clickedSteps = []; // Array containing all click events info
+
+
     var prevStep = []; // Array containing last click events info
-    var prevStepClickIndex;
-    var prevStepClickElement;
-    var prevStepClickText;
+    var prevStepIndex;
+    var prevStepElement;
+    var prevStepText;
+
+    var clickedBack = false;
+    var totalSteps;
     
     // Briefings -----------------------------------------
     var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner.";
@@ -34,20 +38,27 @@ $(document).ready(
     function backStep() {
       stepsLen = clickedSteps.length;
       prevStep = [];
-      // prevStepClickIndex = clickedSteps[stepsLen-6];
-      // prevStepClickElement = clickedSteps[stepsLen-5];
-      // prevStepClickText = clickedSteps[stepsLen-4]
-      
-      prevStepClickIndex = clickedSteps[stepsLen-12];
-      prevStepClickElement = clickedSteps[stepsLen-11];
-      prevStepClickText = clickedSteps[stepsLen-10];
+      clickedBack = true;
+      // if (clickedBack < 0){
+      //   totalSteps = clickedCount;
+      // }
+ 
+      // prevStep = clickedSteps.slice();
+      // prevStepIndex = clickedSteps[stepsLen-6];
+      // prevStepElement = clickedSteps[stepsLen-5];
+      // prevStepText = clickedSteps[stepsLen-4]
+   
 
-      prevStep.push(prevStepClickIndex);
-      prevStep.push(prevStepClickElement);
-      prevStep.push(prevStepClickText);
+      prevStepIndex = clickedSteps[stepsLen-12];
+      prevStepElement = clickedSteps[stepsLen-11];
+      prevStepText = clickedSteps[stepsLen-10];
+
+      prevStep.push(prevStepIndex);
+      prevStep.push(prevStepElement);
+      prevStep.push(prevStepText);
       prevStep.push(clickedBack);
       
-      clickedTxt = prevStepClickText;
+      clickedTxt = prevStepText;
       
       console.log("This is the previous step: " + prevStep);
     };
@@ -298,10 +309,10 @@ $(document).ready(
     $("#nav_back").click(function() {
       elementId = $(this).attr("id");
       clickedTxt = "Back"
-      clickedBack = clickedBack-1
-      // clickedCount = clickedCount+1;
+      // clickedBack = clickedBack-1
+      // clickedCount = clickedCount-1;
       
-      stepTrack();
+      // stepTrack();
       backStep();
       displayPreviousMenu();
 
