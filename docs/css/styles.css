@@ -159,48 +159,23 @@ footer{
     background-color: #5f5e5e;}        
 
 /* MEDIA QUERIES */
-/* Based on Chrome DevTools Breakpoints */
 
 /* Mobile-M */
 @media (min-width: 360px) {
-
-    #q01, #q02{top: -4vh;}
-    #q03, #q04{top: 16vh;}
+    #q01, #q04 {top: -4vh;}
+    #q02, #q03 {top: 15vh;}
     #wrappermain_medium{
       margin-top: 5vh;
-      margin-bottom:2vh;
-    }
-    #wrappermain_bottom{
-      margin-bottom: 4vh;
-    }
+      margin-bottom:2vh;}
+    #wrappermain_bottom{margin-bottom: 4vh;}
     #nav_back, #nav_home{
       width: 15vw;
-      height: 8vh;
-    }
+      height: 8vh;}
 }
 /* Mobile-L */
 @media (min-width: 424px) {
-    #wrapper_quadrant{
-        width: 45vw;
-        height: 45vw
-    }
-
-    /* #nav_wrap, #initial_logo, #second_logo{
-        top: 30vh;
-        width: 40vw;}
-    .quadrant {width: 47vw;}
-    #q01, #q02{top: 26.5vh;}            
-    #q01{left: 10vw;} 
-    #q02{left: 39vw;}
-    #q03, #q04{top: 42.5vh;}        
-    #q03{left: 39vw;}
-    #q04{left: 10vw;}
-    #qinfo{
-        top: 41vh;
-        margin: 1vw;
-        width: 80vw;
-        height: 22vh;
-        border-radius: 3vw;} */
+    #q01, #q04 {top: -5vh;}
+    #q02, #q03 {top: 20vh;}
 }
 /* Tablet */
 @media (min-width: 767px) {
