@@ -19,16 +19,16 @@ header{
 #wrapper_header h1,h6{font-family: 'Bangers', cursive;}
 #wrapper_header h1{
     font-size: 28vw;
-    background-color: #9df4f6;
-    text-shadow: 1.5vw 1.5vw #0b0a0b;
+    background-color:  #65dbde;
+    text-shadow: 1.5vw 1.5vh #0b0a0b;
     color: #f54f00;}
 #wrapper_header h6{
     font-size: 8vw;
     background:#ffffff;
-    text-shadow: 0.5vw 0.5vw #0b0a0b;
+    text-shadow: 0.5vw 0.5vh #0b0a0b;
     color: #f54f00;}
 main{
-    background-color: #9df4f6;
+    background-color: #65dbde;
     width: 100vw;    
     height:auto;
     margin-top: 1vh;} 
@@ -59,11 +59,15 @@ main{
     font-family: 'Bangers', cursive;
     font-weight: bolder;
     font-size: 10vw;
+    color: #0b0a0b;
+    text-shadow: 0.5vw 0.5vh #ffffff;
     overflow:hidden;}
 .quadrant:hover {
     cursor: pointer;
-    background-color: #f54f00;
-    color: #ffffff;}
+    background-color: #0b0a0b;
+    color: #ffffff;
+    text-shadow: none;
+}
 /* Quadrants position */
 #q01, #q04{top: -3vh;}
 #q02, #q03{top: 11vh;}
