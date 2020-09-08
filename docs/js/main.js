@@ -132,7 +132,7 @@ $(document).ready(
           $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
           $("#initial_logo").attr("alt", "Meddom logo");
         case "portfolio":
-          $("#second_logo").attr("src", "docs/img/portfolio.jpg");
+          $("#second_logo").attr("src", "docs/img/portfolio.gif");
           $("#second_logo").attr("alt", "My portfolio");
           break;
         case "projects":
@@ -144,7 +144,7 @@ $(document).ready(
           $("#second_logo").attr("alt", "My gitHub");
           break;
         case "about me":
-          $("#second_logo").attr("src", "docs/img/aboutme.jpg");
+          $("#second_logo").attr("src", "docs/img/about_me.png");
           $("#second_logo").attr("alt", "About me");
           break;
 
