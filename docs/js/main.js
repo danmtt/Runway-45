@@ -11,7 +11,6 @@ $(document).ready(
     var elementId;
     var clickedTxt;
 
-
     var prevStep = []; // Array containing last click events info
     var prevStepIndex;
     var prevStepElement;
@@ -20,9 +19,29 @@ $(document).ready(
     var clickedBack = false;
     var totalSteps;
     
-    // Briefings -----------------------------------------
+    // Briefings / Texts to display in qinfobox ------------
+  
+    // Projects --------------------------------------------
     var projectsTxt = "My projects are my learning tools. Thanks to them I keep educating myself into the coding world. Alphabet is aimed to translate simultaneously in various languages and Tourtrip is a holiday planner.";
-    var gitHubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
+    var alphabetTxt = "";
+    var tourtripTxt = "";
+    
+    // gitHub ----------------------------------------------
+    var githubTxt = "Here you can follow all the progress done throgh the different challenges I found while developing my projects. Have a look at my commits and enjoy!";
+    var profileTxt = "";
+    var reposTxt = "";
+    
+    // About me --------------------------------------------
+    var aboutmeTxt = "";
+    var contactTxt = "";
+    var resumeTxt = "";
+    var linkedInTxt = "";
+    var videoTxt = "";
+    
+    // Portfolio ------------------------------------------- 
+    var portfoliotTxt = "";
+    var wwwTxt = "";
+    var appsTxt = "";
     
     // Initial function call on loading page
     displayNavLogo();
@@ -92,7 +111,7 @@ $(document).ready(
           document.getElementById("qinfomain").innerHTML = projectsTxt;
           break;
         case "github":
-          document.getElementById("qinfomain").innerHTML = gitHubTxt;
+          document.getElementById("qinfomain").innerHTML = githubTxt;
           break;
         default :
           document.getElementById("qinfomain").innerHTML = "NOT UPDATED";
