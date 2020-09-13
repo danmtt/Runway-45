@@ -10,15 +10,17 @@ $(document).ready(
     var clickedCount = 0;
     var elementId;
     var clickedTxt;
-    var topMenu;
+ 
 
     var prevStep = []; // Array containing last click events info
     var prevStepIndex;
     var prevStepElement;
     var prevStepText;
 
+    var navMenu = [];
+
     var clickedBack = false;
-    var totalSteps;
+
     
     // Briefings / Texts to display in qinfobox ------------
   
@@ -58,7 +60,7 @@ $(document).ready(
     function backStep() {
       displaySecondaryLogo();
       addQuadrantsText();
-      
+
       stepsLen = clickedSteps.length;
       prevStep = [];
 
@@ -71,8 +73,20 @@ $(document).ready(
       prevStep.push(prevStepText);
       prevStep.push(clickedBack);
       
-      // clickedTxt = prevStepText;
+      clickedTxt = prevStepText;
       console.log("This is the previous menu: " + topMenu);
+      quadrantsFadeIn();
+      addQuadrantsText();
+      switch(navMenu){
+        default:
+          displayNavLogo();
+
+        case "secondary_menu":
+          displaySecondaryLogo();
+        case"initial_menu":
+          displayInitialLogo();
+      }
+      console.log(navMenu);
     };
     function displayBack() {
       clickedBack = false;
@@ -122,6 +136,7 @@ $(document).ready(
 
     function displayNavLogo() {
       clickedBack = false;
+      navMenu = "nav_menu";
       iniLogoFadeOut();
       secLogoFadeOut();
       quadrantsFadeOut();
@@ -133,6 +148,7 @@ $(document).ready(
     };
     function displayInitialLogo() {
       clickedBack = false;
+      navMenu = "initial_menu";
       navLogoFadeOut();
       secLogoFadeOut();
       $("#wrapper_logo").fadeIn();
@@ -146,6 +162,7 @@ $(document).ready(
     // Function to display a different image as the central logo attending to the quadrant element clicked.
     function displaySecondaryLogo() {
       clickedBack = false;
+      navMenu = "secondary_menu";
       navLogoFadeOut();
       iniLogoFadeOut();
       $("#wrapper_sub_logo").fadeIn();
