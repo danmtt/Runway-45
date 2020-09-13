@@ -17,7 +17,7 @@ $(document).ready(
     var prevStepElement;
     var prevStepText;
 
-    var navMenu = [];
+    var navMenu;
 
     var clickedBack = false;
 
@@ -58,9 +58,6 @@ $(document).ready(
       console.log(clickedSteps);      
     };
     function backStep() {
-      displaySecondaryLogo();
-      addQuadrantsText();
-
       stepsLen = clickedSteps.length;
       prevStep = [];
 
@@ -75,18 +72,17 @@ $(document).ready(
       
       clickedTxt = prevStepText;
       console.log("This is the previous menu: " + topMenu);
+      console.log(navMenu);
       quadrantsFadeIn();
       addQuadrantsText();
       switch(navMenu){
         default:
           displayNavLogo();
-
         case "secondary_menu":
           displaySecondaryLogo();
         case"initial_menu":
           displayInitialLogo();
       }
-      console.log(navMenu);
     };
     function displayBack() {
       clickedBack = false;
