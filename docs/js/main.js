@@ -5,7 +5,7 @@ $(document).ready(
     // VAR DEF
     // -------
 
-    // Step tracking -------------------------------------  
+    // Text clicked tracking -------------------------------------  
     var clickedSteps = []; // Array containing all click events info
     var clickedCount = 0;
     var elementId;
@@ -17,8 +17,13 @@ $(document).ready(
     var prevStepElement;
     var prevStepText;
 
-    var navMenu;
-
+    // Menu level tracking -------------------------------------  
+    var stepMenu = []; // Array containing navigation menus info
+    var menuLen;
+    var menuStep;
+    var prevMenu;
+    
+ 
     var clickedBack = false;
 
     
@@ -58,6 +63,11 @@ $(document).ready(
       console.log(clickedSteps);      
     };
     function backStep() {
+
+      menuLen = stepMenu.length;
+      prevMenu = stepMenu[menuLen - 2];
+      stepMenu.pop();
+
       stepsLen = clickedSteps.length;
       prevStep = [];
 
@@ -71,17 +81,27 @@ $(document).ready(
       prevStep.push(clickedBack);
       
       clickedTxt = prevStepText;
-      console.log("This is the previous menu: " + topMenu);
-      console.log(navMenu);
-      quadrantsFadeIn();
+      console.log("This are the visited menus: " + stepMenu);
+      console.log("This is the actual menu: " + menuStep);
+      console.log("This is the previous menu: " + prevMenu);
+      console.log("This is the previous text clicked: " + clickedTxt);      quadrantsFadeIn();
       addQuadrantsText();
-      switch(navMenu){
-        default:
+      switch(prevMenu){
+        case "navigation":
+          clickedTxt = prevStepText;
           displayNavLogo();
-        case "secondary_menu":
-          displaySecondaryLogo();
-        case"initial_menu":
+          stepMenu.pop();
+          break;
+        case "initial":
+          clickedTxt = prevStepText;
           displayInitialLogo();
+          stepMenu.pop();
+          break;
+        case "secondary":
+          clickedTxt = prevStepText;
+          displaySecondaryLogo();
+          stepMenu.pop();
+          break;
       }
     };
     function displayBack() {
@@ -132,7 +152,7 @@ $(document).ready(
 
     function displayNavLogo() {
       clickedBack = false;
-      navMenu = "nav_menu";
+      stepMenu.push("navigation");
       iniLogoFadeOut();
       secLogoFadeOut();
       quadrantsFadeOut();
@@ -144,7 +164,7 @@ $(document).ready(
     };
     function displayInitialLogo() {
       clickedBack = false;
-      navMenu = "initial_menu";
+      stepMenu.push("initial");
       navLogoFadeOut();
       secLogoFadeOut();
       $("#wrapper_logo").fadeIn();
@@ -158,13 +178,15 @@ $(document).ready(
     // Function to display a different image as the central logo attending to the quadrant element clicked.
     function displaySecondaryLogo() {
       clickedBack = false;
-      navMenu = "secondary_menu";
+      menuStep = "secondary";
+      stepMenu.push(menuStep);
       navLogoFadeOut();
       iniLogoFadeOut();
       $("#wrapper_sub_logo").fadeIn();
       $("#second_logo").fadeIn(625);
+      
       switch (clickedTxt) {
-        default:
+        case "nav_logo":
           $("#initial_logo").attr("src", "docs/img/mylogo.jpg");
           $("#initial_logo").attr("alt", "Meddom logo");
           break;
@@ -239,7 +261,7 @@ $(document).ready(
           document.getElementById("q02").innerHTML = "github";
           document.getElementById("q03").innerHTML = "about me";
           document.getElementById("q04").innerHTML = "portfolio";
-          topMenu = "home";
+          // topMenu = "home";
         break;
       // secondary level
         case "portfolio":
@@ -247,28 +269,28 @@ $(document).ready(
           document.getElementById("q02").innerHTML = "";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "apps";
-          topMenu = "initial";
+          // topMenu = "initial";
         break;
         case "projects":          
           document.getElementById("q01").innerHTML = "alphabet";
           document.getElementById("q02").innerHTML = "";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "tourtrip";
-          topMenu = "initial";
+          // topMenu = "initial";
         break;
         case "github":
           document.getElementById("q01").innerHTML = "profile";
           document.getElementById("q02").innerHTML = "";
           document.getElementById("q03").innerHTML = "";
           document.getElementById("q04").innerHTML = "repos";
-          topMenu = "initial";
+          // topMenu = "initial";
         break;
         case "about me":
           document.getElementById("q01").innerHTML = "contact";
           document.getElementById("q02").innerHTML = "resume";
           document.getElementById("q03").innerHTML = "linkedin";
           document.getElementById("q04").innerHTML = "video";
-          topMenu = "initial";
+          // topMenu = "initial";
         break;
       }
     };
@@ -368,6 +390,7 @@ $(document).ready(
       clickedCount = 0;
       clickedBack = false;
       clickedSteps = [];
+      stepMenu = [];
       stepTrack();
       displayNavLogo();
       $("#qinfo").fadeOut(1250);
