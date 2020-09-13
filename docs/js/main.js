@@ -90,17 +90,17 @@ $(document).ready(
         case "navigation":
           clickedTxt = prevStepText;
           displayNavLogo();
-          stepMenu.pop();
+          // stepMenu.pop();
           break;
         case "initial":
           clickedTxt = prevStepText;
           displayInitialLogo();
-          stepMenu.pop();
+          // stepMenu.pop();
           break;
         case "secondary":
           clickedTxt = prevStepText;
           displaySecondaryLogo();
-          stepMenu.pop();
+          // stepMenu.pop();
           break;
       }
     };
